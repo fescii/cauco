@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="all.css">
+  <link rel="stylesheet" href="nspace.css">
+  <link rel="stylesheet" href="nres.css">
+  <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="icon/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+
+  <script type="module">
+
+    /// importing the first custom element
+    import PostWrapper from './components/component.post.js';
+    import SpaceHeader from './components/component.shead.js';
+    import SpaceInfo from "./components/component.space.js";
+    import StoryWrapper from "./components/component.story.js";
+    import UserProfile from "./components/component.user.js";
+    import TopicInfo from "./components/component.topic.js";
+
+    customElements.define('post-wrapper', PostWrapper);
+    customElements.define('space-header', SpaceHeader);
+    customElements.define("space-info", SpaceInfo);
+    customElements.define("story-wrapper", StoryWrapper);
+    customElements.define("user-profile", UserProfile);
+    customElements.define("topic-info", TopicInfo);
+  </script>
+
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="head">
+      <div class="logo">
+        <div class="logo-image">
+          <img src="img/favi.png" alt="Logo" srcset="" />
+        </div>
+        <div class="app-name">Darkchesa</div>
+      </div>
+      <div class="controls">
+        <span class="iconlyBulk-Arrow-Left-Circle"><span class="path1"></span><span class="path2"></span></span>
+        <span class="iconlyBulk-Arrow-Right-Circle"><span class="path1"></span><span class="path2"></span></span>
+      </div>
+    </div>
+    <div class="menu main-menu">
+      <div class="title">Menu</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Home icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Home</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Edit-Square icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Create</span>
+            </div>
+          </a>
+        </li>
+        <li class="item selected">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Discovery icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Discover</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Document icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Stories</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu">
+      <div class="title">General</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Search icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Search</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-User2 icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">People</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Bookmark icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">My List</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu user">
+      <div class="title">User</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Profile icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Profile</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Message icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Subscriptions</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Setting icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Settings</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu user">
+      <div class="title">User</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link logout">
+            <span class="iconly-Logout icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Logout</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <main class="space">
+    <space-header conn="join" connection="following" background="new/one2.jpg" cover="img/ground1.jpg"
+      space-name="The Humanity Space" followers="923k" members="239k"
+      bio="We are humans due to our humanity. We need to nurture our humanity always.">
+    </space-header>
+
+    <div class="side-info">
+      <ul class="icons header">
+        <li class="icon">
+          <a href="" class="icon-link">
+            <span class="iconly-Search icli"></span>
+            <span class="tooltip search">
+              <span class="pointer"></span>
+              <span class="text">Search</span>
+            </span>
+          </a>
+        </li>
+        <li class="icon">
+          <a href="" class="icon-link">
+            <span class="iconly-Notification icli"></span>
+            <span class="notification dot"></span>
+            <span class="tooltip notification">
+              <span class="pointer"></span>
+              <span class="text">Notifications</span>
+            </span>
+          </a>
+        </li>
+        <div class="profile">
+          <div class="image-section">
+            <div class="image">
+              <img src="img/profile.jpg" alt="" srcset="" />
+            </div>
+            <span class="iconly-Arrow-Down-2 icli"></span>
+          </div>
+        </div>
+      </ul>
+      <section class="info">
+        <p class="about">
+          We are humans due to our humanity. We need to nurture our humanity always. We really need to sustain our faith
+          in humanity by motivating and inspiring others as well as ourselves in a positive way for a safe, peaceful,
+          and prosperous future. Let us share something that really supports humanity and make us sustain our faith in
+          humanity.
+        </p>
+        <ul class="infos">
+          <li class="info-item work">
+            <span class="icon">
+              <i class="iconly-Work icli"></i>
+              <!-- <i class="bi bi-bag"></i> -->
+            </span>
+            <span class="details">
+              <span class="name">Created by <a href="" class="duration">Fredrick Ochieng</a></span>
+            </span>
+          </li>
+          <li class="info-item education">
+            <span class="icon">
+              <i class="bi bi-book-half"></i>
+            </span>
+            <span class="details">
+              <span class="name">
+                Topics discussed includes
+                <a href="" class="duration">Healthcare,</a>
+                <a href="" class="duration">Humanity,</a>
+                <a href="" class="duration">Wisdom</a>
+                <span class="duration more">and more</span>
+              </span>
+            </span>
+          </li>
+          <li class="info-item stat">
+            <span class="icon">
+              <!-- <i class="bi bi-eye"></i> -->
+              <i class="bi bi-graph-up-arrow"></i>
+            </span>
+            <span class="details">
+              <span class="name">12.8k items created so far <span class="duration">923 this month</span></span>
+            </span>
+          </li>
+          <li class="info-item joined">
+            <span class="icon">
+              <i class="bi-calendar-check"></i>
+              <!-- <i class="iconly-Calendar icli"></i> -->
+            </span>
+            <span class="details">
+              <span class="name">Created on May 2020</span>
+            </span>
+          </li>
+        </ul>
+         <div class="more">
+          <a href="" class="all">View users</a>
+        </div>
+      </section>
+      <section class="spaces">
+        <div class="head">
+          <h4 class="title">Related spaces</h4>
+        </div>
+        <div class="spaces">
+          <space-info connection="following" space-profile="img/ground.jpg" space-url="/puri.com"
+            space-name="Knowledge, Wisdom and Understanding" followers="696k"
+            description="There are many resources that provides knowledge, wisdom and understanding.">
+          </space-info>
+
+          <space-info connection="follow" space-profile="img/favi.png" space-url="/puri.com" space-name="aduki, Inc"
+            followers="903k"
+            description="Get inspired to create or contribute to ideas that can help change the world.">
+          </space-info>
+
+          <space-info connection="follow" space-profile="img/ground1.jpg" space-url="/puri.com"
+            space-name="Advocates for the Ethical Treatment" followers="6.03k"
+            description="There are many resources that provides knowledge, wisdom and understanding">
+          </space-info>
+
+          <space-info connection="following" space-profile="new/one.jpg" space-url="/puri.com"
+            space-name="Knowledge, Wisdom and Understanding" followers="696k"
+            description="There are many resources that provides knowledge, wisdom and understanding.">
+          </space-info>
+
+          <space-info connection="follow" space-profile="new/two.jpg" space-url="/puri.com"
+            space-name="Advocates for the Ethical Treatment" followers="6.03k"
+            description="There are many resources that provides knowledge, wisdom and understanding">
+          </space-info>
+        </div>
+        <div class="more">
+          <a href="" class="all">Explore more</a>
+        </div>
+      </section>
+    </div>
+    <div class="contents">
+      <ul class="tab">
+        <li class="tab-item active">
+          <span class="text">Posts</span>
+          <span class="line"></span>
+        </li>
+        <li class="tab-item">
+          <span class="text">Stories</span>
+          <span class="line"></span>
+        </li>
+        <li class="tab-item">
+          <span class="text">About</span>
+          <span class="line"></span>
+        </li>
+      </ul>
+
+      <div class="posts">
+        <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+          occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+          post-likes="9.3k" post-comments="89">
+          <p>
+            Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.
+          </p>
+          <p>
+            The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+            break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+            dream of the infinite.
+          </p>
+          <p>
+            Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.
+          </p>
+          <p>
+            The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+            break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+            dream of the infinite.
+          </p>
+        </post-wrapper>
+
+        <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+          name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+          images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+          post-likes="63.9k" action="like" post-comments="898">
+          <p>Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.</p>
+          <p>The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+            break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+            dream of the infinite.</p>
+        </post-wrapper>
+
+        <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+          occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="0" expands="false"
+          post-likes="69.9k" action="liked" post-comments="898">
+          <p>
+            Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.
+          </p>
+        </post-wrapper>
+
+        <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+          name="Jane Doe" occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="2"
+          images="img/ground1.jpg,new/two.jpg" expands="false" post-likes="63.9k" action="like" post-comments="898">
+          <p>
+            Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.
+          </p>
+        </post-wrapper>
+
+        <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+          occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+          post-likes="9.3k" post-comments="89">
+          <p>
+            Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.
+          </p>
+          <p>
+            The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+            break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+            dream of the infinite.
+          </p>
+          <p>
+            Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.
+          </p>
+          <p>
+            The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+            break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+            dream of the infinite.
+          </p>
+        </post-wrapper>
+
+        <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+          name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+          images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+          post-likes="63.9k" action="like" post-comments="898">
+          <p>
+            Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.
+          </p>
+          <p>
+            The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+            break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+            dream of the infinite.
+          </p>
+        </post-wrapper>
+
+        <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+          occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="0" expands="false"
+          post-likes="69.9k" action="liked" post-comments="898">
+          <p>
+            Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.
+          </p>
+        </post-wrapper>
+
+        <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+          name="Jane Doe" occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="2"
+          images="img/ground1.jpg,new/two.jpg" expands="false" post-likes="63.9k" action="like" post-comments="898">
+          <p>
+            Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.
+          </p>
+        </post-wrapper>
+
+        <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+          occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+          post-likes="9.3k" post-comments="89">
+          <p>
+            Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.
+          </p>
+          <p>
+            The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+            break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+            dream of the infinite.
+          </p>
+          <p>
+            Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.
+          </p>
+          <p>
+            The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+            break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+            dream of the infinite.
+          </p>
+        </post-wrapper>
+
+        <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+          name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+          images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+          post-likes="63.9k" action="like" post-comments="898">
+          <p>
+            Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+            landscapes in this fascinating docu-series.
+          </p>
+          <p>
+            The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+            break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+            dream of the infinite.
+          </p>
+        </post-wrapper>
+      </div>
+
+      <div class="stories">
+
+        <story-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+          name="Jane Doe" time-lapse=" Sunday, August 21, 2022" cover="img/ground1.jpg" url="/story"
+          story-title="The Essential Meta Tags for use in social Media"
+          summery="Communications, file storage and transactions secure from hackers and government inter..."
+          views="23k" duration="9 min read" author-url="/author">
+        </story-wrapper>
+
+        <story-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+          time-lapse=" Sunday, August 21, 2022" cover="img/ground1.jpg" url="/story"
+          story-title="The Essential Meta Tags for use in social Media"
+          summery="Communications, file storage and transactions secure from hackers and government inter..."
+          views="23k" duration="9 min read" author-url="/author">
+        </story-wrapper>
+
+        <story-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+          name="Jane Doe" time-lapse=" Sunday, August 21, 2022" cover="img/ground1.jpg" url="/story"
+          story-title="The Essential Meta Tags for use in social Media"
+          summery="Communications, file storage and transactions secure from hackers and government inter..."
+          views="23k" duration="9 min read" author-url="/author">
+        </story-wrapper>
+
+        <story-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+          time-lapse=" Sunday, August 21, 2022" cover="img/ground1.jpg" url="/story"
+          story-title="The Essential Meta Tags for use in social Media"
+          summery="Communications, file storage and transactions secure from hackers and government inter..."
+          views="23k" duration="9 min read" author-url="/author">
+        </story-wrapper>
+
+        <story-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+          name="Jane Doe" time-lapse=" Sunday, August 21, 2022" cover="img/ground1.jpg" url="/story"
+          story-title="The Essential Meta Tags for use in social Media"
+          summery="Communications, file storage and transactions secure from hackers and government inter..."
+          views="23k" duration="9 min read" author-url="/author">
+        </story-wrapper>
+
+        <story-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+          time-lapse=" Sunday, August 21, 2022" cover="img/ground1.jpg" url="/story"
+          story-title="The Essential Meta Tags for use in social Media"
+          summery="Communications, file storage and transactions secure from hackers and government inter..."
+          views="23k" duration="9 min read" author-url="/author">
+        </story-wrapper>
+
+        <story-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+          name="Jane Doe" time-lapse=" Sunday, August 21, 2022" cover="img/ground1.jpg" url="/story"
+          story-title="The Essential Meta Tags for use in social Media"
+          summery="Communications, file storage and transactions secure from hackers and government inter..."
+          views="23k" duration="9 min read" author-url="/author">
+        </story-wrapper>
+
+        <story-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+          time-lapse=" Sunday, August 21, 2022" cover="img/ground1.jpg" url="/story"
+          story-title="The Essential Meta Tags for use in social Media"
+          summery="Communications, file storage and transactions secure from hackers and government inter..."
+          views="23k" duration="9 min read" author-url="/author">
+        </story-wrapper>
+
+        <story-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+          name="Jane Doe" time-lapse=" Sunday, August 21, 2022" cover="img/ground1.jpg" url="/story"
+          story-title="The Essential Meta Tags for use in social Media"
+          summery="Communications, file storage and transactions secure from hackers and government inter..."
+          views="23k" duration="9 min read" author-url="/author">
+        </story-wrapper>
+
+        <story-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+          time-lapse=" Sunday, August 21, 2022" cover="img/ground1.jpg" url="/story"
+          story-title="The Essential Meta Tags for use in social Media"
+          summery="Communications, file storage and transactions secure from hackers and government inter..."
+          views="23k" duration="9 min read" author-url="/author">
+        </story-wrapper>
+
+      </div>
+
+      <div class="people">
+        <user-profile user-profile="img/purri.jpg" user-name="Janet Doe"
+          occupation="Student at The East African University" connection="follow"></user-profile>
+
+        <user-profile user-profile="img/profile.jpg" user-name="Fredrick Ochieng" occupation="Founder at aduki,Inc"
+          connection="following"> </user-profile>
+
+        <user-profile user-profile="img/purri.jpg" user-name="Janet Doe"
+          occupation="Student at The East African University" connection="following"> </user-profile>
+
+        <user-profile user-profile="img/profile.jpg" user-name="Fredrick Ochieng" occupation="Founder at aduki,Inc"
+          connection="follow"> </user-profile>
+
+        <user-profile user-profile="img/purri.jpg" user-name="Janet Doe"
+          occupation="Student at The East African University" connection="follow"> </user-profile>
+
+        <user-profile user-profile="img/profile.jpg" user-name="Fredrick Ochieng" occupation="Founder at aduki,Inc"
+          connection="following"> </user-profile>
+
+        <user-profile user-profile="img/purri.jpg" user-name="Janet Doe"
+          occupation="Student at The East African University" connection="following"> </user-profile>
+
+        <user-profile user-profile="img/profile.jpg" user-name="Fredrick Ochieng" occupation="Founder at aduki,Inc"
+          connection="follow"> </user-profile>
+      </div>
+    </div>
+  </main>
+  <!-- <script src="js/fun.js"></script> -->
+</body>
+
+</html>

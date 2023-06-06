@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="all.css" />
+  <link rel="stylesheet" href="ncomment.css">
+  <link rel="stylesheet" href="nres.css" />
+  <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="icon/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet" />
+
+  <!-- <script src="/ckeditor/ckeditor.js"></script> -->
+
+  <script type="module">
+    /// importing the first custom element
+    import PostWrapper from "./components/component.post.js";
+    import RespondContainer from "./components/component.respond.js";
+    import CommentContainer from "./components/component.comment.js";
+    import UserInfo from "./components/component.profile.js";
+
+    customElements.define("post-wrapper", PostWrapper);
+    customElements.define("respond-container", RespondContainer);
+    customElements.define("comment-container", CommentContainer);
+    customElements.define("user-info", UserInfo);
+  </script>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="head">
+      <div class="logo">
+        <div class="logo-image">
+          <img src="img/favi.png" alt="Logo" srcset="" />
+        </div>
+        <div class="app-name">Darkchesa</div>
+      </div>
+      <div class="controls">
+        <span class="iconlyBulk-Arrow-Left-Circle"><span class="path1"></span><span class="path2"></span></span>
+        <span class="iconlyBulk-Arrow-Right-Circle"><span class="path1"></span><span class="path2"></span></span>
+      </div>
+    </div>
+    <div class="menu main-menu">
+      <div class="title">Menu</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Home icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Home</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Edit-Square icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Create</span>
+            </div>
+          </a>
+        </li>
+        <li class="item selected">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Discovery icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Discover</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Document icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Stories</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu">
+      <div class="title">General</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Search icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Search</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-User2 icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">People</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Bookmark icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">My List</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu user">
+      <div class="title">User</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Profile icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Profile</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Message icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Subscriptions</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Setting icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Settings</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu user">
+      <div class="title">User</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link logout">
+            <span class="iconly-Logout icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Logout</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="post">
+    <ul class="tab">
+      <li class="tab-item active">
+        <span class="text">Post</span>
+        <span class="line"></span>
+      </li>
+      <li class="tab-item">
+        <span class="text">Comments</span>
+        <span class="line"></span>
+      </li>
+      <li class="tab-item">
+        <span class="text">Threads</span>
+        <span class="line"></span>
+      </li>
+    </ul>
+    <ul class="icons header">
+      <!-- <li class="icon">
+                    <a href="" class="icon-link">
+                        <span class="iconly-Calendar icli"></span>
+                        <span class="dot"></span>
+                    </a>
+          </li> -->
+      <li class="icon">
+        <a href="" class="icon-link">
+          <span class="iconly-Search icli"></span>
+          <span class="tooltip search">
+            <span class="pointer"></span>
+            <span class="text">Search</span>
+          </span>
+        </a>
+      </li>
+      <li class="icon">
+        <a href="" class="icon-link">
+          <span class="iconly-Notification icli"></span>
+          <span class="notification dot"></span>
+          <span class="tooltip notification">
+            <span class="pointer"></span>
+            <span class="text">Notifications</span>
+          </span>
+        </a>
+      </li>
+      <div class="profile">
+        <div class="image-section">
+          <div class="image">
+            <img src="img/profile.jpg" alt="" srcset="" />
+          </div>
+          <span class="iconly-Arrow-Down-2 icli"></span>
+        </div>
+      </div>
+    </ul>
+
+    <section class="post first">
+      <post-wrapper type="none" space-name="none" full="true" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="6" expands="false" action="liked"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" post-likes="9.3k"
+        post-comments="89">
+        <p>
+          Travel to the Sahara,<a href="">Mojave</a>, and the allas we seek out the world's most majestic desert landscapes in this fascinating docu-series.
+        </p>
+        <ul>
+          <li>The yellow Sahara is the postcard image of a desert.</li>
+          <li>A waving sea of sand. Passing dunes. Date palm oases break up the shimmering horizon.</li>
+          <li>Like nowhere else on earth, the Sahara embodies the romantic ideal and lost dream of the infinite.</li>
+        </ul>
+        <h2>Secure Connection Failed</h2>
+        <p>
+          Travel to the Sahara, Mojave, and the allas we seek out the world's most majestic desert landscapes in this fascinating docu-series.
+        </p>
+        <h1>Website issues</h1>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <div class="comments">
+        <comment-container id="1" author-profile="img/profile.jpg" author-url="/puri.com" author-name="Fredrick Ochieng"
+          time-lapse="May 5 at 6:00 PM" likes="908">
+          <p>
+            Travel to the Sahara,<a href="">Mojave</a>, and the allas we seek
+            out the world's most majestic desert landscapes in this
+            fascinating docu-series.
+          </p>
+          <p>
+            Travel to the Sahara, Mojave, and the allas we seek out the
+            world's most majestic desert landscapes in this fascinating
+            docu-series.
+          </p>
+        </comment-container>
+
+        <comment-container id="1" author-profile="img/profile.jpg" author-url="/puri.com" author-name="Fredrick Ochieng"
+          time-lapse="May 5 at 6:00 PM" likes="908">
+          <p>
+            Travel to the Sahara, Mojave, and the allas we seek out the
+            world's most majestic desert landscapes in this fascinating
+            docu-series.
+          </p>
+        </comment-container>
+
+        <comment-container id="1" author-profile="img/profile.jpg" author-url="/puri.com" author-name="Fredrick Ochieng"
+          time-lapse="May 5 at 6:00 PM" likes="908">
+          <p>
+            Travel to the Sahara, Mojave, and the allas we seek out the
+            world's most majestic desert landscapes in this fascinating
+            docu-series.
+          </p>
+          <ul>
+            <li>The yellow Sahara is the postcard image of a desert.</li>
+            <li>
+              A waving sea of sand. Passing dunes. Date palm oases break up
+              the shimmering horizon.
+            </li>
+            <li>
+              Like nowhere else on earth, the Sahara embodies the romantic
+              ideal and lost dream of the infinite.
+            </li>
+          </ul>
+        </comment-container>
+
+        <comment-container id="1" author-profile="img/profile.jpg" author-url="/puri.com" author-name="Fredrick Ochieng"
+          time-lapse="May 5 at 6:00 PM" likes="908">
+          <p>
+            Travel to the Sahara, Mojave, and the allas we seek out the
+            world's most majestic desert landscapes in this fascinating
+            docu-series.
+          </p>
+        </comment-container>
+      </div>
+
+      <div class="respond-placeholder"></div>
+    </section>
+
+    <div class="people side">
+      <div class="head">
+        <h4 class="title">People</h4>
+      </div>
+      <div class="people-list">
+        <user-info connection="following" user-profile="img/purri.jpg" profile-url="/puri.com"
+          user-name="Jane Doe" followers="696">
+        </user-info>
+        <user-info connection="follow" user-profile="img/profile.jpg" profile-url="/puri.com"
+          user-name="Fredrick Ochieng" followers="936">
+        </user-info>
+        <user-info connection="follow" user-profile="img/purri.jpg" profile-url="/puri.com"
+          user-name="Jane Doe" followers="696">
+        </user-info>
+        <user-info connection="following" user-profile="img/profile.jpg" profile-url="/puri.com"
+          user-name="Fredrick Ochieng" followers="936">
+        </user-info>
+        <user-info connection="follow" user-profile="img/purri.jpg" profile-url="/puri.com"
+          user-name="Jane Doe" followers="696">
+        </user-info>
+      </div>
+      <div class="more">
+        <a href="" class="more">Discover more people</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mobile">
+    <div class="more">
+      <div class="modal-overlay"></div>
+      <span class="pointer"></span>
+      <div class="items">
+        <a href="" class="item">
+          <i class="bi-view-list"></i>
+          <span class="text">Posts</span>
+        </a>
+        <a href="" class="item">
+          <i class="bi-hash"></i>
+          <span class="text">Topics</span>
+        </a>
+        <a href="" class="item">
+          <i class="bi-people"></i>
+          <span class="text">Spaces</span>
+        </a>
+        <!-- <a href="" class="item">
+            <i class="bi-person-workspace"></i>
+            <span class="text">Spaces</span>
+          </a> -->
+      </div>
+    </div>
+    <div class="items">
+      <a href="" class="item active">
+        <i class="iconly-Home icli"></i>
+        <!-- <i class="bi-house-door"></i> -->
+        <span class="text">Home</span>
+      </a>
+      <a href="" class="item">
+        <i class="iconly-Document icli"></i>
+        <span class="text">Stories</span>
+      </a>
+      <a href="" class="item">
+        <i class="iconly-Search icli"></i>
+        <span class="text">Search</span>
+      </a>
+      <span class="item more">
+        <span class="dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+        <span class="text">More</span>
+      </span>
+    </div>
+  </footer>
+
+  <script src="js/fun.js"></script>
+</body>
+
+</html>

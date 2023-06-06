@@ -1,0 +1,323 @@
+/*
+
+Name: aduki, Inc
+Version: 0.1.0
+Author: Fredrick Femar Ochieng'
+Email: isfescii@gmail.com
+
+
+*/
+
+/*Home*/
+main.home {
+  /* border: 3px solid var(--gray-color); */
+  margin: 0 0 60px 0;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 55% 38%;
+  row-gap: 0px;
+  column-gap: 30px;
+  justify-content: space-between;
+}
+
+main.home>ul.tab {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: max-content;
+  border-bottom: var(--border);
+  background-color: var(--theme);
+  padding: 22px 0 0 0;
+  z-index: 5;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+}
+
+
+main.home>ul.icons {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  height: max-content;
+  border-bottom: var(--border);
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: sticky;
+  top: 0px;
+  background-color: var(--theme);
+  padding: 15px 0 10px 0;
+  z-index: 5;
+  margin: 0;
+}
+
+main.home>section.posts {
+  /* border: 1px solid #fa0e0e; */
+  grid-column: 1/2;
+  display: flex;
+  flex-flow: column;
+  gap: 0px;
+}
+
+main.home>section.first {
+  grid-row: 2/10;
+}
+
+main.home>section.second {
+  grid-row: 11/19;
+}
+
+main.home>section.third {
+  grid-row: 20/38;
+}
+
+main.home>section.fourth {
+  grid-row: 39/48;
+}
+
+main.home>div.side {
+  grid-column: 2/3;
+  display: flex;
+  flex-flow: column;
+  gap: 0px;
+}
+
+main.home>div.people {
+  grid-row: 2;
+  height: max-content;
+  margin-top: 15px;
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+}
+
+main.home>div.side .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+main.home>div.side .head>h4.title {
+  color: var(--text-color);
+  margin: 0;
+  font-size: 1rem;
+}
+
+main.home>div.side .more {
+  margin-top: 12px;
+  height: max-content;
+}
+
+main.home>div.side .more>a {
+  text-decoration: none;
+  color: var(--gray-color);
+  font-size: 0.9rem;
+  padding: 3px 3px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+main.home>div.side .more>a:hover {
+  text-decoration: underline;
+  color: var(---accent-two);
+}
+
+main.home>div.side .people-list {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  list-style-type: none;
+  margin: 12px 0 0 0;
+  padding: 0;
+}
+
+
+div.spaces {
+  grid-row: 3;
+  height: max-content;
+  padding: 0;
+  margin: 20px 0 0 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+}
+
+div.spaces>.infos {
+  padding: 0;
+  margin: 10px 0 0 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+}
+
+main.home>div.topics {
+  grid-row: 4;
+  padding: 0;
+  margin: 20px 0 0 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+}
+
+main.home>div.popular-stories {
+  grid-row: 5;
+  height: max-content;
+  padding: 0;
+  margin: 20px 12px 20px 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+  position: sticky;
+  top: 75px;
+}
+
+main.home>div.popular-stories>.stories {
+  padding: 0;
+  margin: 12px 0 0 0;
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+}
+
+main.home>div.popular-stories>.stories>.story {
+  background-color: var(--reply);
+  padding: 8px 10px;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  gap: 6px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  position: relative;
+}
+
+main.home>div.popular-stories>.stories>.story>.content {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+main.home>div.popular-stories>.stories>.story>.content>.story-image {
+  overflow: hidden;
+  min-width: 46px;
+  min-height: 34px;
+  width: 46px;
+  height: 34px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+main.home>div.popular-stories>.stories>.story>.content>.story-image>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+main.home>div.popular-stories>.stories>.story>.content>h4.title {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.93rem;
+}
+
+main.home>div.popular-stories>.stories>.story>.content>h4.title>a.title {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+main.home>div.popular-stories>.stories>.story>.content>h4.title>a.title:hover {
+  text-decoration: underline;
+}
+
+main.home>div.popular-stories>.stories>.story>.footer {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-color);
+  padding: 0 0 0 4px;
+  font-size: 0.85rem;
+}
+
+main.home>div.popular-stories>.stories>.story>.footer>a.name {
+  text-decoration: none;
+  color: var(--gray-two);
+  font-size: 0.8rem;
+}
+
+main.home>div.popular-stories>.stories>.story>.footer>a.name:hover {
+  text-decoration: underline;
+}
+
+main.home>div.popular-stories>.stories>.story>.footer>span.dot {
+  display: inline-block;
+  margin-top: 2px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--dot-color);
+  ;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+main.home>div.popular-stories>.stories>.story>.footer>span.date {
+  text-decoration: none;
+  color: var(--gray-color);
+  font-size: 0.8rem;
+}
+
+main.home>div.popular-stories>.stories>.story>.profile-image {
+  overflow: hidden;
+  border: var(--border);
+  background-color: var(--theme);
+  position: absolute;
+  right: -15px;
+  top: calc(50% - 16px);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+main.home>div.popular-stories>.stories>.story>.profile-image>img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}

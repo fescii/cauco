@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="all.css">
+  <link rel="stylesheet" href="nread.css">
+  <link rel="stylesheet" href="nres.css">
+  <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="icon/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+  <script type="module">
+
+    /// importing the first custom element
+    import StoryHeader from './components/component.sthead.js';
+
+    customElements.define('story-header', StoryHeader);
+  </script>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="head">
+      <div class="logo">
+        <div class="logo-image">
+          <img src="img/favi.png" alt="Logo" srcset="" />
+        </div>
+        <div class="app-name">Darkchesa</div>
+      </div>
+      <div class="controls">
+        <span class="iconlyBulk-Arrow-Left-Circle"><span class="path1"></span><span class="path2"></span></span>
+        <span class="iconlyBulk-Arrow-Right-Circle"><span class="path1"></span><span class="path2"></span></span>
+      </div>
+    </div>
+    <div class="menu main-menu">
+      <div class="title">Menu</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Home icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Home</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Edit-Square icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Create</span>
+            </div>
+          </a>
+        </li>
+        <li class="item selected">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Discovery icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Discover</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Document icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Stories</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu">
+      <div class="title">General</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Search icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Search</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-User2 icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">People</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Bookmark icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">My List</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu user">
+      <div class="title">User</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Profile icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Profile</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Message icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Subscriptions</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Setting icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Settings</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu user">
+      <div class="title">User</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link logout">
+            <span class="iconly-Logout icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Logout</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <main class="read">
+    <div class="story">
+      <story-header author-name="Jane Doe" author-url="/jane-doe" date="Sunday, August 21, 2022"
+        author-profile="img/purri.jpg" author-bio="Student at the East African University" read-time="5 min read">
+      </story-header>
+
+      <div class="story-header">
+        <ul class="tab">
+          <li class="tab-item active">
+            <span class="text">Story</span>
+            <span class="line"></span>
+          </li>
+          <li class="tab-item">
+            <span class="text">Related</span>
+            <span class="line"></span>
+          </li>
+          <li class="tab-item">
+            <span class="text">About</span>
+            <span class="line"></span>
+          </li>
+        </ul>
+        <div id="read-action-links" class="action-links">
+          <a href="" id="popup-btn" class="share">
+            <span class="iconly-Send icli"></span>
+          </a>
+          <a href="" id="story-action-btn" class="share dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </a>
+          <div id="story-action-modal" class="options-modal">
+            <span class="pointer"></span>
+            <a href="" class="edit options-item top">
+              <span class="iconly-Edit-Square icli"></span>
+              <div class="option-details">
+                <span class="detail-title">Edit</span>
+                <span class="detail-text">Edit this story</span>
+              </div>
+            </a>
+            <a href="/@maina" class="delete options-item">
+              <span class="iconly-Delete icli"></span>
+              <div class="option-details">
+                <span class="detail-title">Delete</span>
+                <span class="detail-text">Delete this comment</span>
+              </div>
+            </a>
+            <a href="" class="report options-item">
+              <span class="iconly-Info-Square icli"></span>
+              <div class="option-details">
+                <span class="detail-title">Report</span>
+                <span class="detail-text">Problem! report this story</span>
+              </div>
+            </a>
+          </div>
+          <div id="popup-modal" class="popup">
+            <span class="pointer"></span>
+            <div class="header">
+              <!-- <span>Share this article via</span> -->
+              <div class="close"><i class="bi-x"></i></div>
+            </div>
+            <div class="content">
+              <ul class="icons">
+                <a href="https://www.facebook.com/sharer.php?u=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25?t='Even if you're passionate about your job, get energy
+                                        from the people you work with, and believe in your company's mission,
+                                        you can experience a bad day. Maybe your morning sta…'" rel="noopener"
+                  target="_blank">
+                  <i class="bi-facebook"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25&amp;text=Even if you're passionate about your job, get energy
+                                        from the people you work with, and believe in your company's mission, 
+                                        you can experience a bad day. Maybe your morning sta…" rel="noopener"
+                  target="_blank">
+                  <i class="bi-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25&title=Positive vibes&summery=Even if you're passionate about your job, get energy
+                                        from the people you work with, and believe in your company's mission, 
+                                        you can experience a bad day. Maybe your morning sta…" rel="noopener"
+                  target="_blank">
+                  <i class="bi-linkedin"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?text=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25"
+                  data-action="share/whatsapp/share" target="_blank">
+                  <i class="bi-whatsapp"></i>
+                </a>
+                <a href="https://t.me/share/url?url=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25&text=Even if you're passionate about your job, get energy
+                                    from the people you work with, and believe in your company's mission,
+                                    you can experience a bad day. Maybe your morning sta…" rel="noopener"
+                  target="_blank">
+                  <i class="bi-telegram"></i>
+                </a>
+              </ul>
+              <!-- <p>Or copy link</p> -->
+              <div class="field">
+                <i class="bi-link-45deg"></i>
+                <input type="text" readonly value="https://getopas.example.com/share-link/on">
+                <button class="copy">Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="story-content">
+        <h2 class="story-title">The Essential Meta Tags for Social Media</h2>
+        <div id="cover-image">
+          <img id="" src="new/new.jpg" title="article cover" alt="">
+        </div>
+        <div class="article-content">
+          <p>This past summer, I wrote <a href="https://css-tricks.com/essential-meta-tags-social-media/">The
+              Essential Meta Tags for Social Media</a> about how developers can prepare web pages to
+            optimize their appearance when shared on social media. But what about creating the links to let
+            users share these web pages? Facebook, Twitter, and LinkedIn offer numerous ways to do this,
+            some involving button generators and others that require external JavaScript. To avoid all of
+            that, though, you can create your own links to share web pages. And the best part is that
+            it&rsquo;s simple to do yourself. Here&rsquo;s how.</p>
+          <h3 id="h-basic-concept-just-a-link">Basic Concept: Just a Link</h3>
+          <p>When sharing web pages using links, you&rsquo;re essentially submitting a GET request (i.e.
+            clicking a link) to a URL provided by each social media service. Then, by appending a series of
+            name/value pairs (query parameters like ?title=Title) to the end of this URL, you can specify
+            the URL of the web page you want to share and, sometimes, additional information.</p>
+          <p>Now, certain symbols in GET requests known as &ldquo;reserved characters&rdquo;, need to be
+            encoded properly so as not to interfere with normal browser functions. These characters are
+            subject to &ldquo;<a href="https://en.wikipedia.org/wiki/Percent-encoding"
+              rel="noopener">percent-encoding</a>&rdquo; &ndash; that is, they are represented in query
+            parameters with a &ldquo;%&rdquo; followed by a two-digit hex code. These are the reserved
+            characters and their percent-encoded equivalents.</p>
+          <figure class="wp-block-table encoding-table"></figure>
+          <figure class="wp-block-table encoding-table"></figure>
+          <p>Of course, there&rsquo;s no need to memorize these hex codes. There are many resources that
+            provide conversions (<a href="http://www.bing.com/search?q=url%20encoding" rel="noopener">Bing</a> has one
+            built into the search engine) and, as you will soon see,
+            JavaScript can also handle the heavy lifting in this regard. Let&rsquo;s look at a few of the
+            more popular social media services and learn how we can share web pages through them.</p>
+          <h3 id="h-facebook"><a id="aa-facebook" class="aal_anchor"
+              href="https://css-tricks.com/simple-social-sharing-links/#aa-facebook" aria-hidden="true"></a></h3>
+          <h3 id="h-basic-concept-just-a-link">Other Concepts Just a Precise</h3>
+          <p>When sharing web pages using links, you&rsquo;re essentially submitting a GET request (i.e.
+            clicking a link) to a URL provided by each social media service. Then, by appending a series of
+            name/value pairs (query parameters like ?title=Title) to the end of this URL, you can specify
+            the URL of the web page you want to share and, sometimes, additional information.</p>
+          <p>Now, certain symbols in GET requests known as &ldquo;reserved characters&rdquo;, need to be
+            encoded properly so as not to interfere with normal browser functions. These characters are
+            subject to &ldquo;<a href="https://en.wikipedia.org/wiki/Percent-encoding"
+              rel="noopener">percent-encoding</a>&rdquo; &ndash; that is, they are represented in query
+            parameters with a &ldquo;%&rdquo; followed by a two-digit hex code. These are the reserved
+            characters and their percent-encoded equivalents.</p>
+          <figure class="wp-block-table encoding-table"></figure>
+          <figure class="wp-block-table encoding-table"></figure>
+          <p>Of course, there&rsquo;s no need to memorize these hex codes. There are many resources that
+            provide conversions (<a href="http://www.bing.com/search?q=url%20encoding" rel="noopener">Bing</a> has one
+            built into the search engine) and, as you will soon see,
+            JavaScript can also handle the heavy lifting in this regard. Let&rsquo;s look at a few of the
+            more popular social media services and learn how we can share web pages through them.</p>
+          <h3 id="h-facebook"><a id="aa-facebook" class="aal_anchor"
+              href="https://css-tricks.com/simple-social-sharing-links/#aa-facebook" aria-hidden="true"></a></h3>
+          <h3 id="h-facebook">Facebook</h3>
+          <p>Per their <a href="https://developers.facebook.com/docs/sharing/reference/share-dialog"
+              rel="noopener">Developer&rsquo;s Guide</a>, Facebook specifies the following URL to su</p>
+          <h1 id="w_secure-connection-cannot-be-established">Secure connection cannot be established</h1>
+          <p>When a website that requires a secure (<strong>https</strong>)
+            connection tries to secure communication with your computer, Firefox cross-checks this attempt to make sure that
+            the website certificate and the connection method are actually
+            secure. If Firefox cannot establish a secure connection, it will display an error page.
+          </p>
+          <h2>Secure Connection Failed</h2>
+          <p>A <em>Secure Connection Failed</em> error page will include a description of the error, an option to report the
+            error to Mozilla and a <span class="button">Try Again</span> button. There is no option to add a security exception to
+            bypass this type of error.
+          </p>
+          <p>
+          </p>
+          <p>The error page will also include the following information:</p>
+          <ul>
+            <li>
+              <em>The page you are trying to view cannot be shown because the authenticity of the received data could not
+                be verified.</em>
+            </li>
+            <li>
+              <em>Please contact the website owners to inform them of this problem.</em>
+            </li>
+          </ul>
+          <h2>Did Not Connect: Potential Security Issue</h2>
+          <p>Certain secure connection failures will result in a <em>Did Not Connect: Potential Security Issue</em> error
+            page.
+          </p>
+          <p>
+          </p>
+          <p>The error page will include a description of the potential security threat, an option to report the error to
+            Mozilla and an <span class="button">Advanced…</span> button to view the error code and other technical details.
+            There is no option to add a security exception to visit the website.
+          </p>
+          <h1>Website issues</h1>
+          <h2 >TLS version unsupported</h2>
+          <p>Some websites try using outdated (no longer secure) Transport
+            Layer Security(<em>TLS</em>) mechanisms in an attempt to secure your connection. Firefox protects you by
+            preventing navigation to such sites if there is a problem in securely establishing a connection. Contact the
+            owners of the website and ask them to update their TLS version to a version that is still current and still secure.
+          </p>
+          <p>Starting in Firefox version 74, the minimum TLS version allowed by default is TLS 1.2. Websites that don't support
+            TLS version 1.2 or higher will display a <em>Secure
+            Connection Failed</em> error page with Error code: SSL_ERROR_UNSUPPORTED_VERSION and a message that <em>This website
+            might not support the TLS 1.2 protocol, which is the minimum version supported by Firefox.</em> The error page may
+            also include a button, <span class="button">Enable TLS 1.0 and 1.1</span> that will allow you to override the
+            minimum TLS requirement; however, Mozilla plans to remove this option and permanently disable TLS 1.0 and 1.1 in
+            a future version of Firefox.
+          </p>
+          <h2>HSTS required</h2>
+          <p>Other websites may require HTTP
+            Strict Transport Security (HSTS) and will not allow access with an insecure connection.
+          </p>
+          <h1>Security software conflict</h1>
+          <p>Many security products use a feature that intercepts secure connections by default. This can produce connection
+              errors or warnings on secure websites. If you see secure connection errors on multiple secure websites, updating
+              your security product or modifying its settings may resolve the issue.
+          </p>
+          <p>
+            <span class="for">
+              Alternatively, you can uninstall third-party security software and use Windows Defender,
+              the built-in antivirus on Windows 8 and Windows 10.
+            </span>
+          </p>
+          <p>
+          </p>
+          <h1 id="w_incorrect-system-clock">Incorrect system clock</h1>
+          <p>Firefox uses certificates on secure websites to ensure that your information is being sent to the intended
+            recipient and can't be read by eavesdroppers. An incorrect system date can cause Firefox to detect that the website's
+            security certificate is expired or invalid. Make sure your computer is set to the correct date, time and time zone.
+          </p>
+        </div>
+        <div class="article-tags">
+          <a href="/explore/gone" class="tag">Gone</a>
+          <a href="/explore/miami" class="tag">Miami</a>
+          <a href="/explore/tag" class="tag">Tag</a>
+        </div>
+        <div href="" class="comments-action">
+          <div class="action like">
+            <i class="bi-heart"></i>
+            <span class="text">9.03k</span>
+          </div>
+          <div class="action comment">
+            <i class="bi-chat"></i>
+            <span class="text">386</span>
+          </div>
+          <div class="action dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="action dots-mobile">
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="options-modal">
+            <span class="pointer"></span>
+            <a href="" class="edit options-item top">
+              <span class="iconly-Edit-Square icli"></span>
+              <div class="option-details">
+                <span class="detail-title">Edit</span>
+                <span class="detail-text">Edit this story</span>
+              </div>
+            </a>
+            <a href="/@maina" class="delete options-item">
+              <span class="iconly-Delete icli"></span>
+              <div class="option-details">
+                <span class="detail-title">Delete</span>
+                <span class="detail-text">Delete this comment</span>
+              </div>
+            </a>
+            <a href="" class="report options-item">
+              <span class="iconly-Info-Square icli"></span>
+              <div class="option-details">
+                <span class="detail-title">Report</span>
+                <span class="detail-text">Problem! report this story</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="comments-container">
+      <div class="comments-wrapper">
+        <div class="comments-header">
+          <div class="controls">
+            <select name="sort" id="sort">
+              <option value="most">All Comments</option>
+              <option value="most">Most Relevant</option>
+            </select>
+          </div>
+          <div class="comment-options">
+            <!-- <a href="" class="comment">
+                            <i class="iconly-Edit icli"></i>
+                            <span class="add">Comment</span>
+                        </a> -->
+            <span class="hr"></span>
+            <span class="dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </span>
+          </div>
+        </div>
+        <div class="comments-body">
+          <form action="" method="post" class="add-comment">
+            <textarea placeholder="Click to add comment..." name="comment" id="comment" cols="auto"
+              rows="auto"></textarea>
+            <div class="footer">
+              <input type="submit" value="comment">
+            </div>
+          </form>
+          <div class="comment select-comment">
+            <div class="head">
+              <div class="user">
+                <div class="profile">
+                  <img src="img/purri.jpg" alt="profile" srcset="">
+                </div>
+                <div class="info">
+                  <a href="" class="name">Jane Doe</a>
+                  <span class="time">5 hours ago</span>
+                </div>
+              </div>
+              <div class="more">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="more-options">
+                <span class="pointer"></span>
+                <a href="" class="edit options-item top">
+                  <span class="iconly-Edit-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Edit</span>
+                    <span class="detail-text">Edit this comment</span>
+                  </div>
+                </a>
+                <a href="/@maina" class="delete options-item">
+                  <span class="iconly-Delete icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Delete</span>
+                    <span class="detail-text">Delete this comment</span>
+                  </div>
+                </a>
+                <a href="" class="report options-item">
+                  <span class="iconly-Info-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Report</span>
+                    <span class="detail-text">Report this comment</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="content">
+              <p class="text">
+                There are many resources that provide conversions (Bing into the search engine) and, as
+                you will soon see, JavaScript can also handle the heavy lifting in this regard.
+              </p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="" class="like liked">
+                  <i class="iconly-Heart icli"></i>
+                  <span class="no">43</span>
+                  <span class="text">Likes</span>
+                </a>
+                <a href="" class="reply">
+                  <i class="iconly-Chat icli"></i>
+                  <span class="text">Reply</span>
+                  <span class="no">(13)</span>
+                  <i class="iconly-Arrow-Down icli arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="replies-container">
+              <span class="arrow"></span>
+              <form action="" method="post" id="add-reply" class="add-reply">
+                <textarea placeholder="Click to reply..." name="reply" id="reply" cols="auto" rows="auto"></textarea>
+                <div class="footer">
+                  <input type="submit" value="Reply">
+                </div>
+              </form>
+              <div class="reply">
+                <span class="arrow"></span>
+                <div class="reply-content">
+                  <div class="head">
+                    <div class="user">
+                      <div class="profile">
+                        <img src="img/profile.jpg" alt="profile" srcset="">
+                      </div>
+                      <div class="info">
+                        <a href="" class="name">John Doe</a>
+                        <span class="time">5 hours ago</span>
+                      </div>
+                    </div>
+                    <div class="more">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                    <div class="more-options">
+                      <span class="pointer"></span>
+                      <a href="" class="edit options-item top">
+                        <span class="iconly-Edit-Square icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Edit</span>
+                          <span class="detail-text">Edit this reply</span>
+                        </div>
+                      </a>
+                      <a href="/@maina" class="delete options-item">
+                        <span class="iconly-Delete icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Delete</span>
+                          <span class="detail-text">Delete this reply</span>
+                        </div>
+                      </a>
+                      <a href="" class="report options-item">
+                        <span class="iconly-Info-Square icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Report</span>
+                          <span class="detail-text">Report this reply</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="text">
+                      There are many resources that provide conversions (Bing into the search
+                      engine) and, as you will soon see, JavaScript can also handle the heavy
+                      lifting in this regard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="reply">
+                <span class="arrow"></span>
+                <div class="reply-content">
+                  <div class="head">
+                    <div class="user">
+                      <div class="profile">
+                        <img src="img/profile.jpg" alt="profile" srcset="">
+                      </div>
+                      <div class="info">
+                        <a href="" class="name">John Doe</a>
+                        <span class="time">5 hours ago</span>
+                      </div>
+                    </div>
+                    <div class="more">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                    <div class="more-options">
+                      <span class="pointer"></span>
+                      <a href="" class="edit options-item top">
+                        <span class="iconly-Edit-Square icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Edit</span>
+                          <span class="detail-text">Edit this reply</span>
+                        </div>
+                      </a>
+                      <a href="/@maina" class="delete options-item">
+                        <span class="iconly-Delete icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Delete</span>
+                          <span class="detail-text">Delete this reply</span>
+                        </div>
+                      </a>
+                      <a href="" class="report options-item">
+                        <span class="iconly-Info-Square icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Report</span>
+                          <span class="detail-text">Report this reply</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="text">
+                      There are many resources that provide conversions (Bing into the search
+                      engine) and, as you will soon see, JavaScript can also handle the heavy
+                      lifting in this regard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="reply">
+                <span class="arrow"></span>
+                <div class="reply-content">
+                  <div class="head">
+                    <div class="user">
+                      <div class="profile">
+                        <img src="img/profile.jpg" alt="profile" srcset="">
+                      </div>
+                      <div class="info">
+                        <a href="" class="name">John Doe</a>
+                        <span class="time">5 hours ago</span>
+                      </div>
+                    </div>
+                    <div class="more">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                    <div class="more-options">
+                      <span class="pointer"></span>
+                      <a href="" class="edit options-item top">
+                        <span class="iconly-Edit-Square icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Edit</span>
+                          <span class="detail-text">Edit this reply</span>
+                        </div>
+                      </a>
+                      <a href="/@maina" class="delete options-item">
+                        <span class="iconly-Delete icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Delete</span>
+                          <span class="detail-text">Delete this reply</span>
+                        </div>
+                      </a>
+                      <a href="" class="report options-item">
+                        <span class="iconly-Info-Square icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Report</span>
+                          <span class="detail-text">Report this reply</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="text">
+                      There are many resources that provide conversions (Bing into the search
+                      engine) and, as you will soon see, JavaScript can also handle the heavy
+                      lifting in this regard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="comment select-comment">
+            <div class="head">
+              <div class="user">
+                <div class="profile">
+                  <img src="img/purri.jpg" alt="profile" srcset="">
+                </div>
+                <div class="info">
+                  <a href="" class="name">Jane Doe</a>
+                  <span class="time">5 hours ago</span>
+                </div>
+              </div>
+              <div class="more">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="more-options">
+                <span class="pointer"></span>
+                <a href="" class="edit options-item top">
+                  <span class="iconly-Edit-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Edit</span>
+                    <span class="detail-text">Edit this comment</span>
+                  </div>
+                </a>
+                <a href="/@maina" class="delete options-item">
+                  <span class="iconly-Delete icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Remove</span>
+                    <span class="detail-text">Remove this comment</span>
+                  </div>
+                </a>
+                <a href="" class="report options-item">
+                  <span class="iconly-Info-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Report</span>
+                    <span class="detail-text">Report this comment</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="content">
+              <p class="text">
+                There are many resources that provide conversions (Bing has one built into the search
+                engine) and, as you will soon see, JavaScript can also handle the heavy lifting in this
+                regard.
+              </p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="" class="like">
+                  <i class="iconly-Heart icli"></i>
+                  <span class="no">43</span>
+                  <span class="text">Likes</span>
+                </a>
+                <a href="" class="reply">
+                  <i class="iconly-Chat icli"></i>
+                  <span class="text">Reply</span>
+                  <span class="no">(3)</span>
+                  <i class="iconly-Arrow-Down icli arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="replies-container">
+              <span class="arrow"></span>
+              <form action="" method="post" id="add-reply" class="add-reply">
+                <textarea placeholder="Click to reply..." name="reply" id="reply" cols="auto" rows="auto"></textarea>
+                <div class="footer">
+                  <input type="submit" value="Reply">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="comment select-comment">
+            <div class="head">
+              <div class="user">
+                <div class="profile">
+                  <img src="img/purri.jpg" alt="profile" srcset="">
+                </div>
+                <div class="info">
+                  <a href="" class="name">Jane Doe</a>
+                  <span class="time">5 hours ago</span>
+                </div>
+              </div>
+              <div class="more">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="more-options">
+                <span class="pointer"></span>
+                <a href="" class="edit options-item top">
+                  <span class="iconly-Edit-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Edit</span>
+                    <span class="detail-text">Edit this comment</span>
+                  </div>
+                </a>
+                <a href="/@maina" class="delete options-item">
+                  <span class="iconly-Delete icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Delete</span>
+                    <span class="detail-text">Delete this comment</span>
+                  </div>
+                </a>
+                <a href="" class="report options-item">
+                  <span class="iconly-Info-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Report</span>
+                    <span class="detail-text">Report this comment</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="content">
+              <p class="text">
+                There are many resources that provide conversions (Bing has one built into the search
+                engine) and, as you will soon see, JavaScript can also handle the heavy lifting in this
+                regard.
+              </p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="" class="like">
+                  <i class="iconly-Heart icli"></i>
+                  <span class="no">43</span>
+                  <span class="text">Likes</span>
+                </a>
+                <a href="" class="reply">
+                  <i class="iconly-Chat icli"></i>
+                  <span class="text">Reply</span>
+                  <span class="no">(8)</span>
+                  <i class="iconly-Arrow-Down icli arrow"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="comment select-comment">
+            <div class="head">
+              <div class="user">
+                <div class="profile">
+                  <img src="img/purri.jpg" alt="profile" srcset="">
+                </div>
+                <div class="info">
+                  <a href="" class="name">Jane Doe</a>
+                  <span class="time">5 hours ago</span>
+                </div>
+              </div>
+              <div class="more">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="more-options">
+                <span class="pointer"></span>
+                <a href="" class="edit options-item top">
+                  <span class="iconly-Edit-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Edit</span>
+                    <span class="detail-text">Edit this comment</span>
+                  </div>
+                </a>
+                <a href="/@maina" class="delete options-item">
+                  <span class="iconly-Delete icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Delete</span>
+                    <span class="detail-text">Delete this comment</span>
+                  </div>
+                </a>
+                <a href="" class="report options-item">
+                  <span class="iconly-Info-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Report</span>
+                    <span class="detail-text">Report this comment</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="content">
+              <p class="text">
+                There are many resources that provide conversions (Bing has one built into the search
+                engine) and, as you will soon see, JavaScript can also handle the heavy lifting in this
+                regard.
+              </p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="" class="like">
+                  <i class="iconly-Heart icli"></i>
+                  <span class="no">43</span>
+                  <span class="text">Likes</span>
+                </a>
+                <a href="" class="reply">
+                  <i class="iconly-Chat icli"></i>
+                  <span class="text">Reply</span>
+                  <span class="no">(11)</span>
+                  <i class="iconly-Arrow-Down icli arrow"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="comment select-comment">
+            <div class="head">
+              <div class="user">
+                <div class="profile">
+                  <img src="img/purri.jpg" alt="profile" srcset="">
+                </div>
+                <div class="info">
+                  <a href="" class="name">Jane Doe</a>
+                  <span class="time">5 hours ago</span>
+                </div>
+              </div>
+              <div class="more">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="more-options">
+                <span class="pointer"></span>
+                <a href="" class="edit options-item top">
+                  <span class="iconly-Edit-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Edit</span>
+                    <span class="detail-text">Edit this comment</span>
+                  </div>
+                </a>
+                <a href="/@maina" class="delete options-item">
+                  <span class="iconly-Delete icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Delete</span>
+                    <span class="detail-text">Delete this comment</span>
+                  </div>
+                </a>
+                <a href="" class="report options-item">
+                  <span class="iconly-Info-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Report</span>
+                    <span class="detail-text">Report this comment</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="content">
+              <p class="text">
+                There are many resources that provide conversions (Bing has one built into the search
+                engine) and,
+              </p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="" class="like">
+                  <i class="iconly-Heart icli"></i>
+                  <span class="no">43</span>
+                  <span class="text">Likes</span>
+                </a>
+                <a href="" class="reply">
+                  <i class="iconly-Chat icli"></i>
+                  <span class="text">Reply</span>
+                  <span class="no">(5)</span>
+                  <i class="iconly-Arrow-Down icli arrow"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="comment select-comment">
+            <div class="head">
+              <div class="user">
+                <div class="profile">
+                  <img src="img/purri.jpg" alt="profile" srcset="">
+                </div>
+                <div class="info">
+                  <a href="" class="name">Jane Doe</a>
+                  <span class="time">5 hours ago</span>
+                </div>
+              </div>
+              <div class="more">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="more-options">
+                <span class="pointer"></span>
+                <a href="" class="edit options-item top">
+                  <span class="iconly-Edit-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Edit</span>
+                    <span class="detail-text">Edit this comment</span>
+                  </div>
+                </a>
+                <a href="/@maina" class="delete options-item">
+                  <span class="iconly-Delete icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Delete</span>
+                    <span class="detail-text">Delete this comment</span>
+                  </div>
+                </a>
+                <a href="" class="report options-item">
+                  <span class="iconly-Info-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Report</span>
+                    <span class="detail-text">Report this comment</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="content">
+              <p class="text">
+                There are many resources that provide conversions (Bing has one built into the search
+                engine) and, as you will soon see, JavaScript can also handle the heavy lifting in this
+                regard.
+              </p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="" class="like">
+                  <i class="iconly-Heart icli"></i>
+                  <span class="no">43</span>
+                  <span class="text">Likes</span>
+                </a>
+                <a href="" class="reply">
+                  <i class="iconly-Chat icli"></i>
+                  <span class="text">Reply</span>
+                  <span class="no">(101)</span>
+                  <i class="iconly-Arrow-Down icli arrow"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="author">
+      <ul class="icons header">
+        <!-- <li class="icon">
+                    <a href="" class="icon-link">
+                        <span class="iconly-Calendar icli"></span>
+                        <span class="dot"></span>
+                    </a>
+                </li> -->
+        <li class="icon">
+          <a href="" class="icon-link">
+            <span class="iconly-Search icli"></span>
+            <span class="tooltip search">
+              <span class="pointer"></span>
+              <span class="text">Search</span>
+            </span>
+          </a>
+        </li>
+        <li class="icon">
+          <a href="" class="icon-link">
+            <span class="iconly-Notification icli"></span>
+            <span class="notification dot"></span>
+            <span class="tooltip notification">
+              <span class="pointer"></span>
+              <span class="text">Notifications</span>
+            </span>
+          </a>
+        </li>
+        <div class="profile">
+          <div class="image-section">
+            <div class="image">
+              <img src="img/profile.jpg" alt="" srcset="" />
+            </div>
+            <span class="iconly-Arrow-Down-2 icli"></span>
+          </div>
+        </div>
+      </ul>
+      <div class="author-info">
+        <div class="profile">
+          <div class="container">
+            <div class="image">
+              <img src="img/purri.jpg" alt="Profile" srcset="">
+            </div>
+            <div class="info">
+              <a href="" class="name">Janet Doe</a>
+              <span class="info">Student at The East African University</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="stats">
+            <span class="stat folowers">
+              <span class="no">926k</span>
+              <span class="text">followers</span>
+            </span>
+            <span class="dot"></span>
+            <span class="stat members">
+              <span class="no">209k</span>
+              <span class="text">subscribers</span>
+            </span>
+          </div>
+          <div class="actions">
+            <span class="action follow">
+              <i class="iconly-Add-User"></i>
+              <span class="text">Follow</span>
+            </span>
+            <span class="action message">
+              <i class="iconly-Message icli"></i>
+              <span class="text">Message</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <section class="info stats">
+        <div class="head">
+          <h4 class="title">Story Stats</h4>
+        </div>
+        <div class="stat stories">
+          <div class="no">
+            <i class="iconly-Show icli"></i>
+            <span class="total">308</span>
+          </div>
+          <p class="text">views</p>
+        </div>
+        <div class="stat users">
+          <div class="no">
+            <i class="bi-chat"></i>
+            <span class="total">89</span>
+          </div>
+          <p class="text">Responses</p>
+        </div>
+      </section>
+      <section class="info credentials">
+        <div class="head">
+          <h4 class="title">Author Highlights</h4>
+        </div>
+        <ul class="infos">
+          <li class="info-item work">
+            <span class="icon">
+              <i class="iconly-Work icli"></i>
+              <!-- <i class="bi bi-bag"></i> -->
+            </span>
+            <span class="details">
+              <span class="name">Founder at aduki, Inc <span class="duration">2022 - present</span></span>
+            </span>
+          </li>
+          <li class="info-item education">
+            <span class="icon">
+              <i class="bi bi-book-half"></i>
+            </span>
+            <span class="details">
+              <span class="name">BCs Computer Science from The East African University <span class="duration">Sep 2019 -
+                  Dec 2023</span></span>
+            </span>
+          </li>
+          <li class="info-item location">
+            <span class="icon">
+              <i class="bi bi-geo-alt"></i>
+            </span>
+            <span class="details">
+              <span class="name">Lives in Nairobi, Kenya <span class="duration">2019 -
+                  present</span></span>
+            </span>
+          </li>
+          <li class="info-item lang">
+            <span class="icon">
+              <!-- <i class="iconly-Location icli"></i> -->
+              <i class="bi bi-translate"></i>
+            </span>
+            <span class="details">
+              <span class="name">Speaks English & Swahili</span>
+            </span>
+          </li>
+          <li class="info-item stat">
+            <span class="icon">
+              <!-- <i class="bi bi-eye"></i> -->
+              <i class="bi bi-graph-up-arrow"></i>
+            </span>
+            <span class="details">
+              <span class="name">45M content views <span class="duration">575K this month</span></span>
+            </span>
+          </li>
+          <li class="info-item joined">
+            <span class="icon">
+              <i class="bi-calendar-check"></i>
+              <!-- <i class="iconly-Calendar icli"></i> -->
+            </span>
+            <span class="details">
+              <span class="name">Joined May 2020</span>
+            </span>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <script src="js/fun.js"></script>
+</body>
+
+</html>

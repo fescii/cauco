@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="all.css" />
+  <link rel="stylesheet" href="nhome.css">
+  <link rel="stylesheet" href="nres.css" />
+  <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="icon/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet" />
+
+  <script type="module">
+    /// importing the first custom element
+    import PostWrapper from "./components/component.post.js";
+    import UserInfo from "./components/component.profile.js";
+    import SpaceInfo from "./components/component.space.js";
+
+    customElements.define("post-wrapper", PostWrapper);
+    customElements.define("user-info", UserInfo);
+    customElements.define("space-info", SpaceInfo);
+  </script>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="head">
+      <div class="logo">
+        <div class="logo-image">
+          <img src="img/favi.png" alt="Logo" srcset="" />
+        </div>
+        <div class="app-name">Darkchesa</div>
+      </div>
+      <div class="controls">
+        <span class="iconlyBulk-Arrow-Left-Circle"><span class="path1"></span><span class="path2"></span></span>
+        <span class="iconlyBulk-Arrow-Right-Circle"><span class="path1"></span><span class="path2"></span></span>
+      </div>
+    </div>
+    <div class="menu main-menu">
+      <div class="title">Menu</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Home icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Home</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Edit-Square icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Create</span>
+            </div>
+          </a>
+        </li>
+        <li class="item selected">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Discovery icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Discover</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Document icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Stories</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu">
+      <div class="title">General</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Search icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Search</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-User2 icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">People</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Bookmark icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">My List</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu user">
+      <div class="title">User</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Profile icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Profile</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Message icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Subscriptions</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Setting icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Settings</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu user">
+      <div class="title">User</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link logout">
+            <span class="iconly-Logout icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Logout</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="home">
+    <ul class="tab">
+      <li class="tab-item active">
+        <span class="text">Home</span>
+        <span class="line"></span>
+      </li>
+      <li class="tab-item">
+        <span class="text">Following</span>
+        <span class="line"></span>
+      </li>
+      <li class="tab-item">
+        <span class="text">Recent</span>
+        <span class="line"></span>
+      </li>
+      <li class="tab-item">
+        <span class="text">People</span>
+        <span class="line"></span>
+      </li>
+    </ul>
+
+    <ul class="icons header">
+      <li class="icon">
+        <a href="" class="icon-link">
+          <span class="iconly-Search icli"></span>
+          <span class="tooltip search">
+            <span class="pointer"></span>
+            <span class="text">Search</span>
+          </span>
+        </a>
+      </li>
+      <li class="icon">
+        <a href="" class="icon-link">
+          <span class="iconly-Notification icli"></span>
+          <span class="notification dot"></span>
+          <span class="tooltip notification">
+            <span class="pointer"></span>
+            <span class="text">Notifications</span>
+          </span>
+        </a>
+      </li>
+      <div class="profile">
+        <div class="image-section">
+          <div class="image">
+            <img src="img/profile.jpg" alt="" srcset="" />
+          </div>
+          <span class="iconly-Arrow-Down-2 icli"></span>
+        </div>
+      </div>
+    </ul>
+
+    <section class="posts first">
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+        post-likes="9.3k" post-comments="89">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+        post-likes="63.9k" action="like" post-comments="898">
+        <p>Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.</p>
+        <p>The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.</p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="0" expands="false" post-likes="69.9k"
+        action="liked" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="2"
+        images="img/ground1.jpg,new/two.jpg" expands="false" post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+        post-likes="9.3k" post-comments="89">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+        post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="0" expands="false" post-likes="69.9k"
+        action="liked" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="2"
+        images="img/ground1.jpg,new/two.jpg" expands="false" post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+        post-likes="9.3k" post-comments="89">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+        post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+    </section>
+
+    <div class="people side">
+      <div class="head">
+        <h4 class="title">People</h4>
+      </div>
+      <div class="people-list">
+        <user-info connection="following" user-profile="img/purri.jpg" profile-url="/puri.com"
+          user-name="Jane Doe" followers="696">
+        </user-info>
+        <user-info connection="follow" user-profile="img/profile.jpg" profile-url="/puri.com"
+          user-name="Fredrick Ochieng" followers="936">
+        </user-info>
+        <user-info connection="follow" user-profile="img/purri.jpg" profile-url="/puri.com"
+          user-name="Jane Doe" followers="696">
+        </user-info>
+        <user-info connection="following" user-profile="img/profile.jpg" profile-url="/puri.com"
+          user-name="Fredrick Ochieng" followers="936">
+        </user-info>
+        <user-info connection="follow" user-profile="img/purri.jpg" profile-url="/puri.com"
+          user-name="Jane Doe" followers="696">
+        </user-info>
+      </div>
+      <div class="more">
+        <a href="" class="more">Discover more people</a>
+      </div>
+    </div>
+
+    <section class="posts second">
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+        post-likes="9.3k" post-comments="89">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+        post-likes="63.9k" action="like" post-comments="898">
+        <p>Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.</p>
+        <p>The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.</p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="0" expands="false" post-likes="69.9k"
+        action="liked" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="2"
+        images="img/ground1.jpg,new/two.jpg" expands="false" post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+        post-likes="9.3k" post-comments="89">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+        post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="0" expands="false" post-likes="69.9k"
+        action="liked" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="2"
+        images="img/ground1.jpg,new/two.jpg" expands="false" post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+        post-likes="9.3k" post-comments="89">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+        post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+    </section>
+
+    <div class="spaces side">
+      <div class="head">
+        <h4 class="title">Spaces</h4>
+      </div>
+      <div class="infos">
+        <space-info connection="following" space-profile="img/ground.jpg" space-url="/puri.com"
+          space-name="Knowledge, Wisdom and Understanding" followers="696k"
+          description="There are many resources that provides knowledge, wisdom and understanding.">
+        </space-info>
+
+        <space-info connection="follow" space-profile="img/favi.png" space-url="/puri.com"
+          space-name="aduki, Inc" followers="903k"
+          description="Get inspired to create or contribute to ideas that can help change the world.">
+        </space-info>
+
+        <space-info connection="follow" space-profile="img/ground1.jpg" space-url="/puri.com"
+          space-name="Advocates for the Ethical Treatment" followers="6.03k"
+          description="There are many resources that provides knowledge, wisdom and understanding">
+        </space-info>
+
+        <space-info connection="following" space-profile="new/one.jpg" space-url="/puri.com"
+          space-name="Knowledge, Wisdom and Understanding" followers="696k"
+          description="There are many resources that provides knowledge, wisdom and understanding.">
+        </space-info>
+
+        <space-info connection="follow" space-profile="new/two.jpg" space-url="/puri.com"
+          space-name="Advocates for the Ethical Treatment" followers="6.03k"
+          description="There are many resources that provides knowledge, wisdom and understanding">
+        </space-info>
+      </div>
+      <div class="more">
+        <a href="" class="more">View more spaces</a>
+      </div>
+    </div>
+
+    <section class="posts third">
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+        post-likes="9.3k" post-comments="89">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+        post-likes="63.9k" action="like" post-comments="898">
+        <p>Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.</p>
+        <p>The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.</p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="0" expands="false" post-likes="69.9k"
+        action="liked" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="2"
+        images="img/ground1.jpg,new/two.jpg" expands="false" post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+        post-likes="9.3k" post-comments="89">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+        post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="0" expands="false" post-likes="69.9k"
+        action="liked" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="2"
+        images="img/ground1.jpg,new/two.jpg" expands="false" post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+        post-likes="9.3k" post-comments="89">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+        post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+    </section>
+
+    <div class="topics side">
+      <div class="head">
+        <h4 class="title">Topics</h4>
+      </div>
+      <ul class="topic-list">
+        <li class="item">
+          <a href="" class="item-link">
+            <i class="bi-plus"></i>
+            <span class="text">Health Care</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="item-link">
+            <i class="bi-plus"></i>
+            <span class="text">Linux</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="item-link">
+            <i class="bi-plus"></i>
+            <span class="text">Mental Health</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="item-link">
+            <i class="bi-plus"></i>
+            <span class="text">Technology</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="item-link">
+            <i class="bi-plus"></i>
+            <span class="text">Business</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="item-link">
+            <i class="bi-plus"></i>
+            <span class="text">Javascript</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="item-link">
+            <i class="bi-plus"></i>
+            <span class="text">Web Development</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="item-link">
+            <i class="bi-plus"></i>
+            <span class="text">Web</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="item-link">
+            <i class="bi-plus"></i>
+            <span class="text">Finance</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="item-link">
+            <i class="bi-plus"></i>
+            <span class="text">Geek</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="item-link">
+            <i class="bi-plus"></i>
+            <span class="text">Lifestyle</span>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="item-link">
+            <i class="bi-plus"></i>
+            <span class="text">Poetry</span>
+          </a>
+        </li>
+      </ul>
+      <div class="more">
+        <a href="" class="more">Discover more topics</a>
+      </div>
+    </div>
+
+    <section class="posts fourth">
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+        post-likes="9.3k" post-comments="89">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+        post-likes="63.9k" action="like" post-comments="898">
+        <p>Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.</p>
+        <p>The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.</p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="0" expands="false" post-likes="69.9k"
+        action="liked" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="2"
+        images="img/ground1.jpg,new/two.jpg" expands="false" post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+        post-likes="9.3k" post-comments="89">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+        post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="0" expands="false" post-likes="69.9k"
+        action="liked" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Today at 1:09 PM" image-count="2"
+        images="img/ground1.jpg,new/two.jpg" expands="false" post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="none" space-name="none" profile-src="img/purri.jpg" profile-url="/puri.com" name="Jane Doe"
+        occupation="Frontend Engineer" time-lapse="May 5 at 6:00 PM" image-count="0" expands="true" action="liked"
+        post-likes="9.3k" post-comments="89">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+
+      <post-wrapper type="space" space-name="The humanity space" profile-src="img/purri.jpg" profile-url="/puri.com"
+        name="Jane Doe" occupation="Frontend Engineer" time-lapse="Mon at 11:29 AM" image-count="6"
+        images="img/ground1.jpg,new/two.jpg,new/one2.jpg,img/ground1.jpg,new/two.jpg,new/one2.jpg" expands="true"
+        post-likes="63.9k" action="like" post-comments="898">
+        <p>
+          Travel to the Sahara, Mojave, and the Colorado Plateau as we seek out the world's most majestic desert
+          landscapes in this fascinating docu-series.
+        </p>
+        <p>
+          The yellow Sahara is the postcard image of a desert. A waving sea of sand. Passing dunes. Date palm oases
+          break up the shimmering horizon. Like nowhere else on earth, the Sahara embodies the romantic ideal and lost
+          dream of the infinite.
+        </p>
+      </post-wrapper>
+    </section>
+
+    <div class="popular-stories side">
+      <div class="head">
+        <h4 class="title">Stories</h4>
+      </div>
+      <div class="stories">
+        <div class="story">
+          <a href="" class="profile-image">
+            <img src="img/profile.jpg" alt="Story-Image" srcset="">
+          </a>
+          <div class="content">
+            <div class="story-image">
+              <img src="new/new.jpg" alt="Story-Image" srcset="">
+            </div>
+            <h4 class="title">
+              <a href="" class="title">How rust is the programming language of web3 in 2022</a>
+            </h4>
+          </div>
+          <div class="footer">
+            <span class="by">by</span>
+            <a href="" class="name">Fredrick Ochieng</a>
+            <span class="dot"></span>
+            <span class="date">Monday, January 03, 2022</span>
+          </div>
+        </div>
+        <div class="story">
+          <a href="" class="profile-image">
+            <img src="img/purri.jpg" alt="Story-Image" srcset="">
+          </a>
+          <div class="content">
+            <div class="story-image">
+              <img src="new/ill/3386851.jpg" alt="Story-Image" srcset="">
+            </div>
+            <h4 class="title">
+              <a href="" class="title">Break free from centralized parties</a>
+            </h4>
+          </div>
+          <div class="footer">
+            <span class="by">by</span>
+            <a href="" class="name">Jane Doe</a>
+            <span class="dot"></span>
+            <span class="date">Monday, January 03, 2022</span>
+          </div>
+        </div>
+        <div class="story">
+          <a href="" class="profile-image">
+            <img src="img/profile.jpg" alt="Story-Image" srcset="">
+          </a>
+          <div class="content">
+            <div class="story-image">
+              <img src="img/ground.jpg" alt="Story-Image" srcset="">
+            </div>
+            <h4 class="title">
+              <a href="" class="title">Programming languages today</a>
+            </h4>
+          </div>
+          <div class="footer">
+            <span class="by">by</span>
+            <a href="" class="name">Fredrick Ochieng</a>
+            <span class="dot"></span>
+            <span class="date">Monday, January 03, 2022</span>
+          </div>
+        </div>
+        <div class="story">
+          <a href="" class="profile-image">
+            <img src="img/purri.jpg" alt="Story-Image" srcset="">
+          </a>
+          <div class="content">
+            <div class="story-image">
+              <img src="img/ground1.jpg" alt="Story-Image" srcset="">
+            </div>
+            <h4 class="title">
+              <a href="" class="title">Break free from centralized parties</a>
+            </h4>
+          </div>
+          <div class="footer">
+            <span class="by">by</span>
+            <a href="" class="name">Jane Doe</a>
+            <span class="dot"></span>
+            <span class="date">Monday, January 03, 2022</span>
+          </div>
+        </div>
+        <div class="story">
+          <a href="" class="profile-image">
+            <img src="img/profile.jpg" alt="Story-Image" srcset="">
+          </a>
+          <div class="content">
+            <div class="story-image">
+              <img src="new/illustration/3255469.jpg" alt="Story-Image" srcset="">
+            </div>
+            <h4 class="title">
+              <a href="" class="title">How Rust is the Programming Language of Web3 in 2022</a>
+            </h4>
+          </div>
+          <div class="footer">
+            <span class="by">by</span>
+            <a href="" class="name">Fredrick Ochieng</a>
+            <span class="dot"></span>
+            <span class="date">Monday, January 03, 2022</span>
+          </div>
+        </div>
+        <div class="story">
+          <a href="" class="profile-image">
+            <img src="img/profile.jpg" alt="Story-Image" srcset="">
+          </a>
+          <div class="content">
+            <div class="story-image">
+              <img src="new/anim.jpg" alt="Story-Image" srcset="">
+            </div>
+            <h4 class="title">
+              <a href="" class="title">How Rust is the Programming Language of Web3 in 2022</a>
+            </h4>
+          </div>
+          <div class="footer">
+            <span class="by">by</span>
+            <a href="" class="name">Jane Doe</a>
+            <span class="dot"></span>
+            <span class="date">Monday, January 03, 2022</span>
+          </div>
+        </div>
+      </div>
+      <div class="more">
+        <a href="" class="more">Discover stories</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="mobile">
+    <div class="more">
+      <div class="modal-overlay"></div>
+      <span class="pointer"></span>
+      <div class="items">
+        <a href="" class="item">
+          <i class="bi-view-list"></i>
+          <span class="text">Posts</span>
+        </a>
+        <a href="" class="item">
+          <i class="bi-hash"></i>
+          <span class="text">Topics</span>
+        </a>
+        <a href="" class="item">
+          <i class="bi-people"></i>
+          <span class="text">Spaces</span>
+        </a>
+        <!-- <a href="" class="item">
+            <i class="bi-person-workspace"></i>
+            <span class="text">Spaces</span>
+          </a> -->
+      </div>
+    </div>
+    <div class="items">
+      <a href="" class="item active">
+        <i class="iconly-Home icli"></i>
+        <!-- <i class="bi-house-door"></i> -->
+        <span class="text">Home</span>
+      </a>
+      <a href="" class="item">
+        <i class="iconly-Document icli"></i>
+        <span class="text">Stories</span>
+      </a>
+      <a href="" class="item">
+        <i class="iconly-Search icli"></i>
+        <span class="text">Search</span>
+      </a>
+      <span class="item more">
+        <span class="dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+        <span class="text">More</span>
+      </span>
+    </div>
+  </footer>
+
+  <script src="js/fun.js"></script>
+</body>
+
+</html>
+

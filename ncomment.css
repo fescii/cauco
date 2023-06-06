@@ -1,0 +1,142 @@
+/*
+
+Name: aduki, Inc
+Version: 0.1.0
+Author: Fredrick Femar Ochieng'
+Email: isfescii@gmail.com
+
+
+*/
+
+
+main.post {
+  margin: 0;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 55% 38%;
+  row-gap: 0px;
+  column-gap: 30px;
+  justify-content: space-between;
+}
+
+main.post>ul.tab {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: max-content;
+  border-bottom: var(--border);
+  background-color: var(--theme);
+  padding: 22px 0 0 0;
+  z-index: 5;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+}
+
+
+main.post>ul.icons {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  height: max-content;
+  border-bottom: var(--border);
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: sticky;
+  top: 0px;
+  background-color: var(--theme);
+  padding: 15px 0 10px 0;
+  z-index: 5;
+  margin: 0;
+}
+
+main.post>section.post {
+  grid-column: 1/2;
+  grid-row: 2;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  height: max-content;
+}
+
+main.post>div.side {
+  grid-column: 2/3;
+  display: flex;
+  flex-flow: column;
+  gap: 0px;
+  position: sticky;
+  top: 70px;
+}
+main.post>div.side .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+main.post>div.side h4.title {
+  color: var(--text-color);
+  margin: 0;
+  font-size: 1rem;
+}
+
+main.post>div.side .more {
+  margin-top: 12px;
+  height: max-content;
+}
+
+main.post>div.side a {
+  text-decoration: none;
+  color: var(--gray-color);
+  font-size: 0.9rem;
+  padding: 3px 3px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+main.post>div.side a:hover {
+  text-decoration: underline;
+}
+
+div.people>.people-list {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  list-style-type: none;
+  margin: 12px 0 0 0;
+  padding: 0;
+}
+
+main.post>div.spaces {
+  grid-row: 3;
+  height: max-content;
+  padding: 0;
+  margin: 20px 0 0 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+}
+
+main.post>section.post>.comments {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+}
+
+main.post>section.post>.comments>.comment-wrapper {
+  border-bottom: var(--border);
+  padding: 0 0 15px 0px;
+  display: flex;
+  flex-flow: column;
+  gap: 0px;
+}

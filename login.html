@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opus Login</title>
+
+    <meta name="description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+
+
+    <link rel="stylesheet" href="logon.css">
+    <link rel="stylesheet" href="icon/style.css">
+
+    <script src="//cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="image-wrapper">
+                <img src="img/favi.png" alt="Logo" srcset="">
+            </div>
+            <h2>Welcome back!</h2>
+            <i>Glad to see you again</i>
+        </div>
+        <form action="/login/" method="post">
+            <div class="field">
+                <span class="name">Username</span>
+                <span class="iconly-Profile icli"></span>
+                <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username"
+                    maxlength="150" required id="id_username">
+            </div>
+            <div class="field">
+                <span class="name">Password</span>
+                <span class="iconly-Lock icli"></span>
+                <input type="password" name="password" autocomplete="current-password" required id="id_password">
+            </div>
+            <ul class="errors">
+                <li>Your username and password didn't match.</li>
+            </ul>
+            <input type="submit" value="Log In">
+        </form>
+        <a class="forgot" href="/password_reset/">Forgot your password?</a>
+        <p class="register">If you don't have an account <a href="/register/">register here</a></p>
+    </div>
+</body>
+
+</html>

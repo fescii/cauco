@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="all.css" />
+  <link rel="stylesheet" href="nread.css" />
+  <link rel="stylesheet" href="nres.css" />
+  <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="icon/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+
+  <script type="module">
+    /// importing the custom element
+    import StoryHeader from "./components/component.sthead.js";
+
+    customElements.define("story-header", StoryHeader);
+  </script>
+
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="head">
+      <div class="logo">
+        <div class="logo-image">
+          <img src="img/favi.png" alt="Logo" srcset="" />
+        </div>
+        <div class="app-name">Darkchesa</div>
+      </div>
+      <div class="controls">
+        <span class="iconlyBulk-Arrow-Left-Circle"><span class="path1"></span><span class="path2"></span></span>
+        <span class="iconlyBulk-Arrow-Right-Circle"><span class="path1"></span><span class="path2"></span></span>
+      </div>
+    </div>
+    <div class="menu main-menu">
+      <div class="title">Menu</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Home icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Home</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Edit-Square icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Create</span>
+            </div>
+          </a>
+        </li>
+        <li class="item selected">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Discovery icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Discover</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Document icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Stories</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu">
+      <div class="title">General</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Search icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Search</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-User2 icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">People</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Bookmark icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">My List</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu user">
+      <div class="title">User</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Profile icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Profile</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Message icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Subscriptions</span>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Setting icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Settings</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu user">
+      <div class="title">User</div>
+      <ul class="menu-items">
+        <li class="item">
+          <span class="line"></span>
+          <a href="" class="item-link logout">
+            <span class="iconly-Logout icli"></span>
+            <div class="link-text">
+              <span class="arrow"></span>
+              <span class="text">Logout</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <main class="read">
+    <div class="story">
+      <story-header author-name="Jane Doe" author-url="/jane-doe" date="Sunday, August 21, 2022"
+        author-profile="img/purri.jpg" author-bio="Student at the East African University" read-time="5 min read">
+      </story-header>
+
+      <div class="story-header">
+        <ul class="tab">
+          <li class="tab-item active">
+            <span class="text">Story</span>
+            <span class="line"></span>
+          </li>
+          <li class="tab-item">
+            <span class="text">Related</span>
+            <span class="line"></span>
+          </li>
+          <li class="tab-item">
+            <span class="text">About</span>
+            <span class="line"></span>
+          </li>
+        </ul>
+        <div id="read-action-links" class="action-links">
+          <a href="" id="popup-btn" class="share">
+            <span class="iconly-Send icli"></span>
+          </a>
+          <a href="" id="story-action-btn" class="share dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </a>
+          <div id="story-action-modal" class="options-modal">
+            <span class="pointer"></span>
+            <a href="" class="edit options-item top">
+              <span class="iconly-Edit-Square icli"></span>
+              <div class="option-details">
+                <span class="detail-title">Edit</span>
+                <span class="detail-text">Edit this story</span>
+              </div>
+            </a>
+            <a href="/@maina" class="delete options-item">
+              <span class="iconly-Delete icli"></span>
+              <div class="option-details">
+                <span class="detail-title">Delete</span>
+                <span class="detail-text">Delete this comment</span>
+              </div>
+            </a>
+            <a href="" class="report options-item">
+              <span class="iconly-Info-Square icli"></span>
+              <div class="option-details">
+                <span class="detail-title">Report</span>
+                <span class="detail-text">Problem! report this story</span>
+              </div>
+            </a>
+          </div>
+          <div id="popup-modal" class="popup">
+            <span class="pointer"></span>
+            <div class="header">
+              <!-- <span>Share this article via</span> -->
+              <div class="close"><i class="bi-x"></i></div>
+            </div>
+            <div class="content">
+              <ul class="icons">
+                <a href="https://www.facebook.com/sharer.php?u=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25?t='Even if you're passionate about your job, get energy
+                                        from the people you work with, and believe in your company's mission,
+                                        you can experience a bad day. Maybe your morning sta…'" rel="noopener"
+                  target="_blank">
+                  <i class="bi-facebook"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25&amp;text=Even if you're passionate about your job, get energy
+                                        from the people you work with, and believe in your company's mission, 
+                                        you can experience a bad day. Maybe your morning sta…" rel="noopener"
+                  target="_blank">
+                  <i class="bi-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25&title=Positive vibes&summery=Even if you're passionate about your job, get energy
+                                        from the people you work with, and believe in your company's mission, 
+                                        you can experience a bad day. Maybe your morning sta…" rel="noopener"
+                  target="_blank">
+                  <i class="bi-linkedin"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?text=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25"
+                  data-action="share/whatsapp/share" target="_blank">
+                  <i class="bi-whatsapp"></i>
+                </a>
+                <a href="https://t.me/share/url?url=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25&text=Even if you're passionate about your job, get energy
+                                    from the people you work with, and believe in your company's mission,
+                                    you can experience a bad day. Maybe your morning sta…" rel="noopener"
+                  target="_blank">
+                  <i class="bi-telegram"></i>
+                </a>
+              </ul>
+              <!-- <p>Or copy link</p> -->
+              <div class="field">
+                <i class="bi-link-45deg"></i>
+                <input type="text" readonly value="https://getopas.example.com/share-link/on" />
+                <button class="copy">Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="story-content">
+        <h2 class="story-title">Debian Vs Ubuntu Linux: Which one should you choose?</h2>
+        <div id="cover-image">
+          <img id="" src="https://getopas.pythonanywhere.com/media/articles/2023/01/23/debian-11-ubuntu-2104-wallpaper-split.webp.700x0_q85.jpg"
+            title="article cover" alt="" />
+        </div>
+        <div class="article-content">
+          <p>
+            <span class="site-main" data-original-attrs='{"role":"main"}' data-original-tag="MAIN" id="main">
+              <article
+                class="post-749045 post type-post status-publish format-standard category-the-geek-blog tag-bigpic tag-features breadcrumbs-linux"
+                id="post-749045">
+                <div class="entry-content e-content">
+                  <p>
+                    If you’re looking for a Linux distribution, you’ve likely
+                    seen recommendations for both&nbsp;<a
+                      data-original-attrs='{"data-original-href":"https://www.debian.org/"}'
+                      href="https://www.blogger.com/#">Debian</a>
+                    or
+                    <a data-original-attrs='{"data-original-href":"https://ubuntu.com/"}'
+                      href="https://www.blogger.com/#">Ubuntu</a>. Their similarities, and the fact that Ubuntu is
+                    technically based on Debian, blur the lines between them.
+                    Let’s explore the important differences.
+                  </p>
+
+                  <h2 data-original-attrs='{"aria-level":"2","role":"heading"}'>
+                    Debian Has Lower System Requirements
+                  </h2>
+                  <p>
+                    If the device you want to
+                    <a data-original-attrs='{"data-original-href":"https://www.howtogeek.com/693588/how-to-install-linux/"}'
+                      href="https://www.blogger.com/#">install Linux</a>
+                    on is light on resources, you’ll want to note Debian and
+                    Ubuntu’s differing minimum requirements.
+                    <a data-original-attrs='{"data-original-href":"https://www.debian.org/releases/bullseye/amd64/ch03s04.en.html"}'
+                      href="https://www.blogger.com/#">A Debian 11 desktop install requires</a>
+                    at least a 1GHz processor, 1GB RAM, and 10GB storage.
+                    <a data-original-attrs='{"data-original-href":"https://ubuntu.com/download/desktop"}'
+                      href="https://www.blogger.com/#">Ubuntu Desktop more than doubles those requirements</a>
+                    with a 2GHz dual-core processor, 4GB of RAM, and 25GB of
+                    disk space.
+                  </p>
+                  <p>
+                    That said, when we tested standard installations of both
+                    Debian 11 and Ubuntu Desktop 20.04, the pull on resources
+                    didn’t differ significantly, using about 1GB of RAM at
+                    idle. For older devices, this can be asking a lot, so you
+                    may want a more minimal desktop. That’s relatively easy to
+                    get with Debian, but for Ubuntu, you’re better off going
+                    with another “<a data-original-attrs='{"data-original-href":"https://ubuntu.com/download/flavours"}'
+                      href="https://www.blogger.com/#">Ubuntu flavor</a>” like
+                    <a data-original-attrs='{"data-original-href":"https://lubuntu.me/"}'
+                      href="https://www.blogger.com/#">Lubuntu</a>
+                    or
+                    <a data-original-attrs='{"data-original-href":"https://xubuntu.org/"}'
+                      href="https://www.blogger.com/#">Xubuntu</a>.
+                  </p>
+
+                  <p>
+                    Why? Much of the resource consumption comes from the GNOME
+                    desktop environment (DE), not the
+                    <a data-original-attrs='{"data-original-href":"https://www.howtogeek.com/361572/what-is-an-operating-system/"}'
+                      href="https://www.blogger.com/#">operating system</a>
+                    itself. You can reduce&nbsp;Debian’s weight significantly
+                    if, at install, you simply choose a lightweight DE like
+                    Xfce or LXQt instead of GNOME (optionally, deselect
+                    “standard system utilities” as well to forgo most of the
+                    preinstalled apps). On Ubuntu, you could
+                    <a data-original-attrs='{"data-original-href":"https://www.howtogeek.com/193129/how-to-install-and-use-another-desktop-environment-on-linux/"}'
+                      href="https://www.blogger.com/#">get one of those DEs after installation</a>, but that process is
+                    a bit more complicated and leaves
+                    you with an additional DE you might not use.
+                  </p>
+                  <h2 data-original-attrs='{"aria-level":"2","role":"heading"}'>
+                    Ubuntu Makes Proprietary Software Easier to Get
+                  </h2>
+                  <p>
+                    Ubuntu and Debian take different approaches to the debate
+                    on free and
+                    <a data-original-attrs='{"data-original-href":"https://www.howtogeek.com/129967/htg-explains-what-is-open-source-software-and-why-you-should-care/"}'
+                      href="https://www.blogger.com/#">open source</a>
+                    (FOSS) versus closed source or “proprietary” software.
+                    When you first run Debian, you don’t have immediate access
+                    to proprietary software, which includes popular apps like
+                    Spotify, Steam, and Microsoft Teams. This also includes
+                    drivers necessary to make some critical hardware work,
+                    including NVIDIA GPUs. You can only get that proprietary
+                    software by&nbsp;<a
+                      data-original-attrs='{"data-original-href":"https://www.howtogeek.com/117579/htg-explains-how-software-installation-package-managers-work-on-linux/"}'
+                      href="https://www.blogger.com/#">adding specific repositories</a>
+                    to your software sources, downloading
+                    <a data-original-attrs='{"data-original-href":"https://www.howtogeek.com/772548/how-to-install-a-deb-file-in-linux/"}'
+                      href="https://www.blogger.com/#">DEB files</a>
+                    from official websites, or installing them through
+                    services like
+                    <a data-original-attrs='{"data-original-href":"https://www.howtogeek.com/670084/what-you-need-to-know-about-snaps-on-ubuntu-20.04/"}'
+                      href="https://www.blogger.com/#">Snap</a>
+                    or
+                    <a data-original-attrs='{"data-original-href":"https://flathub.org/"}'
+                      href="https://www.blogger.com/#">Flathub</a>.
+                  </p>
+
+                  <p>
+                    In stark contrast, Ubuntu Desktop doesn’t hold any
+                    proprietary software back. Generally, if there’s a popular
+                    app available for Linux, you can get it with ease the
+                    moment you first boot up Ubuntu (an exception might be
+                    <a data-original-attrs='{"data-original-href":"https://www.howtogeek.com/731805/how-to-install-google-chrome-on-ubuntu-linux/"}'
+                      href="https://www.blogger.com/#">Google Chrome</a>). Ubuntu will also make sure you get all
+                    necessary
+                    hardware drivers at installation, proprietary and
+                    otherwise.
+                  </p>
+                  <p>
+                    Why the dramatic difference? Debian tries to serve a wider
+                    community by making it easy for people who are dedicated
+                    to the FOSS way of life to use Debian in good conscience.
+                    Ubuntu, however, prioritizes convenience for the everyday
+                    user who doesn’t care about code philosophies. If that’s
+                    you, you’ll likely find Ubuntu more appealing.
+                  </p>
+                  <h2 data-original-attrs='{"aria-level":"2","role":"heading"}'>
+                    Debian Supports Older Hardware
+                  </h2>
+                  <p>
+                    If you’re thinking of
+                    <a data-original-attrs='{"data-original-href":"https://www.howtogeek.com/692747/why-people-restore-vintage-computers-and-how-you-can-too/"}'
+                      href="https://www.blogger.com/#">reviving an aging device</a>
+                    with Linux, you’re more likely to have success with
+                    Debian. That’s partly because Debian still maintains
+                    support for 32-bit architectures (also known
+                    as&nbsp;i386). Most consumer PCs released in or after the
+                    year 2009 use 64-bit architectures. But if your computer
+                    is from before that year, you may need a distribution
+                    (distro) that still supports 32-bit, such as Debian.
+                  </p>
+                  <p>
+                    Ubuntu, in contrast, dropped full 32-bit support with
+                    version 18.04. Earlier versions with 32-bit support are
+                    still available for download, but standard updates have
+                    already ended. Extended security updates&nbsp;for version
+                    14.04 will continue only until April 2024 and April 2026
+                    for 16.04.
+                  </p>
+                  <p>
+                    The decision to drop 32-bit allowed the Ubuntu development
+                    team to focus on serving modern users with modern devices.
+                    The Debian team, in contrast, carries on the 32-bit legacy
+                    so that outmoded but otherwise functioning devices can
+                    stay out of the trash bin. These are two different but
+                    honorable objectives, and which serves you better depends
+                    on your device.
+                  </p>
+                  <h2 data-original-attrs='{"aria-level":"2","role":"heading"}'>
+                    Ubuntu Is Corporate-Backed
+                  </h2>
+                  <p>
+                    Ubuntu is maintained by an organization called
+                    <a data-original-attrs='{"data-original-href":"https://canonical.com/"}'
+                      href="https://www.blogger.com/#">Canonical</a>. Debian, in contrast, is developed completely by a
+                    community of volunteers. Both offer their distros free of
+                    charge, but Canonical also offers paid support if you’re
+                    using Ubuntu professionally.
+                  </p>
+                </div>
+              </article>
+            </span>
+          </p>
+          <article
+            class="post-749045 post type-post status-publish format-standard category-the-geek-blog tag-bigpic tag-features breadcrumbs-linux"
+            id="post-749045">
+            <div class="entry-content e-content">
+              <p>
+                For the same reason, Ubuntu’s documentation tends to be more
+                friendly to the average PC user, while Debian’s documentation
+                has a more blunt, technically-minded tone and appearance. If
+                you’re a computer geek, you’ll appreciate Debian’s approach,
+                but others might find it uncomfortable or intimidating.
+              </p>
+              <p>
+                The corporate backing is also in part why it’s much easier to
+                buy a&nbsp;<a
+                  data-original-attrs='{"data-original-href":"https://www.howtogeek.com/748445/best-linux-laptops/"}'
+                  href="https://www.blogger.com/#">Linux laptop</a>&nbsp;or tower with Ubuntu pre-installed than one
+                with Debian
+                pre-installed. Canonical is able to make Ubuntu more prolific
+                through business partnerships with retailers selling pre-built
+                PCs.
+              </p>
+              <h2 data-original-attrs='{"aria-level":"2","role":"heading"}'>
+                Debian Is More Stable by Default
+              </h2>
+              <p>
+                When you perform a regular install of Debian, your software
+                all comes from a repository named “<a
+                  data-original-attrs='{"data-original-href":"https://wiki.debian.org/DebianStable"}'
+                  href="https://www.blogger.com/#">Stable</a>.” All Stable software has been thoroughly tested to ensure
+                reliable functionality. This sounds great, and it is great,
+                especially if you’re running a server with Debian. If you’re
+                using it as a desktop, though, the long wait for updates might
+                feel <i>too</i> long. Security patches get pushed as needed,
+                of course, but getting the latest features of your favorite
+                software might take some serious patience.
+              </p>
+
+              <p>
+                You can dial things up though by changing Debian’s software
+                source to from Stable to “<a
+                  data-original-attrs='{"data-original-href":"https://wiki.debian.org/DebianTesting"}'
+                  href="https://www.blogger.com/#">Testing</a>.” Don’t let the name scare you; the software there has
+                already been tested for at least two days and confirmed to not
+                have any critical bugs. Testing
+                <a data-original-attrs='{"data-original-href":"https://www.howtogeek.com/740795/how-to-update-ubuntu-linux/"}'
+                  href="https://www.blogger.com/#">updates</a>
+                will arrive closer to (and maybe even sooner than) Ubuntu’s
+                regular software branch.
+              </p>
+              <p>
+                That said, many Debian users take the middle road by
+                using&nbsp;<a data-original-attrs='{"data-original-href":"https://wiki.debian.org/Backports"}'
+                  href="https://www.blogger.com/#">Debian Backports</a>, which allows you to stay on Stable but get
+                specific
+                software (like Firefox or LibreOffice) from Testing. That way,
+                you can stay up-to-date with the apps where it’s important
+                while keeping the rest of your Debian system rock-solid
+                stable.
+              </p>
+              <h2 data-original-attrs='{"aria-level":"2","role":"heading"}'>
+                Which Distro Should You Choose?
+              </h2>
+              <p>
+                There are other, more cosmetic differences between Debian and
+                Ubuntu. Generally, Ubuntu has a more progressive,
+                forward-thinking feel. Some parts of Debian have an older,
+                classic computing feel that you might find comfortable and
+                nostalgic.
+                <a data-original-attrs='{"data-original-href":"https://wiki.debian.org/DebianReleases"}'
+                  href="https://www.blogger.com/#">Debian’s release cycle</a>
+                and
+                <a data-original-attrs='{"data-original-href":"https://ubuntu.com/about/release-cycle"}'
+                  href="https://www.blogger.com/#">Ubuntu’s release cycle</a>&nbsp;also differ quite a bit, which is
+                worth considering if
+                you want to stay on one distro long-term.
+              </p>
+              If you want a general recommendation, Ubuntu will serve you best
+              if you want to install any and all software without fuss. If
+              your device is old or low on resources, though, Debian is
+              probably the better option.
+              <p>
+                In many ways, Ubuntu and Debian will give you a more or less
+                similar experience. In fact, that similarity is kind of a
+                bonus: guides, solutions, and explanations for one often also
+                work for the other, increasing the resources at your disposal.
+                Also, something that’s possible on one can typically be
+                achieved on the other, given enough work and know-how. That’s
+                the beauty of Linux: you have complete control over your
+                computer, and you’re never locked into one option.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="article-tags">
+          <a href="/explore/gone" class="tag">Gone</a>
+          <a href="/explore/miami" class="tag">Miami</a>
+          <a href="/explore/tag" class="tag">Tag</a>
+        </div>
+        <div href="" class="comments-action">
+          <div class="action like">
+            <i class="bi-heart"></i>
+            <span class="text">9.03k</span>
+          </div>
+          <div class="action comment">
+            <i class="bi-chat"></i>
+            <span class="text">386</span>
+          </div>
+          <div class="action dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="action dots-mobile">
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="options-modal">
+            <span class="pointer"></span>
+            <a href="" class="edit options-item top">
+              <span class="iconly-Edit-Square icli"></span>
+              <div class="option-details">
+                <span class="detail-title">Edit</span>
+                <span class="detail-text">Edit this story</span>
+              </div>
+            </a>
+            <a href="/@maina" class="delete options-item">
+              <span class="iconly-Delete icli"></span>
+              <div class="option-details">
+                <span class="detail-title">Delete</span>
+                <span class="detail-text">Delete this comment</span>
+              </div>
+            </a>
+            <a href="" class="report options-item">
+              <span class="iconly-Info-Square icli"></span>
+              <div class="option-details">
+                <span class="detail-title">Report</span>
+                <span class="detail-text">Problem! report this story</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="comments-container">
+      <div class="comments-wrapper">
+        <div class="comments-header">
+          <div class="controls">
+            <select name="sort" id="sort">
+              <option value="most">All Comments</option>
+              <option value="most">Most Relevant</option>
+            </select>
+          </div>
+          <div class="comment-options">
+            <!-- <a href="" class="comment">
+                            <i class="iconly-Edit icli"></i>
+                            <span class="add">Comment</span>
+                        </a> -->
+            <span class="hr"></span>
+            <span class="dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </span>
+          </div>
+        </div>
+        <div class="comments-body">
+          <form action="" method="post" class="add-comment">
+            <textarea placeholder="Click to add comment..." name="comment" id="comment" cols="auto"
+              rows="auto"></textarea>
+            <div class="footer">
+              <input type="submit" value="comment" />
+            </div>
+          </form>
+          <div class="comment select-comment">
+            <div class="head">
+              <div class="user">
+                <div class="profile">
+                  <img src="img/purri.jpg" alt="profile" srcset="" />
+                </div>
+                <div class="info">
+                  <a href="" class="name">Jane Doe</a>
+                  <span class="time">5 hours ago</span>
+                </div>
+              </div>
+              <div class="more">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="more-options">
+                <span class="pointer"></span>
+                <a href="" class="edit options-item top">
+                  <span class="iconly-Edit-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Edit</span>
+                    <span class="detail-text">Edit this comment</span>
+                  </div>
+                </a>
+                <a href="/@maina" class="delete options-item">
+                  <span class="iconly-Delete icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Delete</span>
+                    <span class="detail-text">Delete this comment</span>
+                  </div>
+                </a>
+                <a href="" class="report options-item">
+                  <span class="iconly-Info-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Report</span>
+                    <span class="detail-text">Report this comment</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="content">
+              <p class="text">
+                There are many resources that provide conversions (Bing into
+                the search engine) and, as you will soon see, JavaScript can
+                also handle the heavy lifting in this regard.
+              </p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="" class="like liked">
+                  <i class="iconly-Heart icli"></i>
+                  <span class="no">43</span>
+                  <span class="text">Likes</span>
+                </a>
+                <a href="" class="reply">
+                  <i class="iconly-Chat icli"></i>
+                  <span class="text">Reply</span>
+                  <span class="no">(13)</span>
+                  <i class="iconly-Arrow-Down icli arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="replies-container">
+              <span class="arrow"></span>
+              <form action="" method="post" id="add-reply" class="add-reply">
+                <textarea placeholder="Click to reply..." name="reply" id="reply" cols="auto" rows="auto"></textarea>
+                <div class="footer">
+                  <input type="submit" value="Reply" />
+                </div>
+              </form>
+              <div class="reply">
+                <span class="arrow"></span>
+                <div class="reply-content">
+                  <div class="head">
+                    <div class="user">
+                      <div class="profile">
+                        <img src="img/profile.jpg" alt="profile" srcset="" />
+                      </div>
+                      <div class="info">
+                        <a href="" class="name">John Doe</a>
+                        <span class="time">5 hours ago</span>
+                      </div>
+                    </div>
+                    <div class="more">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                    <div class="more-options">
+                      <span class="pointer"></span>
+                      <a href="" class="edit options-item top">
+                        <span class="iconly-Edit-Square icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Edit</span>
+                          <span class="detail-text">Edit this reply</span>
+                        </div>
+                      </a>
+                      <a href="/@maina" class="delete options-item">
+                        <span class="iconly-Delete icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Delete</span>
+                          <span class="detail-text">Delete this reply</span>
+                        </div>
+                      </a>
+                      <a href="" class="report options-item">
+                        <span class="iconly-Info-Square icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Report</span>
+                          <span class="detail-text">Report this reply</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="text">
+                      There are many resources that provide conversions (Bing
+                      into the search engine) and, as you will soon see,
+                      JavaScript can also handle the heavy lifting in this
+                      regard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="reply">
+                <span class="arrow"></span>
+                <div class="reply-content">
+                  <div class="head">
+                    <div class="user">
+                      <div class="profile">
+                        <img src="img/profile.jpg" alt="profile" srcset="" />
+                      </div>
+                      <div class="info">
+                        <a href="" class="name">John Doe</a>
+                        <span class="time">5 hours ago</span>
+                      </div>
+                    </div>
+                    <div class="more">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                    <div class="more-options">
+                      <span class="pointer"></span>
+                      <a href="" class="edit options-item top">
+                        <span class="iconly-Edit-Square icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Edit</span>
+                          <span class="detail-text">Edit this reply</span>
+                        </div>
+                      </a>
+                      <a href="/@maina" class="delete options-item">
+                        <span class="iconly-Delete icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Delete</span>
+                          <span class="detail-text">Delete this reply</span>
+                        </div>
+                      </a>
+                      <a href="" class="report options-item">
+                        <span class="iconly-Info-Square icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Report</span>
+                          <span class="detail-text">Report this reply</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="text">
+                      There are many resources that provide conversions (Bing
+                      into the search engine) and, as you will soon see,
+                      JavaScript can also handle the heavy lifting in this
+                      regard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="reply">
+                <span class="arrow"></span>
+                <div class="reply-content">
+                  <div class="head">
+                    <div class="user">
+                      <div class="profile">
+                        <img src="img/profile.jpg" alt="profile" srcset="" />
+                      </div>
+                      <div class="info">
+                        <a href="" class="name">John Doe</a>
+                        <span class="time">5 hours ago</span>
+                      </div>
+                    </div>
+                    <div class="more">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                    <div class="more-options">
+                      <span class="pointer"></span>
+                      <a href="" class="edit options-item top">
+                        <span class="iconly-Edit-Square icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Edit</span>
+                          <span class="detail-text">Edit this reply</span>
+                        </div>
+                      </a>
+                      <a href="/@maina" class="delete options-item">
+                        <span class="iconly-Delete icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Delete</span>
+                          <span class="detail-text">Delete this reply</span>
+                        </div>
+                      </a>
+                      <a href="" class="report options-item">
+                        <span class="iconly-Info-Square icli"></span>
+                        <div class="option-details">
+                          <span class="detail-title">Report</span>
+                          <span class="detail-text">Report this reply</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="text">
+                      There are many resources that provide conversions (Bing
+                      into the search engine) and, as you will soon see,
+                      JavaScript can also handle the heavy lifting in this
+                      regard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="comment select-comment">
+            <div class="head">
+              <div class="user">
+                <div class="profile">
+                  <img src="img/purri.jpg" alt="profile" srcset="" />
+                </div>
+                <div class="info">
+                  <a href="" class="name">Jane Doe</a>
+                  <span class="time">5 hours ago</span>
+                </div>
+              </div>
+              <div class="more">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="more-options">
+                <span class="pointer"></span>
+                <a href="" class="edit options-item top">
+                  <span class="iconly-Edit-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Edit</span>
+                    <span class="detail-text">Edit this comment</span>
+                  </div>
+                </a>
+                <a href="/@maina" class="delete options-item">
+                  <span class="iconly-Delete icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Remove</span>
+                    <span class="detail-text">Remove this comment</span>
+                  </div>
+                </a>
+                <a href="" class="report options-item">
+                  <span class="iconly-Info-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Report</span>
+                    <span class="detail-text">Report this comment</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="content">
+              <p class="text">
+                There are many resources that provide conversions (Bing has
+                one built into the search engine) and, as you will soon see,
+                JavaScript can also handle the heavy lifting in this regard.
+              </p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="" class="like">
+                  <i class="iconly-Heart icli"></i>
+                  <span class="no">43</span>
+                  <span class="text">Likes</span>
+                </a>
+                <a href="" class="reply">
+                  <i class="iconly-Chat icli"></i>
+                  <span class="text">Reply</span>
+                  <span class="no">(3)</span>
+                  <i class="iconly-Arrow-Down icli arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="replies-container">
+              <span class="arrow"></span>
+              <form action="" method="post" id="add-reply" class="add-reply">
+                <textarea placeholder="Click to reply..." name="reply" id="reply" cols="auto" rows="auto"></textarea>
+                <div class="footer">
+                  <input type="submit" value="Reply" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="comment select-comment">
+            <div class="head">
+              <div class="user">
+                <div class="profile">
+                  <img src="img/purri.jpg" alt="profile" srcset="" />
+                </div>
+                <div class="info">
+                  <a href="" class="name">Jane Doe</a>
+                  <span class="time">5 hours ago</span>
+                </div>
+              </div>
+              <div class="more">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="more-options">
+                <span class="pointer"></span>
+                <a href="" class="edit options-item top">
+                  <span class="iconly-Edit-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Edit</span>
+                    <span class="detail-text">Edit this comment</span>
+                  </div>
+                </a>
+                <a href="/@maina" class="delete options-item">
+                  <span class="iconly-Delete icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Delete</span>
+                    <span class="detail-text">Delete this comment</span>
+                  </div>
+                </a>
+                <a href="" class="report options-item">
+                  <span class="iconly-Info-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Report</span>
+                    <span class="detail-text">Report this comment</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="content">
+              <p class="text">
+                There are many resources that provide conversions (Bing has
+                one built into the search engine) and, as you will soon see,
+                JavaScript can also handle the heavy lifting in this regard.
+              </p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="" class="like">
+                  <i class="iconly-Heart icli"></i>
+                  <span class="no">43</span>
+                  <span class="text">Likes</span>
+                </a>
+                <a href="" class="reply">
+                  <i class="iconly-Chat icli"></i>
+                  <span class="text">Reply</span>
+                  <span class="no">(8)</span>
+                  <i class="iconly-Arrow-Down icli arrow"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="comment select-comment">
+            <div class="head">
+              <div class="user">
+                <div class="profile">
+                  <img src="img/purri.jpg" alt="profile" srcset="" />
+                </div>
+                <div class="info">
+                  <a href="" class="name">Jane Doe</a>
+                  <span class="time">5 hours ago</span>
+                </div>
+              </div>
+              <div class="more">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="more-options">
+                <span class="pointer"></span>
+                <a href="" class="edit options-item top">
+                  <span class="iconly-Edit-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Edit</span>
+                    <span class="detail-text">Edit this comment</span>
+                  </div>
+                </a>
+                <a href="/@maina" class="delete options-item">
+                  <span class="iconly-Delete icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Delete</span>
+                    <span class="detail-text">Delete this comment</span>
+                  </div>
+                </a>
+                <a href="" class="report options-item">
+                  <span class="iconly-Info-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Report</span>
+                    <span class="detail-text">Report this comment</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="content">
+              <p class="text">
+                There are many resources that provide conversions (Bing has
+                one built into the search engine) and, as you will soon see,
+                JavaScript can also handle the heavy lifting in this regard.
+              </p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="" class="like">
+                  <i class="iconly-Heart icli"></i>
+                  <span class="no">43</span>
+                  <span class="text">Likes</span>
+                </a>
+                <a href="" class="reply">
+                  <i class="iconly-Chat icli"></i>
+                  <span class="text">Reply</span>
+                  <span class="no">(11)</span>
+                  <i class="iconly-Arrow-Down icli arrow"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="comment select-comment">
+            <div class="head">
+              <div class="user">
+                <div class="profile">
+                  <img src="img/purri.jpg" alt="profile" srcset="" />
+                </div>
+                <div class="info">
+                  <a href="" class="name">Jane Doe</a>
+                  <span class="time">5 hours ago</span>
+                </div>
+              </div>
+              <div class="more">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="more-options">
+                <span class="pointer"></span>
+                <a href="" class="edit options-item top">
+                  <span class="iconly-Edit-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Edit</span>
+                    <span class="detail-text">Edit this comment</span>
+                  </div>
+                </a>
+                <a href="/@maina" class="delete options-item">
+                  <span class="iconly-Delete icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Delete</span>
+                    <span class="detail-text">Delete this comment</span>
+                  </div>
+                </a>
+                <a href="" class="report options-item">
+                  <span class="iconly-Info-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Report</span>
+                    <span class="detail-text">Report this comment</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="content">
+              <p class="text">
+                There are many resources that provide conversions (Bing has
+                one built into the search engine) and,
+              </p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="" class="like">
+                  <i class="iconly-Heart icli"></i>
+                  <span class="no">43</span>
+                  <span class="text">Likes</span>
+                </a>
+                <a href="" class="reply">
+                  <i class="iconly-Chat icli"></i>
+                  <span class="text">Reply</span>
+                  <span class="no">(5)</span>
+                  <i class="iconly-Arrow-Down icli arrow"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="comment select-comment">
+            <div class="head">
+              <div class="user">
+                <div class="profile">
+                  <img src="img/purri.jpg" alt="profile" srcset="" />
+                </div>
+                <div class="info">
+                  <a href="" class="name">Jane Doe</a>
+                  <span class="time">5 hours ago</span>
+                </div>
+              </div>
+              <div class="more">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="more-options">
+                <span class="pointer"></span>
+                <a href="" class="edit options-item top">
+                  <span class="iconly-Edit-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Edit</span>
+                    <span class="detail-text">Edit this comment</span>
+                  </div>
+                </a>
+                <a href="/@maina" class="delete options-item">
+                  <span class="iconly-Delete icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Delete</span>
+                    <span class="detail-text">Delete this comment</span>
+                  </div>
+                </a>
+                <a href="" class="report options-item">
+                  <span class="iconly-Info-Square icli"></span>
+                  <div class="option-details">
+                    <span class="detail-title">Report</span>
+                    <span class="detail-text">Report this comment</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="content">
+              <p class="text">
+                There are many resources that provide conversions (Bing has
+                one built into the search engine) and, as you will soon see,
+                JavaScript can also handle the heavy lifting in this regard.
+              </p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="" class="like">
+                  <i class="iconly-Heart icli"></i>
+                  <span class="no">43</span>
+                  <span class="text">Likes</span>
+                </a>
+                <a href="" class="reply">
+                  <i class="iconly-Chat icli"></i>
+                  <span class="text">Reply</span>
+                  <span class="no">(101)</span>
+                  <i class="iconly-Arrow-Down icli arrow"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="author">
+      <ul class="icons header">
+        <!-- <li class="icon">
+                    <a href="" class="icon-link">
+                        <span class="iconly-Calendar icli"></span>
+                        <span class="dot"></span>
+                    </a>
+                </li> -->
+        <li class="icon">
+          <a href="" class="icon-link">
+            <span class="iconly-Search icli"></span>
+            <span class="tooltip search">
+              <span class="pointer"></span>
+              <span class="text">Search</span>
+            </span>
+          </a>
+        </li>
+        <li class="icon">
+          <a href="" class="icon-link">
+            <span class="iconly-Notification icli"></span>
+            <span class="notification dot"></span>
+            <span class="tooltip notification">
+              <span class="pointer"></span>
+              <span class="text">Notifications</span>
+            </span>
+          </a>
+        </li>
+        <div class="profile">
+          <div class="image-section">
+            <div class="image">
+              <img src="img/profile.jpg" alt="" srcset="" />
+            </div>
+            <span class="iconly-Arrow-Down-2 icli"></span>
+          </div>
+        </div>
+      </ul>
+      <div class="author-info">
+        <div class="profile">
+          <div class="container">
+            <div class="image">
+              <img src="img/purri.jpg" alt="Profile" srcset="" />
+            </div>
+            <div class="info">
+              <a href="" class="name">Janet Doe</a>
+              <span class="info">Student at The East African University</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="stats">
+            <span class="stat folowers">
+              <span class="no">926k</span>
+              <span class="text">followers</span>
+            </span>
+            <span class="dot"></span>
+            <span class="stat members">
+              <span class="no">209k</span>
+              <span class="text">subscribers</span>
+            </span>
+          </div>
+          <div class="actions">
+            <span class="action follow">
+              <i class="iconly-Add-User"></i>
+              <span class="text">Follow</span>
+            </span>
+            <span class="action message">
+              <i class="iconly-Message icli"></i>
+              <span class="text">Message</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <section class="info stats">
+        <div class="head">
+          <h4 class="title">Story Stats</h4>
+        </div>
+        <div class="stat stories">
+          <div class="no">
+            <i class="iconly-Show icli"></i>
+            <span class="total">308</span>
+          </div>
+          <p class="text">views</p>
+        </div>
+        <div class="stat users">
+          <div class="no">
+            <i class="bi-chat"></i>
+            <span class="total">89</span>
+          </div>
+          <p class="text">Responses</p>
+        </div>
+      </section>
+      <section class="info credentials">
+        <div class="head">
+          <h4 class="title">Author Highlights</h4>
+        </div>
+        <ul class="infos">
+          <li class="info-item work">
+            <span class="icon">
+              <i class="iconly-Work icli"></i>
+              <!-- <i class="bi bi-bag"></i> -->
+            </span>
+            <span class="details">
+              <span class="name">Founder at aduki, Inc
+                <span class="duration">2022 - present</span></span>
+            </span>
+          </li>
+          <li class="info-item education">
+            <span class="icon">
+              <i class="bi bi-book-half"></i>
+            </span>
+            <span class="details">
+              <span class="name">BCs Computer Science from The East African University
+                <span class="duration">Sep 2019 - Dec 2023</span></span>
+            </span>
+          </li>
+          <li class="info-item location">
+            <span class="icon">
+              <i class="bi bi-geo-alt"></i>
+            </span>
+            <span class="details">
+              <span class="name">Lives in Nairobi, Kenya
+                <span class="duration">2019 - present</span></span>
+            </span>
+          </li>
+          <li class="info-item lang">
+            <span class="icon">
+              <!-- <i class="iconly-Location icli"></i> -->
+              <i class="bi bi-translate"></i>
+            </span>
+            <span class="details">
+              <span class="name">Speaks English & Swahili</span>
+            </span>
+          </li>
+          <li class="info-item stat">
+            <span class="icon">
+              <!-- <i class="bi bi-eye"></i> -->
+              <i class="bi bi-graph-up-arrow"></i>
+            </span>
+            <span class="details">
+              <span class="name">45M content views
+                <span class="duration">575K this month</span></span>
+            </span>
+          </li>
+          <li class="info-item joined">
+            <span class="icon">
+              <i class="bi-calendar-check"></i>
+              <!-- <i class="iconly-Calendar icli"></i> -->
+            </span>
+            <span class="details">
+              <span class="name">Joined May 2020</span>
+            </span>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <script src="js/fun.js"></script>
+</body>
+
+</html>

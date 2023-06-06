@@ -1,0 +1,395 @@
+/*
+
+Name: aduki, Inc
+Version: 0.1.0
+Author: Fredrick Femar Ochieng'
+Email: isfescii@gmail.com
+
+
+*/
+
+@media screen and (min-width: 1250px) {
+  html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  body {
+    padding: 0%;
+    width: 1200px;
+    max-width: 1200px;
+    min-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    row-gap: 0;
+    column-gap: 0;
+    justify-content: space-between;
+  }
+
+  main.read {
+    margin: 0;
+  }
+
+  .sidebar {
+    grid-column: 1/2;
+    background-color: var(--theme);
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+    width: max-content;
+    padding: 30px 10px 10px 25px;
+    height: 90vh;
+    z-index: 6;
+    position: sticky;
+    top: 0;
+    left: unset;
+    height: 100vh;
+  }
+}
+
+
+@media screen and (max-width: 1250px) {
+  body {
+    width: unset;
+    max-width: unset;
+    min-width: unset;
+    display: block;
+    margin: 0% 6% 0% 8%;
+    padding: 0%;
+  }
+
+  .sidebar {
+    grid-column: 1/2;
+    background-color: var(--theme);
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+    width: max-content;
+    padding: 30px 10px 10px 25px;
+    height: 90vh;
+    z-index: 6;
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    bottom: 0%;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  body {
+    margin: 0% 2% 0% 7%;
+    padding: 0%;
+  }
+
+  .sidebar {
+    background-color: var(--theme);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0%;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    margin: 0% 0% 0% 70px;
+    padding: 0%;
+  }
+
+  .sidebar {
+    max-width: 70px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+
+  /*Space*/
+  main.read {
+    margin: 0%;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    max-width: 85%;
+  }
+
+  /*Side-Info*/
+  main.read>.author {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 870px) {
+
+  /*Space*/
+  /*Home*/
+  main.post,
+  main.home,
+  main.profile,
+  main.topics,
+  main.space {
+    margin: 0%;
+    padding: 0 15px;
+    display: flex;
+    flex-flow: column;
+    gap: 0px;
+    max-width: 85%;
+  }
+
+  /*Side-Info*/
+  main.post>div.people,
+  main.post>ul.icons,
+  main.home>ul.icons,
+  main.profile>.side-info,
+  main.topics>.quick-contents,
+  main.space>.side-info {
+    display: none;
+    visibility: hidden;
+  }
+
+  main.post>div.people,
+  main.home>div.people,
+  main.home>div.spaces,
+  main.home>div.topics {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  /*Space*/
+  main.post,
+  main.home,
+  main.read,
+  main.profile,
+  main.topics,
+  main.space {
+    max-width: 90%;
+  }
+
+  main.read>.story>.story-content {
+    gap: 20px;
+  }
+
+  main.read>.story>.story-content>h2.story-title {
+    color: var(--text-color);
+    margin: 18px 0 0 0;
+  }
+
+  main.read>.story>.story-content>#cover-image {
+    align-self: center;
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  /*Space*/
+  main.post,
+  main.home,
+  main.read,
+  main.profile,
+  main.topics,
+  main.space {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  main.read>.story>.story-header>.action-links>.options-modal {
+    right: -10px;
+    top: 30px;
+  }
+
+  main.read>.story>.story-header>.action-links>.options-modal>.pointer {
+    right: 17px;
+  }
+
+  main.read>.story>.story-header>.action-links>.popup {
+    top: 30px;
+    right: -10px;
+  }
+
+  main.read>.story>.story-header>.action-links>.popup>.pointer {
+    right: 55px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    margin: 0% 0% 0% 50px;
+    padding: 0%;
+  }
+
+  /*Sidebar*/
+  .sidebar {
+    padding: 30px 5px 10px 12px;
+  }
+
+  /*Space*/
+  main.post,
+  main.home,
+  main.read,
+  main.profile,
+  main.topics,
+  main.space {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  /*Sidebar*/
+  .sidebar {
+    display: none;
+  }
+
+  /*Space*/
+  main.read,
+  main.profile,
+  main.topics,
+  main.space {
+    padding: 0;
+    gap: 0;
+  }
+
+  main.home {
+    margin: 0 0 70px 0;
+  }
+
+  main.read>.story,
+  main.profile>.main-info,
+  main.topics>.contents,
+  main.space>.contents {
+    padding: 0 10px;
+  }
+
+  main.read>.story>.story-header,
+  main.profile>.main-info>ul.tab,
+  main.space>.contents>ul.tab,
+  main.topics>.contents>ul.tab {
+    top: 0;
+  }
+
+  main.read>.story>.mobile-tab,
+  main.profile>.main-info>ul.mobile-tab,
+  main.space>.contents>ul.mobile-tab,
+  main.topics>.contents>ul.mobile-tab {
+    top: 30px;
+  }
+
+  main.read>.story>.hide,
+  main.profile>.main-info>ul.hide,
+  main.space>.contents>ul.hide,
+  main.topics>.contents>ul.hide {
+    display: none;
+  }
+
+  main.read>.story>.story-header>.action-links {
+    display: none;
+  }
+
+  main.read>.story>.story-content>.comments-action {
+    position: fixed;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+
+  main.read>.story>.story-content>.comments-action>.action {
+    cursor: unset;
+  }
+
+  main.read>.story>.story-content>.comments-action>.dots {
+    display: none;
+  }
+
+  main.read>.story>.story-content>.comments-action>.dots-mobile {
+    display: flex;
+  }
+
+
+  main.home>div.topics,
+  main.home>div.spaces {
+    margin: 15px 0;
+  }
+
+  main.home>div.popular-stories .more>a,
+  main.home>div.topics .more>a,
+  main.home>div.spaces .more>a,
+  main.home>div.people .more>a {
+    text-decoration: none;
+    color: var(--accent-color);
+  }
+
+  main.home>div.people {
+    height: max-content;
+    display: flex;
+    margin: 15px 0;
+    flex-flow: column;
+    gap: 0;
+    max-width: 100%;
+  }
+
+  main.home>div.people>.people-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    gap: 18px;
+    list-style-type: none;
+    margin: 12px 0 0 0;
+    padding: 0;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  main.home>div.people>.people-list::-webkit-scrollbar {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  main.post>section.post>div.respond-placeholder {
+    border: var(--border);
+    background-color: var(--theme);
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0 0 8px 0;
+    display: none;
+    flex-flow: column;
+    gap: 0px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    z-index: 20;
+  }
+
+  main.post>section.post>.comments {
+    margin: 0 0 60px 0;
+  }
+
+  footer.mobile {
+    display: flex;
+  }
+
+  body.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
+}

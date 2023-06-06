@@ -1,0 +1,225 @@
+/*
+
+Name: aduki, Inc
+Version: 0.1.0
+Author: Fredrick Femar Ochieng'
+Email: isfescii@gmail.com
+
+
+*/
+
+main.topics {
+  /* border: 1px solid var(--gray-color); */
+  margin: 0%;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 55% 38%;
+  row-gap: 0px;
+  column-gap: 30px;
+  justify-content: space-between;
+}
+
+main.topics>.contents {
+  grid-column: 1/2;
+  grid-row: 2;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+main.topics>.contents>.stories {
+  display: flex;
+  flex-flow: column;
+  gap: 0px;
+  /* padding-bottom: 30px; */
+}
+
+/*Writers*/
+main.topics>.contents>.people {
+  display: flex;
+  flex-flow: column;
+  gap: 0px;
+  /* padding-bottom: 30px; */
+}
+
+main.topics>.quick-contents {
+  /* border: 1px solid var(--gray-color); */
+  grid-column: 2/3;
+  grid-row: 1/5;
+  margin: 0;
+  padding: 0 0 30px 0;
+  display: flex;
+  flex-flow: column;
+  gap: 0px;
+  height: max-content;
+  position: sticky;
+  top: 0px;
+}
+
+main.topics>.quick-contents>.icons {
+  border-bottom: var(--border);
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: sticky;
+  top: 0px;
+  background-color: var(--theme);
+  padding: 15px 0 10px 0;
+  margin: 0;
+  z-index: 5;
+}
+
+
+main.topics>.quick-contents>.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 10px;
+  margin-top: 20px;
+}
+
+main.topics>.quick-contents>.info>.stat {
+  grid-row: 1;
+  /* border:  var(--border); */
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  padding: 10px 50px 15px 10px;
+  border: var(--button-border);
+  border-left: var(--button-border-left);
+  border-bottom: var(--button-border-left);
+  color: transparent;
+  background: var(--button-background);
+  background-color: var(--main-color);
+  background-size: 400% 400%;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+main.topics>.quick-contents>.info>.stat>.no {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: transparent;
+}
+
+main.topics>.quick-contents>.info>.stat>.no>i {
+  font-size: 1.2rem;
+  /* font-weight: bold; */
+}
+
+main.topics>.quick-contents>.info>.stat>p.text {
+  margin: 0 3px;
+  padding: 0;
+  font-size: 1rem;
+  color: var(--text-color);
+  /* color: transparent; */
+  padding-left: 10px;
+  border-left: 3px solid var(--main-color);
+}
+
+main.topics>.quick-contents>.info>.space {
+  padding: 5px 10px;
+  max-height: max-content;
+  grid-column: 1/3;
+  display: flex;
+  flex-flow: column;
+  gap: 0px;
+  border: var(--button-border);
+  border-left: var(--button-border-left);
+  border-bottom: var(--button-border-left);
+  color: transparent;
+  background: var(--button-background);
+  background-color: var(--main-color);
+  background-size: 400% 400%;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+main.topics>.quick-contents>.info>.space>p.text {
+  /* border: 1px solid #c3c3c39b; */
+  margin: 0;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+main.topics>.quick-contents>.topics {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+
+main.topics>.quick-contents .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+main.topics>.quick-contents .head > h4.title {
+  color: var(--text-color);
+  margin: 0;
+  font-size: 1rem;
+}
+
+main.topics>.quick-contents .more {
+  margin-top: 0px;
+  /* border: 1px solid #c3c3c39b; */
+  height: max-content;
+  /* align-self: center; */
+}
+
+main.topics>.quick-contents .more > a {
+  text-decoration: none;
+  color: var(--gray-color);
+  font-size: 0.9rem;
+  padding: 3px 3px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+main.topics>.quick-contents .more > a:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+
+main.topics>.quick-contents>.people {
+  /* border: var(--border); */
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+}
+
+main.topics>.quick-contents>.people>.people-list {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+}

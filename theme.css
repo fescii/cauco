@@ -1,0 +1,159 @@
+/*
+
+Name: aduki, Inc
+Version: 0.1.0
+Author: Fredrick Femar Ochieng'
+Email: isfescii@gmail.com
+
+
+*/
+
+:root {
+  /*========== Colors ==========*/
+  --font-one: "Sen", sans-serif;
+  --font-two: "Product Sans", sans-serif;
+
+  /*Color mode HSL(hue, saturation, lightness)*/
+  /*
+        Purple: hsl(250, 66%, 75%)
+        Blue: hsl(207, 90%, 72%)
+        Pink: hsl(356, 66%, 75%)
+        Teal: hsl(174, 63%, 62%)
+  */
+
+  --tab-color: #aa77ff;
+  --main-color: hsl(250, 66%, 71%);
+  --accent-color: #08b86f;
+  --white: #ffffff;
+
+  --nav-item-background: hsla(250, 88%, 75%, 0.192);
+  --nav-item-color: hsl(250, 88%, 75%);
+  --logout: #fb482c;
+
+  --border: 1px solid #80808027;
+  --dashed: 1px dashed #80808027;
+  --start-border: 2px solid hsla(250, 88%, 75%, 0.521);
+
+
+  --border-reply: 1px solid #80808027;
+  --reply: #f8f8f8;
+  --user-background: #f8f8f8;
+
+  --button-background: linear-gradient(-105deg, #08b86f, hsla(250, 88%, 75%, 0.274), #08b86f, hsla(250, 88%, 75%, 0.521));
+  --button-background-two: linear-gradient(-45deg, #ee7752, #23a6d5,#08b86f, #08b86f);
+  --button-text-one: #ffffff;
+  --button-text-two: #08b86f;
+  --button-border: 1px solid #08b86f60;
+  --button-border-left: 1px solid hsla(250, 88%, 75%, 0.521);
+
+  --title-color: #282829;
+  --text-color: #404040;
+  --gray-color: #808080;
+  --gray-two: #666464;
+  --link-color: #0d6efd;
+
+  --dot-color: #808080c1;
+  --reply-dot-color: #80808067;
+
+  --red-color: #f84125;
+
+  --expand-color: #ee7752;
+
+  --box-shadow: 0 5px 25px rgba(109, 117, 141, 0.1);
+
+  --theme: #ffffff;
+  --body: hsl(219, 100%, 99%);
+
+  --modal: #ffffff;
+  --modal-hover-background: #f5f5f5;
+  --modal-background: hsl(219, 28%, 16%, .7);
+  --modal-close: #f0f0f0;
+  --back-one-color: rgba(94, 94, 94, 0.087);
+  --close-background: #a9a8a8;
+  --post-linear-gradient: linear-gradient(180deg, #ffffff29, #ffffffd1, #ffffffe8, #ffffff);
+
+  /*========== Font and typography ==========*/
+  --mobile-header: #ffffff5d;
+  --mobile-border: 1px solid #80808067;
+  --pointer-mobile: 1px solid #80808067;
+  --mobile-dashed: 1px dashed #808080f0;
+  --mobile-border-reply: 1.5px solid #80808060;
+  --mobile-reply-dot-color: #808080;
+  --mobile-user-background: #f1f1f1;
+
+
+  /*========== Font weight ==========*/
+
+}
+@media (prefers-color-scheme: dark) {
+  :root{
+
+    --tab-color: #aa77ff;
+    --main-color: hsl(250, 66%, 71%);
+    --accent-color: #08b86f;
+    --white: #ffffff;
+
+    --nav-item-background: hsla(250, 88%, 75%, 0.192);
+    --nav-item-color: hsl(250, 88%, 75%);
+    --logout: #fb482c;
+
+    --border: 1px solid rgb(61, 67, 73);
+    --dashed: 1px dashed #ffffff27;
+    --start-border: 2px solid hsla(250, 88%, 75%, 0.521);
+
+    --border-reply: 1px solid rgb(91, 99, 107);
+    --reply: rgb(46, 51, 56);
+
+    --user-background: rgb(46, 51, 56);
+
+    --button-background: linear-gradient(-105deg, #08b86f, hsla(250, 88%, 75%, 0.274), #08b86f, hsla(250, 88%, 75%, 0.521));
+    --button-background-two: linear-gradient(-45deg, #ee7752, #23a6d5,#08b86f, #08b86f);
+    --button-text-one: #ffffff;
+    --button-text-two: #08b86f;
+    --button-border: 1px solid #08b86f60;
+    --button-border-left: 1px solid hsla(250, 88%, 75%, 0.521);
+
+    --title-color: hsl(0, 0%, 100%);
+    --text-color: rgb(219, 219, 219);
+    --gray-color: rgb(113, 118, 123);
+    --gray-two: rgb(158, 160, 161);
+    --link-color: #0d6efd;
+
+    --dot-color: #808080c1;
+    --reply-dot-color: rgb(91, 99, 107);
+
+    --red-color: #f84125;
+
+    --expand-color: #ee7752;
+
+    --box-shadow: 0 5px 25px rgba(109, 117, 141, 0.1);
+
+    --theme: rgb(33, 37, 41);
+    --body: rgb(33, 37, 41);
+
+    --modal: rgb(33, 37, 41);
+    --modal-hover-background: rgb(46, 51, 56);
+    --modal-background: hsl(219, 28%, 16%, .7);
+    --modal-close: rgb(46, 51, 56);
+    --back-one-color: rgb(46, 51, 56);
+    --close-background: #f10e0e;
+    --post-linear-gradient: linear-gradient(180deg, rgba(33, 37, 41, 0.747), rgba(33, 37, 41, 0.836), rgba(33, 37, 41, 0.938), rgb(33, 37, 41));
+
+    /*========== Font and typography ==========*/
+    --mobile-header: rgba(33, 37, 41, 0.548);
+    --mobile-border: 1px solid rgb(61, 67, 73);
+    --pointer-mobile: 1px solid #80808067;
+    --mobile-dashed: 1px dashed #ffffff27;
+    --mobile-border-reply: 1.5px solid rgb(91, 99, 107);
+    --mobile-reply-dot-color: rgb(91, 99, 107);
+    --mobile-user-background: rgb(46, 51, 56);
+
+
+  /*editor*/
+    --ck-color-base-background: rgb(33, 37, 41);
+    --ck-color-base-foreground: rgb(33, 37, 41);
+    --ck-color-button-default-hover-background: rgb(87, 96, 105);
+	  --ck-color-button-default-active-background: rgb(87, 96, 105);
+    --ck-color-text: var(--text-color);
+  }
+}
