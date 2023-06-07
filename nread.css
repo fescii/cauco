@@ -634,7 +634,7 @@ main.read>.story>.story-content>.comments-action>.comment:hover {
   Side-content
 */
 main.read>.author {
-  border: 1px solid #00ff22;
+  /* border: 1px solid #00ff22; */
   grid-row: 1;
   grid-column: 2/3;
   padding: 0 10px;
@@ -721,17 +721,12 @@ main.read>.author>.icons>.icon>.icon-link>.tooltip>.pointer {
   width: 7px;
   height: 7px;
   position: absolute;
-  /* top: -6px; */
-  /* bottom: -6px; */
   right: -4px;
-  /* left: 55px; */
   left: unset;
   rotate: 45deg;
   background-color: var(--theme);
   border-top: var(--border);
-  /* border-left:  var(--border); */
   border-right: var(--border);
-  /* border-bottom:  var(--border); */
 }
 
 main.read>.author>.icons>.icon>.icon-link>.search>.pointer {
@@ -776,10 +771,8 @@ main.read>.author>.icons>.profile {
 }
 
 main.read>.author>.icons>.profile>.image-section {
-  /* border:  var(--border); */
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   gap: 5px;
 }
 
@@ -905,7 +898,6 @@ main.read>.author>.author-info>.footer>.stats {
 }
 
 main.read>.author>.author-info>.footer>.stats>.stat {
-  /* border: 1px solid #8e8e8d; */
   display: flex;
   /* padding: 2px; */
   align-items: center;
@@ -941,14 +933,14 @@ main.read>.author>.author-info>.footer>.actions {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 25px;
 }
 
-main.read>.author>.author-info>.footer>.actions>.action {
+main.read>.author>.author-info>.footer>.actions>.message {
   border: var(--border);
   font-size: 0.9rem;
-  color: var(--gray-color);
+  color: var(--gray-two);
   text-decoration: none;
   height: max-content;
   display: flex;
@@ -961,10 +953,20 @@ main.read>.author>.author-info>.footer>.actions>.action {
   border-bottom-left-radius: 15px;
 }
 
-main.read>.author>.author-info>.footer>.actions>.notify:hover,
-main.read>.author>.author-info>.footer>.actions>.message:hover {
-  color: var(--main-color);
+main.read>.author>.author-info>.footer>.actions>.message:hover{
+  border: var(--button-border);
+  border-left: var(--button-border-left);
+  border-bottom: var(--button-border-left);
+  color: transparent;
+  background: var(--button-background);
+  background-color: var(--main-color);
+  background-size: 400% 400%;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
 }
+
+
 
 main.read>.author>.author-info>.footer>.actions> .follow {
   display: flex;
