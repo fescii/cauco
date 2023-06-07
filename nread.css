@@ -1044,7 +1044,6 @@ main.read>.author>section.info>.head {
 
 main.read>.author>section.stats>.stat {
   grid-row: 1;
-  /* border:  var(--border); */
   width: max-content;
   height: max-content;
   display: flex;
@@ -1098,7 +1097,6 @@ main.read>.author>section.info>ul.infos {
 }
 
 main.read>.author>section.info>ul.infos>li.info-item {
-  /* border: var(--border);; */
   display: flex;
   align-items: flex-start;
   gap: 8px;
