@@ -930,7 +930,6 @@ main.read>.author>.author-info>.footer>.actions {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  /* justify-content: space-between; */
   gap: 25px;
 }
 

@@ -109,7 +109,6 @@ main.topics>.quick-contents>.info>.stat>.no {
 
 main.topics>.quick-contents>.info>.stat>.no>i {
   font-size: 1.2rem;
-  /* font-weight: bold; */
 }
 
 main.topics>.quick-contents>.info>.stat>p.text {
@@ -117,7 +116,6 @@ main.topics>.quick-contents>.info>.stat>p.text {
   padding: 0;
   font-size: 1rem;
   color: var(--text-color);
-  /* color: transparent; */
   padding-left: 10px;
   border-left: 3px solid var(--main-color);
 }
