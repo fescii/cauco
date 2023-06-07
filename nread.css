@@ -143,11 +143,11 @@ main.read>.story>.story-content>.article-tags>a:hover {
 }
 
 main.read>.story>.story-content>.comments-action {
-  border: 1px solid #c3c3c3ae;
+  border: var(--border);
   align-self: center;
-  padding: 8px 5px;
+  padding: 8px 5px 8px 10px;
   background-color: var(--theme);
-  box-shadow: 0 5px 25px rgba(109, 117, 141, 0.259);
+  box-shadow: var(--box-shadow);
   position: fixed;
   bottom: 30px;
   display: flex;
@@ -159,7 +159,7 @@ main.read>.story>.story-content>.comments-action {
   border-bottom-left-radius: 18px;
 }
 main.read>.story>.story-content>.comments-action>.action {
-  border-right: 1px solid #c3c3c3ae;
+  border-right: var(--border);
   text-decoration: none;
   font-size: 1rem;
   color: var(--gray-color);
@@ -196,7 +196,7 @@ main.read>.story>.story-content>.comments-action>span.like:hover *{
 .comments-action>span.like  svg {
   position: absolute;
   left: -21px;
-  top: -4px;
+  top: -5px;
   cursor: pointer;
   overflow: visible;
   width: 28px;
@@ -450,9 +450,9 @@ main.read>.story>.story-content>.comments-action>span.like:hover *{
     transform: scale(1);
   }
 }
+
 main.read>.story>.story-content>.comments-action>.dots-mobile,
 main.read>.story>.story-content>.comments-action>.dots {
-  /*background-color: #e0e0e0e0;*/
   border-right:none;
   text-decoration: none;
   border-top-right-radius: 50px;
@@ -467,8 +467,7 @@ main.read>.story>.story-content>.comments-action>.dots {
   min-height: 20px;
   width: 30px;
   min-width: 30px;
-  margin: 0px 15px 0px 0px;
-  /* padding-left: 8px; */
+  margin: 0px 15px 0px 5px;
   gap: 3px;
 }
 
@@ -493,13 +492,13 @@ main.read>.story>.story-content>.comments-action>.dots>span.dot {
 }
 
 main.read>.story>.story-content>.comments-action>.dots-active {
-  background-color: #a5a5a531;
-  color: var(--main-color);
+  background-color:  var(--back-one-color);
+  color: var(--accent-color);
 
 }
 
 main.read>.story>.story-content>.comments-action>.dots-active>span.dot {
-  background-color: var(--main-color);
+  background-color: var(--accent-color);
 }
 
 main.read>.story>.story-content>.comments-action>.action>i{
@@ -512,9 +511,7 @@ main.read>.story>.story-content>.comments-action>.action>i.bi-heart {
 main.read>.story>.story-content>.comments-action>.comment:hover {
   color: var(--main-color);
 }
-main.read>.story>.story-content>.comments-action>.like:hover {
-  color: var(--expand-color);
-}
+
 
 .options-modal{
   border: var(--border);
@@ -527,7 +524,7 @@ main.read>.story>.story-content>.comments-action>.like:hover {
   position: absolute;
   width: 190px;
   right: 0px;
-  bottom: 48px;
+  bottom: 45px;
   top: unset;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -542,7 +539,7 @@ main.read>.story>.story-content>.comments-action>.like:hover {
   width: 10px;
   height: 10px;
   position: absolute;
-  right: 23px;
+  right: 29px;
   bottom: -5px;
   top: unset;
   rotate: 45deg;
