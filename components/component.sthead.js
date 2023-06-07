@@ -1067,7 +1067,7 @@ export default class StoryHeader extends HTMLElement {
           gap: 8px;
         }
         .options-modal>.options>.close-modal>div.return{
-          color: var(--white);
+          color: var(--text-color);
           background-color: var(--modal-close);
         }
         .options-modal>.options>.close-modal>div>i{
