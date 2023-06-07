@@ -261,27 +261,7 @@ export default class StoryHeader extends HTMLElement {
       </div>
     </div>
 
-    <div class="profile">
-      <div class="container">
-        <div class="image">
-          <img src="${this.getAttribute('author-profile')}" alt="Profile" srcset="">
-        </div>
-        <div class="info">
-          <a href="${this.getAttribute('author-url')}" class="name">${this.getAttribute('author-name')}</a>
-          <span class="info">${this.getAttribute('author-bio')}</span>
-        </div>
-      </div>
-      <div class="actions">
-        <span class="action follow">
-          <i class="bi-person-plus"></i>
-          <span class="text">Follow</span>
-        </span>
-        <span class="action">
-          <i class="bi-envelope-paper"></i>
-          <span class="text">Support</span>
-        </span>
-      </div>
-    </div>
+    ${this.getProfile(this.getAttribute('type'))}
     <div class="footer">
       <div class="stats">
         <span class="stat followers">
@@ -414,6 +394,90 @@ export default class StoryHeader extends HTMLElement {
   `;
   }
 
+  getProfile(type){
+    if (type == "space") {
+      return `
+      <div class="space-info">
+        <div class="space">
+          <div class="info">
+            <a href="${this.getAttribute('space-url')}" class="name">${this.getAttribute('space')}</a>
+            <div class="author">
+              <span class="by">by</span>
+              <a href="" class="name">${this.getAttribute('author-name')}</a>
+              <span class="dot"></span>
+              <span class="time">${this.getAttribute('author-role')}</span>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          ${this.getFollow(this.getAttribute('connection'))}
+          <span class="support">
+            <i class="bi-envelope-paper"></i>
+            <span class="text">Support</span>
+          </span>
+        </div>
+      </div>
+      `
+    } else {
+      return `
+      <div class="profile">
+        <div class="container">
+          <div class="image">
+            <img src="${this.getAttribute('author-profile')}" alt="Profile" srcset="">
+          </div>
+          <div class="info">
+            <a href="${this.getAttribute('author-url')}" class="name">${this.getAttribute('author-name')}</a>
+            <span class="info">${this.getAttribute('author-bio')}</span>
+          </div>
+        </div>
+        <div class="actions">
+          ${this.getFollow(this.getAttribute('connection'))}
+          <span class="support">
+            <i class="bi-envelope-paper"></i>
+            <span class="text">Support</span>
+          </span>
+        </div>
+      </div>
+      `
+    }
+  }
+
+  getSpaceConnection(conn){
+    if (conn == "following") {
+      return `
+      <span class="following">
+        <i class="bi-person-check"></i>
+        <span class="text">Following</span>
+      </span>
+      `
+    } else {
+      return `
+      <span class="follow">
+        <i class="bi-person-plus"></i>
+        <span class="text">Follow</span>
+      </span>
+      `
+    }
+  }
+
+  getFollow(conn){
+    if (conn == "following") {
+      return `
+      <span class="following">
+        <i class="bi-person-check"></i>
+        <span class="text">Following</span>
+      </span>
+      `
+    } else {
+      return `
+      <span class="follow">
+        <i class="bi-person-plus"></i>
+        <span class="text">Follow</span>
+      </span>
+      `
+    }
+  }
+
   getStyles() {
     return `
     <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css">
@@ -428,7 +492,7 @@ export default class StoryHeader extends HTMLElement {
         }
         * {
         box-sizing: border-box !important;
-          --font-one: 'Sen', sans-serif;
+          font-family: 'Sen', sans-serif;
           --font-two: 'Product Sans', sans-serif;
         }
         .head-nav{
@@ -521,18 +585,94 @@ export default class StoryHeader extends HTMLElement {
           -o-border-radius: 50px;
         }
 
+        .space-info{
+          display: flex;
+          gap: 10px;
+          flex-flow: column;
+          font-size: 1rem;
+        }
+        .space{
+          display: flex;
+          gap: 8px;
+          margin: 0 0 0 -1px;
+          font-size: 1rem;
+        }
+        .space>.image{
+          display: none;
+          width: 38px;
+          height: 38px;
+          overflow: hidden;
+          border-radius: 100%;
+          -webkit-border-radius: 100%;
+          -moz-border-radius: 100%;
+          -ms-border-radius: 100%;
+          -o-border-radius: 100%;
+        }
+        .space>.image>img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 100%;
+          -webkit-border-radius: 100%;
+          -moz-border-radius: 100%;
+          -ms-border-radius: 100%;
+          -o-border-radius: 100%;
+        }
+        .space>.info{
+          display: flex;
+          flex-flow: column;
+          gap: 0;
+          justify-content: center;
+        }
+        .space>.info>a.name{
+          text-decoration: none;
+          color: var(--text-color);
+          font-size: 1.25rem;
+        }
+        .space>.info>a.name:hover{
+          text-decoration: underline;
+        }
+        .space>.info>.author{
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          padding: 0 0 0 4px;
+          font-size: 0.8rem;
+          color: var(--text-color);
+        }
+        .space>.info>.author>a.name{
+          text-decoration: none;
+          color: var(--gray-two);
+          font-size: 0.8rem;
+        }
+        .space>.info>.author>a.name:hover{
+          text-decoration: underline;
+        }
+        .space>.info>.author>span.dot{
+          display: inline-block;
+          width: 4px;
+          height: 4px;
+          background-color: var(--dot-color);
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+        }
+        .space>.info>.author>span.time{
+          text-decoration: none;
+          color: var(--gray-color);
+          font-size: 0.8rem;
+        }
 
         .profile{
-          /*border: 1px solid #c02727;*/
           display: flex;
           align-items: start;
           flex-flow: column;
-          /*flex-wrap: nowrap;*/
           justify-content: space-between;
           gap: 10px;
         }
         .profile>.container{
-          /*border: 1px solid #c02727;*/
           display: flex;
           align-items: center;
           flex-flow: row;
@@ -560,7 +700,6 @@ export default class StoryHeader extends HTMLElement {
           -o-border-radius: 50px;
         }
         .profile>.container>.info{
-          /*border: 1px solid #c02727;*/
           align-self: flex-start;
           text-decoration: none;
           display: flex;
@@ -577,7 +716,6 @@ export default class StoryHeader extends HTMLElement {
           margin: 0%;
         }
         .profile>.container>.info>.name:hover{
-          /* color: #1A73E8; */
           text-decoration: underline;
         }
         .profile>.container>.info>.info{
@@ -588,18 +726,16 @@ export default class StoryHeader extends HTMLElement {
           gap: 15px;
           align-items: center;
         }
-        .profile>.actions {
-          /* border: 1px solid #f7eb06; */
+        .actions {
           display: flex;
           align-items: center;
           flex-wrap: nowrap;
           gap: 25px;
         }
-        .profile>.actions>.action {
-          /* border: 1px solid #2397d6; */
-         var(--border);
+        .actions>.support {
+          border: var(--border);
           font-size: 0.9rem;
-          color: var(--gray-color);
+          color: var(--gray-two);
           text-decoration: none;
           height: max-content;
           display: flex;
@@ -611,41 +747,71 @@ export default class StoryHeader extends HTMLElement {
           border-bottom-right-radius: 15px;
           border-bottom-left-radius: 15px;
         }
-        .profile>.actions>.notify:hover,
-        .profile>.actions>.message:hover {
-          color: var(--main-color);
-        }
-        .profile>.actions>.follow {
-          border: none;
-          text-decoration: none;
-          display: flex;
-          flex-wrap: nowrap;
-          align-items: center;
-          justify-content: center;
-          color: var(--theme);
+
+        .actions>.support:hover{
+          border: var(--button-border);
+          border-left: var(--button-border-left);
+          border-bottom: var(--button-border-left);
+          color: transparent;
+          background: var(--button-background);
           background-color: var(--main-color);
-          background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
           background-size: 400% 400%;
+          background-clip: text;
+          -moz-background-clip: text;
+          -webkit-background-clip: text;
         }
+
+        .actions > .follow {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          cursor: pointer;
+          padding: 4px 15px 4px 12px;
+          background: var(--button-background-two);
+          color: var(--button-text-one);
+          background-color: var(--main-color);
+          background-size: 500% 500%;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          border-bottom-left-radius: 15px;
+        }
+
+        .actions > .following {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          cursor: pointer;
+          padding: 3px 12px 4px 12px;
+          border: var(--button-border);
+          border-left: var(--button-border-left);
+          border-bottom: var(--button-border-left);
+          color: transparent;
+          background: var(--button-background);
+          background-color: var(--main-color);
+          background-size: 400% 400%;
+          background-clip: text;
+          -moz-background-clip: text;
+          -webkit-background-clip: text;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          border-bottom-left-radius: 15px;
+        }
+
         .footer{
-          /*border: 1px solid #f7eb06;*/
           display: flex;
           flex-flow: column;
           gap: 10px;
           margin: 10px 0 0 0;
         }
         .footer>.stats {
-          /* border: 1px solid #bed623; */
           font-size: 0.93rem;
           display: flex;
           align-items: center;
           gap: 8px;
-          color: var(--gray-color);
+          color: var(--gray-two);
         }
         .footer>.stats>.stat {
-          /* border: 1px solid #8e8e8d; */
           display: flex;
-          /* padding: 2px; */
           align-items: center;
           justify-content: center;
           gap: 5px;
@@ -656,8 +822,8 @@ export default class StoryHeader extends HTMLElement {
         .footer>.stats>span.dot {
           display: inline-block;
           margin-top: 1px;
-          width: 4px;
-          height: 4px;
+          width: 5px;
+          height: 5px;
           background-color: var(--dot-color);
           border-radius: 50px;
           -webkit-border-radius: 50px;
@@ -665,7 +831,6 @@ export default class StoryHeader extends HTMLElement {
           -ms-border-radius: 50px;
           -o-border-radius: 50px;
         }
-
 
         .options-modal{
           position: fixed;
@@ -679,13 +844,14 @@ export default class StoryHeader extends HTMLElement {
           padding: 0;
           display: none;
         }
+
         .options-modal>.modal-overlay{
           position: absolute;
           right: 0;
           top: 0;
           left: 0;
           bottom: 0;
-          background-color: #737272cf;
+          background-color: var(--modal-background);
         }
         .options-modal>.options{
           position: absolute;
@@ -699,26 +865,22 @@ export default class StoryHeader extends HTMLElement {
           flex-flow: column;
           align-items: center;
           gap: 0px;
-          background-color: var(--theme);
+          background-color: var(--modal);
           border-top-right-radius: 15px;
           border-top-left-radius: 15px;
         }
         .options-modal>.options>.popup,
         .options-modal>.options>.more-options{
-          /*border: 3px solidvar(--gray-color);*/
           display: flex;
           flex-flow: column;
           align-items: center;
           width: 100%;
           min-width: 100%;
-          /*padding: 0 5px;*/
         }
         .options-modal>.options>.popup{
           display: none;
-         /* margin: 0 5px 15px 5px;*/
         }
         .options-modal>.options>.popup>.content{
-          /*border: 3px solidvar(--gray-color);*/
           display: flex;
           flex-flow: column;
           width: 90%;
@@ -737,7 +899,6 @@ export default class StoryHeader extends HTMLElement {
           rotate: unset;
         }
         .options-modal>.options>.popup>.header{
-          /*border: 1px solidvar(--gray-color);*/
           color: var(--text-color);
           padding: 10px 0;
         }
@@ -746,11 +907,9 @@ export default class StoryHeader extends HTMLElement {
         }
         .options-modal>.options>.popup>.content>a,
         .options-modal>.options>.more-options>.options-item{
-          /*border-bottom: 1px solidvar(--gray-color);*/
           width: 90%;
           display: flex;
           padding: 15px 5px;
-          /*align-self: start;*/
           align-items: center;
           text-decoration: none;
           gap: 15px;
@@ -770,7 +929,6 @@ export default class StoryHeader extends HTMLElement {
         }
         .options-modal>.options>.popup>.content>a>.option-details,
         .options-modal>.options>.more-options>.options-item>.option-details{
-          /*border: 1px solidvar(--gray-color);*/
           display: flex;
           flex-flow: column;
         }
@@ -811,21 +969,20 @@ export default class StoryHeader extends HTMLElement {
         }
         .options-modal>.options>.popup>.content>p{
           margin: 5px 0 2px 5px;
-          color: #004040;
+          color: var(--main-color);
         }
         .popup .content .field {
           margin: 8px 0 10px 0;
           height: max-content;
           border-radius: 50px;
           padding: 2px 5px;
-          border: 1px solid #bbb9b9aa;
+          border: var(--border);
           position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .popup .field i {
-          /* border: 1px solid #bbb9b9aa; */
           color: var(--gray-color);
           width: 25px;
           font-size: 1rem;
@@ -837,23 +994,23 @@ export default class StoryHeader extends HTMLElement {
           color: var(--main-color);
         }
         .popup .field input {
-          /* border: 1px solid #bbb9b9aa; */
           color: var(--gray-color);
           width: 100%;
           height: max-content;
           border: none;
           outline: none;
           font-size: 1rem;
-          padding: 2px 10px 2px 0px;
+          padding: 3px 10px 3px 0px;
+          background: transparent;
         }
         .popup .field button {
           position: absolute;
           right: 5px;
-          top: 2px;
+          top: 3px;
           bottom: 3px;
-          color: #fff;
+          color: var(--white);
           border: none;
-          font-size: 1rem;
+          font-size: 0.9rem;
           border-radius: 50px;
           display: inline-block;
           margin-right: 5px;
@@ -876,10 +1033,7 @@ export default class StoryHeader extends HTMLElement {
           gap: 5px;
         }
         .options-modal>.options>.close-modal>div{
-          background-color: #f0f0f0;
-          /*color: var(--gray-color);*/
-          /*background-color:  #fb482c19;*/
-          /*color:var(--red-color);*/
+          background-color: var(--modal-close);
           color: var(--text-color);
           padding: 7px 10px;
           margin: 0;
@@ -894,15 +1048,13 @@ export default class StoryHeader extends HTMLElement {
           border-radius: 50px;
         }
         .options-modal>.options>.close-modal>div.share{
-          background-color: var(--main-color);
-          color: var(--theme);
+          background-color: var(--accent-color);
+          color: var(--white);
           gap: 8px;
         }
         .options-modal>.options>.close-modal>div.return{
-          /*background-color: #f0f0f0;*/
-          background-color: #099eef18;
-          /*color: var(--text-color);*/
-          color: var(--main-color);
+          color: var(--white);
+          background-color: var(--modal-close);
         }
         .options-modal>.options>.close-modal>div>i{
           margin: 3px 0 0 0;
@@ -911,7 +1063,6 @@ export default class StoryHeader extends HTMLElement {
         @media screen and ( max-width:500px ){
           :host {
             box-sizing: border-box !important;
-            /* border: 1px solid #c02727; */
             padding:  30px 3px 0 0;
             display: flex;
             flex-flow: column;
