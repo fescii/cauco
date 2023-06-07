@@ -806,7 +806,7 @@ main.read>.author>.author-info {
   flex-flow: column;
   height: max-content;
   gap: 8px;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 main.read>.author>.author-info>.profile {
@@ -1106,8 +1106,7 @@ main.read>.author>section.info>ul.infos>li.info-item {
 }
 
 main.read>.author>section.info>ul.infos>li.info-item>span.icon {
-  /* border:  var(--border); */
-  background-color: #f7f7f7;
+  background-color: var(--back-one-color);
   color: var(--gray-color);
   padding: 5px 5px;
   width: 25px;
