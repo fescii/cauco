@@ -667,7 +667,6 @@ main.read>.author>.icons>.icon {
 }
 
 main.read>.author>.icons>.icon>.icon-link {
-  /* border: 1px solid #c3c3c34d; */
   text-decoration: none;
   color: var(--gray-color);
   display: flex;
@@ -943,7 +942,7 @@ main.read>.author>.author-info>.footer>.actions>.message {
   height: max-content;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   cursor: pointer;
   padding: 3px 12px 4px 12px;
   border-top-right-radius: 15px;
