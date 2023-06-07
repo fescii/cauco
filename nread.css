@@ -1122,11 +1122,9 @@ main.read>.author>section.info>ul.infos>li.info-item>span.icon {
 main.read>.author>section.info>ul.infos>li.info-item>span.icon>i {
   font-size: 0.85rem;
   color: var(--gray-color);
-  /* margin-top: 2px; */
 }
 
 main.read>.author>section.info>ul.infos>li.info-item>span.details {
-  /* border:  var(--border); */
   font-size: 0.93rem;
   align-self: center;
   display: flex;
@@ -1140,8 +1138,6 @@ main.read>.author>section.info>ul.infos>li.info-item>span.details>span.name>span
 
 main.read>.author>section.info>a.all {
   text-decoration: none;
-  /* text-transform: capitalize; */
-  /* border:  var(--border); */
   margin-left: 8px;
   padding: 3px 5px;
   color: var(--gray-color);
