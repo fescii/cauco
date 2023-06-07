@@ -1025,7 +1025,7 @@ main.read>.author>section.stats {
   display: flex;
   flex-flow: row;
   row-gap: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   align-items: center;
   justify-content: space-between;
   border-bottom: var(--border);
