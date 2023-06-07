@@ -1043,7 +1043,7 @@ main.read>.author>section.info>.head {
 
 main.read>.author>section.stats>.stat {
   grid-row: 1;
-  width: max-content;
+  width: 120px;
   height: max-content;
   display: flex;
   flex-flow: column;
