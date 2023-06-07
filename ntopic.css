@@ -31,19 +31,15 @@ main.topics>.contents>.stories {
   display: flex;
   flex-flow: column;
   gap: 0px;
-  /* padding-bottom: 30px; */
 }
 
-/*Writers*/
 main.topics>.contents>.people {
   display: flex;
   flex-flow: column;
   gap: 0px;
-  /* padding-bottom: 30px; */
 }
 
 main.topics>.quick-contents {
-  /* border: 1px solid var(--gray-color); */
   grid-column: 2/3;
   grid-row: 1/5;
   margin: 0;
