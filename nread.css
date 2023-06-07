@@ -747,7 +747,7 @@ main.read>.author>.icons>.icon>.icon-link>.dot {
   display: inline-block;
   width: 7px;
   height: 7px;
-  background-color: rgb(251, 72, 44);
+  background-color: var(--red-color);
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
