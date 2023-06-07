@@ -1024,12 +1024,9 @@ main.read>.author>section.info>.head>h4.title {
 }
 
 main.read>.author>section.stats {
-  /* border: 1px solid#fe2003; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 20px;
-  /* column-gap: 10px; */
-  margin-top: 15px;
   justify-content: space-between;
 
 }
