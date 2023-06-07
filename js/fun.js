@@ -118,7 +118,6 @@ viewBtns.forEach((viewBtn, index) => {
 })
 
 //Read-Headers
-let readOut = document.querySelector("main.read>.story>.story-header>#read-action-links")
 let readFooterModal = document.querySelector("main.read>.story>.story-content>.comments-action>.options-modal")
 let readFooterDots = document.querySelector("main.read>.story>.story-content>.comments-action>.dots")
 if (readFooterModal != null && readFooterDots != null) {
@@ -137,94 +136,11 @@ if (readFooterModal != null && readFooterDots != null) {
     let top = readFooterModal.querySelector(".options-item:last-of-type")
 
     top.addEventListener("mouseenter", (e) => {
-        pointer.style.backgroundColor = "var(--modal-hover-background);"
+        pointer.style.backgroundColor = "var(--modal-hover-background)"
     })
     top.addEventListener("mouseleave", (e) => {
         pointer.style.backgroundColor = "var(--theme)"
     })
-}
-if (readOut != null) {
-    let actionModal = readOut.querySelector("#story-action-modal");
-    let actionBtn = readOut.querySelector("#story-action-btn");
-
-    let shareModal = readOut.querySelector("#popup-modal");
-    let shareBtn = readOut.querySelector("#popup-btn");
-
-    actionBtn.addEventListener("click", (e) => {
-        e.preventDefault()
-        try {
-            shareModal.style.display = "none"
-            shareBtn.classList.remove("active")
-        }
-        finally {
-            if (actionModal.style.display == "flex") {
-                actionBtn.classList.remove("dots-active")
-                actionModal.style.display = "none"
-            } else {
-                actionBtn.classList.add("dots-active")
-                actionModal.style.display = "flex"
-            }
-        }
-    })
-
-    let pointer = actionModal.querySelector("span.pointer")
-    let top = actionModal.querySelector(".options-item:first-of-type")
-
-    top.addEventListener("mouseenter", (e) => {
-        pointer.style.backgroundColor = "var(--modal-hover-background);"
-    })
-    top.addEventListener("mouseleave", (e) => {
-        pointer.style.backgroundColor = "var(--theme)"
-    })
-
-    shareBtn.addEventListener("click", (e) => {
-        e.preventDefault()
-        try {
-            actionBtn.classList.remove("dots-active")
-            actionModal.style.display = "none"
-        }
-        finally {
-            if (shareModal.style.display == "flex") {
-                shareBtn.classList.remove("active")
-                shareModal.style.display = "none"
-            } else {
-                shareBtn.classList.add("active")
-                shareModal.style.display = "flex"
-
-            }
-        }
-    })
-
-    let close = shareModal.querySelector(".close"),
-        field = shareModal.querySelector(".field"),
-        input = field.querySelector("input"),
-        copy = field.querySelector("button.copy");
-
-    close.addEventListener("click", () => {
-        shareModal.style.setProperty('display', 'none')
-        shareBtn.classList.remove("active")
-    })
-
-    copy.onclick = () => {
-        input.select(); //select input value
-        if (document.execCommand("copy")) { //if the selected text copy
-            field.classList.add("active");
-            copy.innerText = "Copied";
-            setTimeout(() => {
-                window.getSelection().removeAllRanges(); //remove selection from document
-                field.classList.remove("active");
-                copy.innerText = "Copy";
-            }, 3000);
-        }
-    }
-
-
-    // element.addEventListener("mouseenter", (e) => {
-    //         toolTip.style.display = "inline-block"
-    //     })
-    // element.addEventListener("mouseleave", (e) => {
-    //         toolTip.style.display = "none"
-    //     })
 }
 
 //Comments-Container

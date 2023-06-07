@@ -299,6 +299,7 @@ Email: isfescii@gmail.com
 
   main.read>.story>.story-content>.comments-action {
     position: fixed;
+    padding-left: 10px;
     bottom: 30px;
     display: flex;
     align-items: center;
@@ -312,6 +313,27 @@ Email: isfescii@gmail.com
   main.read>.story>.story-content>.comments-action>.action {
     cursor: unset;
   }
+
+  main.read>.story>.story-content>.comments-action>span.like {
+    position: relative;
+    padding: 0;
+    margin: 0 0 0 18px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+  }
+  .comments-action>span.like>label>span{
+    cursor: default;
+  }
+  main.read>.story>.story-content>.comments-action>span.like:hover{
+    color:var(--gray-color);
+  }
+  main.read>.story>.story-content>.comments-action>span.like:hover *{
+    stroke: var(--gray-color);
+  }
+
 
   main.read>.story>.story-content>.comments-action>.dots {
     display: none;
