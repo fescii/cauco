@@ -811,7 +811,6 @@ main.read>.author>.icons>.profile>.image-section>span.icli {
 }
 
 main.read>.author>.author-info {
-  /* border: 1px solid #c02727; */
   padding: 0;
   display: flex;
   flex-flow: column;
@@ -821,7 +820,6 @@ main.read>.author>.author-info {
 }
 
 main.read>.author>.author-info>.profile {
-  /* border: 1px solid #c02727; */
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -831,7 +829,6 @@ main.read>.author>.author-info>.profile {
 }
 
 main.read>.author>.author-info>.profile>.container {
-  /* border: 1px solid #c02727; */
   display: flex;
   align-items: center;
   flex-flow: row;
@@ -862,7 +859,6 @@ main.read>.author>.author-info>.profile>.container>.image>img {
 }
 
 main.read>.author>.author-info>.profile>.container>.info {
-  /* border: 1px solid #c02727; */
   align-self: flex-start;
   text-decoration: none;
   display: flex;
@@ -881,7 +877,7 @@ main.read>.author>.author-info>.profile>.container>.info>.name {
 }
 
 main.read>.author>.author-info>.profile>.container>.info>.name:hover {
-  color: #1A73E8;
+  text-decoration: underline;
 }
 
 main.read>.author>.author-info>.profile>.container>.info>.info {
@@ -894,7 +890,6 @@ main.read>.author>.author-info>.profile>.container>.info>.info {
 }
 
 main.read>.author>.author-info>.footer {
-  /* border: 1px solid #06eff7; */
   display: flex;
   flex-flow: column;
   gap: 10px;
@@ -902,7 +897,6 @@ main.read>.author>.author-info>.footer {
 }
 
 main.read>.author>.author-info>.footer>.stats {
-  /* border: 1px solid #bed623; */
   font-size: 0.93rem;
   display: flex;
   align-items: center;
@@ -943,7 +937,6 @@ main.read>.author>.author-info>.footer>.stats>span.dot {
 }
 
 main.read>.author>.author-info>.footer>.actions {
-  /* border: 1px solid #f7eb06; */
   width: 100%;
   display: flex;
   align-items: center;
@@ -953,7 +946,6 @@ main.read>.author>.author-info>.footer>.actions {
 }
 
 main.read>.author>.author-info>.footer>.actions>.action {
-  /* border: 1px solid #2397d6; */
   border: var(--border);
   font-size: 0.9rem;
   color: var(--gray-color);
