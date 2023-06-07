@@ -634,7 +634,6 @@ main.read>.story>.story-content>.comments-action>.comment:hover {
   Side-content
 */
 main.read>.author {
-  /* border: 1px solid #00ff22; */
   grid-row: 1;
   grid-column: 2/3;
   padding: 0 10px;
