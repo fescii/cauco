@@ -1023,17 +1023,16 @@ main.read>.author>section.info>.head>h4.title {
 }
 
 main.read>.author>section.stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-flow: row;
   row-gap: 20px;
   padding-bottom: 25px;
+  align-items: center;
   justify-content: space-between;
   border-bottom: var(--border);
 }
 
 main.read>.author>section.info>.head {
-  grid-column: 1/3;
-  grid-row: 1;
   border-bottom: var(--border);
   display: flex;
   align-items: center;
