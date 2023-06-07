@@ -1088,10 +1088,10 @@ main.read>.author>section.stats>.stat>p.text {
   color: var(--text-color);
   padding-left: 10px;
   border-left: 3px solid var(--main-color);
+  text-transform: capitalize;
 }
 
 main.read>.author>section.info>ul.infos {
-  /* border:  var(--border); */
   padding: 0 0 0 5px;
   margin: 0;
   list-style-type: none;
