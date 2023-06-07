@@ -249,7 +249,7 @@ export default class StoryHeader extends HTMLElement {
           <div class="title">Story</div>
           <span class="users">
             <span class="by">by</span>
-            <span class="author">${this.getAttribute('author-name')}</span>
+            ${this.getAuthor(this.getAttribute('type'))}
           </span>
         </div>
       </div>
@@ -394,6 +394,18 @@ export default class StoryHeader extends HTMLElement {
   `;
   }
 
+  getAuthor(type){
+    if (type == "space") {
+      return `
+      <span class="author">${this.getAttribute('space')}</span>
+      `
+    } else {
+      return `
+      <span class="author">${this.getAttribute('author-name')}</span>
+      `
+    }
+  }
+
   getProfile(type){
     if (type == "space") {
       return `
@@ -410,7 +422,7 @@ export default class StoryHeader extends HTMLElement {
           </div>
         </div>
         <div class="actions">
-          ${this.getFollow(this.getAttribute('connection'))}
+          ${this.getSpaceConnection(this.getAttribute('connection'))}
           <span class="support">
             <i class="bi-envelope-paper"></i>
             <span class="text">Support</span>
@@ -446,19 +458,20 @@ export default class StoryHeader extends HTMLElement {
     if (conn == "following") {
       return `
       <span class="following">
-        <i class="bi-person-check"></i>
+        <!--<i class="bi-dash"></i>-->
         <span class="text">Following</span>
       </span>
       `
     } else {
       return `
       <span class="follow">
-        <i class="bi-person-plus"></i>
+        <i class="bi bi-plus"></i>
         <span class="text">Follow</span>
       </span>
       `
     }
   }
+
 
   getFollow(conn){
     if (conn == "following") {
@@ -477,6 +490,7 @@ export default class StoryHeader extends HTMLElement {
       `
     }
   }
+
 
   getStyles() {
     return `
@@ -587,7 +601,7 @@ export default class StoryHeader extends HTMLElement {
 
         .space-info{
           display: flex;
-          gap: 10px;
+          gap: 15px;
           flex-flow: column;
           font-size: 1rem;
         }
