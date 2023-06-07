@@ -1010,7 +1010,6 @@ main.read>.author>section.info {
 }
 
 main.read>.author>section.info>.head {
-  border-bottom: var(--border);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1027,8 +1026,9 @@ main.read>.author>section.stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 20px;
+  padding-bottom: 25px;
   justify-content: space-between;
-
+  border-bottom: var(--border);
 }
 
 main.read>.author>section.info>.head {
