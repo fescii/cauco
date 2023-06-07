@@ -702,7 +702,6 @@ export default class PostWrapper extends HTMLElement {
           font-family: 'Sen', sans-serif;
         }
         .space{
-          /* border: 1px solid #b30efa; */
           display: flex;
           flex-flow: row;
           align-items: center;
@@ -711,14 +710,11 @@ export default class PostWrapper extends HTMLElement {
           gap: 10px;
         }
         .space>.left{
-          /* border: 1px solid #51fa0e; */
           display: flex;
-          /* align-items: center; */
           gap: 8px;
           font-size: 1rem;
         }
         .space>.left>.image{
-          /* border: 1px solid #51fa0e; */
           display: none;
           width: 38px;
           height: 38px;
@@ -746,7 +742,6 @@ export default class PostWrapper extends HTMLElement {
           justify-content: center;
         }
         .space>.left>.info>a.name{
-          /* border: 1px solid #51fa0e; */
           text-decoration: none;
           color:  var(--title-color);
           font-size: 1.15rem;
@@ -755,7 +750,6 @@ export default class PostWrapper extends HTMLElement {
           text-decoration: underline;
         }
         .space>.left>.info>.author{
-          /* border: 1px solid #51fa0e; */
           display: flex;
           align-items: center;
           gap: 5px;
@@ -789,7 +783,6 @@ export default class PostWrapper extends HTMLElement {
           font-size: 0.8rem;
         }
         .head{
-          /* border: 1px solid #b30efa;*/
           display: flex;
           flex-flow: row;
           align-items: center;
@@ -798,7 +791,6 @@ export default class PostWrapper extends HTMLElement {
           gap: 20px;
         }
         .head>.user{
-         /*border: 1px solid #b30efa;*/
           display: flex;
           flex-flow: row;
           align-items: center;
@@ -806,7 +798,6 @@ export default class PostWrapper extends HTMLElement {
           gap: 10px;
         }
         .head>.user>.profile{
-          /*border: 1px solid #b30efa;*/
           width: 38px;
           height: 38px;
           border-radius: 50px;
@@ -826,14 +817,12 @@ export default class PostWrapper extends HTMLElement {
           -o-border-radius: 50px;
         }
         .head>.user>.info{
-          /*border: 1px solid #c3c3c3;*/
           margin-top: 1px;
           display: flex;
           flex-flow: column;
           gap: 2px;
         }
         .head>.user>.info>.name-container{
-          /*border: 1px solid #c3c3c3;*/
           display: flex;
           flex-flow: row;
           flex-wrap: nowrap;
@@ -842,7 +831,6 @@ export default class PostWrapper extends HTMLElement {
           gap: 8px;
         }
         .head>.user>.info>.name-container>p.name{
-          /*border: 1px solid #c3c3c3;*/
           margin: 0;
           display: flex;
           align-items: center;
@@ -864,7 +852,6 @@ export default class PostWrapper extends HTMLElement {
           color:  var(--main-color);
         }
         .head>.user>.info>.other{
-          /*border: 1px solid #df2828;*/
           display: flex;
           flex-flow: row;
           align-items: center;
@@ -951,7 +938,6 @@ export default class PostWrapper extends HTMLElement {
           align-items: center;
           justify-content: center;
           border-top-right-radius: 10px;
-          /*border-top-left-radius: 10px;*/
           border-bottom-right-radius: 10px;
           border-bottom-left-radius: 10px;
         }
@@ -986,7 +972,6 @@ export default class PostWrapper extends HTMLElement {
         }
         .space>.more>.options-cover>.options>.option,
         .head>.more>.options-cover>.options>.option {
-          /*border: 1px solid #784adf;*/
           display: flex;
           padding: 8px 12px;
           flex-flow: row;
@@ -1011,7 +996,6 @@ export default class PostWrapper extends HTMLElement {
         }
         .space>.more>.options-cover>.options>.delete:hover,
         .head>.more>.options-cover>.options>.delete:hover {
-          /* background-color:  #fb482c19; */
           color: var(--red-color);
           text-decoration: underline;
         }
@@ -1022,19 +1006,16 @@ export default class PostWrapper extends HTMLElement {
         }
         .space>.more>.options-cover>.options .option:last-child,
         .head>.more>.options-cover>.options .option:last-child {
-          /*border: 1px solid #484adf;*/
           padding: 5px 10px 8px 10px;
           border-bottom-right-radius: 10px;
           border-bottom-left-radius: 10px;
         }
         .content{
-          /* border: 1px solid #784adf;*/
           display: flex;
           flex-flow: column;
           gap: 0px;
         }
         .content>.false{
-          /* border: 1px solid #784adf;*/
           display: flex;
           flex-flow: column;
           gap: 3px;
@@ -1043,7 +1024,6 @@ export default class PostWrapper extends HTMLElement {
           max-height: max-content;
         }
         .content>.true{
-          /*border: 1px solid #784adf;*/
           display: flex;
           flex-flow: column;
           gap: 3px;
@@ -1061,7 +1041,6 @@ export default class PostWrapper extends HTMLElement {
         .content>.text h4,
         .content>.text h5,
         .content>.text h6{
-          /*border: 1px solid #784adf;*/
           color: var(--title-color);
           margin: 0 0 0px 0;
           padding: 0;

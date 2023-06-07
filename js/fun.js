@@ -137,7 +137,7 @@ if (readFooterModal != null && readFooterDots != null) {
     let top = readFooterModal.querySelector(".options-item:last-of-type")
 
     top.addEventListener("mouseenter", (e) => {
-        pointer.style.backgroundColor = "#f1f1f1"
+        pointer.style.backgroundColor = "var(--modal-hover-background);"
     })
     top.addEventListener("mouseleave", (e) => {
         pointer.style.backgroundColor = "var(--theme)"
@@ -171,7 +171,7 @@ if (readOut != null) {
     let top = actionModal.querySelector(".options-item:first-of-type")
 
     top.addEventListener("mouseenter", (e) => {
-        pointer.style.backgroundColor = "#f1f1f1"
+        pointer.style.backgroundColor = "var(--modal-hover-background);"
     })
     top.addEventListener("mouseleave", (e) => {
         pointer.style.backgroundColor = "var(--theme)"

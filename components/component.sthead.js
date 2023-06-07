@@ -641,7 +641,7 @@ export default class StoryHeader extends HTMLElement {
         .space>.info>a.name{
           text-decoration: none;
           color: var(--text-color);
-          font-size: 1.25rem;
+          font-size: 1.5rem;
         }
         .space>.info>a.name:hover{
           text-decoration: underline;

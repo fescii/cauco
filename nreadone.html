@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="theme.css">
-    <link rel="stylesheet" href="all.css" />
+  <link rel="stylesheet" href="all.css" />
   <link rel="stylesheet" href="nread.css" />
   <link rel="stylesheet" href="nres.css" />
   <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css" />
@@ -178,7 +178,8 @@
   <main class="read">
     <div class="story">
 
-      <story-header type="space" space="The humanity space" author-role="Editor"  space-url="/jane-doe" connection="following" author-name="Jane Doe" author-url="/jane-doe" date="Sunday, August 21, 2022"
+      <story-header type="space" space="The humanity space" author-role="Editor" space-url="/jane-doe"
+        connection="following" author-name="Jane Doe" author-url="/jane-doe" date="Sunday, August 21, 2022"
         read-time="5 min read">
       </story-header>
 
@@ -193,6 +194,10 @@
             <span class="line"></span>
           </li>
           <li class="tab-item">
+            <span class="text">Responses</span>
+            <span class="line"></span>
+          </li>
+          <li class="tab-item">
             <span class="text">Related</span>
             <span class="line"></span>
           </li>
@@ -201,89 +206,12 @@
             <span class="line"></span>
           </li>
         </ul>
-        <div id="read-action-links" class="action-links">
-          <a href="" id="popup-btn" class="share">
-            <span class="iconly-Send icli"></span>
-          </a>
-          <a href="" id="story-action-btn" class="share dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </a>
-          <div id="story-action-modal" class="options-modal">
-            <span class="pointer"></span>
-            <a href="" class="edit options-item top">
-              <span class="iconly-Edit-Square icli"></span>
-              <div class="option-details">
-                <span class="detail-title">Edit</span>
-                <span class="detail-text">Edit this story</span>
-              </div>
-            </a>
-            <a href="/@maina" class="delete options-item">
-              <span class="iconly-Delete icli"></span>
-              <div class="option-details">
-                <span class="detail-title">Delete</span>
-                <span class="detail-text">Delete this comment</span>
-              </div>
-            </a>
-            <a href="" class="report options-item">
-              <span class="iconly-Info-Square icli"></span>
-              <div class="option-details">
-                <span class="detail-title">Report</span>
-                <span class="detail-text">Problem! report this story</span>
-              </div>
-            </a>
-          </div>
-          <div id="popup-modal" class="popup">
-            <span class="pointer"></span>
-            <div class="header">
-              <!-- <span>Share this article via</span> -->
-              <div class="close"><i class="bi-x"></i></div>
-            </div>
-            <div class="content">
-              <ul class="icons">
-                <a href="https://www.facebook.com/sharer.php?u=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25?t='Even if you're passionate about your job, get energy
-                                        from the people you work with, and believe in your company's mission,
-                                        you can experience a bad day. Maybe your morning sta…'" rel="noopener"
-                  target="_blank">
-                  <i class="bi-facebook"></i>
-                </a>
-                <a href="https://twitter.com/intent/tweet?url=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25&amp;text=Even if you're passionate about your job, get energy
-                                        from the people you work with, and believe in your company's mission, 
-                                        you can experience a bad day. Maybe your morning sta…" rel="noopener"
-                  target="_blank">
-                  <i class="bi-twitter"></i>
-                </a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25&title=Positive vibes&summery=Even if you're passionate about your job, get energy
-                                        from the people you work with, and believe in your company's mission, 
-                                        you can experience a bad day. Maybe your morning sta…" rel="noopener"
-                  target="_blank">
-                  <i class="bi-linkedin"></i>
-                </a>
-                <a href="https://api.whatsapp.com/send?text=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25"
-                  data-action="share/whatsapp/share" target="_blank">
-                  <i class="bi-whatsapp"></i>
-                </a>
-                <a href="https://t.me/share/url?url=https://getopas.pythonanywhere.com/@femar/positive-vibes-1-25&text=Even if you're passionate about your job, get energy
-                                    from the people you work with, and believe in your company's mission,
-                                    you can experience a bad day. Maybe your morning sta…" rel="noopener"
-                  target="_blank">
-                  <i class="bi-telegram"></i>
-                </a>
-              </ul>
-              <!-- <p>Or copy link</p> -->
-              <div class="field">
-                <i class="bi-link-45deg"></i>
-                <input type="text" readonly value="https://getopas.example.com/share-link/on" />
-                <button class="copy">Copy</button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="story-content">
         <h2 class="story-title">Debian Vs Ubuntu Linux: Which one should you choose?</h2>
         <div id="cover-image">
-          <img id="" src="https://getopas.pythonanywhere.com/media/articles/2023/01/23/debian-11-ubuntu-2104-wallpaper-split.webp.700x0_q85.jpg"
+          <img id=""
+            src="https://getopas.pythonanywhere.com/media/articles/2023/01/23/debian-11-ubuntu-2104-wallpaper-split.webp.700x0_q85.jpg"
             title="article cover" alt="" />
         </div>
         <div class="article-content">
@@ -565,27 +493,41 @@
           </div>
           <div class="options-modal">
             <span class="pointer"></span>
-            <a href="" class="edit options-item top">
-              <span class="iconly-Edit-Square icli"></span>
-              <div class="option-details">
-                <span class="detail-title">Edit</span>
-                <span class="detail-text">Edit this story</span>
+            <div class="options">
+              <div class="more-options">
+                <span class="options-item">
+                  <i class="bi-person-plus"></i>
+                  <span class="option-details">
+                    <span class="detail-title">Follow author</span>
+                  </span>
+                </span>
+                <span class="options-item">
+                  <i class="bi-send-plus"></i>
+                  <span class="option-details">
+                    <span class="detail-title">Email author</span>
+                  </span>
+                </span>
+                <span class="options-item">
+                  <i class="bi-clipboard"></i>
+                  <span class="option-details">
+                    <span class="detail-title">Copy link</span>
+                  </span>
+                </span>
+                <span class="options-item">
+                  <i class="bi-flag"></i>
+                  <div class="option-details">
+                    <span class="detail-title">Report story</span>
+                  </div>
+                </span>
+                <span class="options-item">
+                  <i class="bi-envelope-open-heart"></i>
+                  <span class="option-details">
+                    <span class="detail-title">Support author</span>
+                  </span>
+                </span>
               </div>
-            </a>
-            <a href="/@maina" class="delete options-item">
-              <span class="iconly-Delete icli"></span>
-              <div class="option-details">
-                <span class="detail-title">Delete</span>
-                <span class="detail-text">Delete this comment</span>
               </div>
-            </a>
-            <a href="" class="report options-item">
-              <span class="iconly-Info-Square icli"></span>
-              <div class="option-details">
-                <span class="detail-title">Report</span>
-                <span class="detail-text">Problem! report this story</span>
-              </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1175,12 +1117,6 @@
     </div>
     <div class="author">
       <ul class="icons header">
-        <!-- <li class="icon">
-                    <a href="" class="icon-link">
-                        <span class="iconly-Calendar icli"></span>
-                        <span class="dot"></span>
-                    </a>
-                </li> -->
         <li class="icon">
           <a href="" class="icon-link">
             <span class="iconly-Search icli"></span>
@@ -1328,6 +1264,7 @@
         </ul>
       </section>
     </div>
+
   </main>
   <script src="js/fun.js"></script>
 </body>
