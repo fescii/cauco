@@ -887,6 +887,7 @@ main.read>.author>.author-info>.footer {
 }
 
 main.read>.author>.author-info>.footer>.stats {
+  margin-top: 5px;
   font-size: 0.93rem;
   display: flex;
   align-items: center;
@@ -962,8 +963,6 @@ main.read>.author>.author-info>.footer>.actions>.message:hover{
   -webkit-background-clip: text;
 }
 
-
-
 main.read>.author>.author-info>.footer>.actions> .follow {
   display: flex;
   align-items: center;
@@ -1033,13 +1032,11 @@ main.read>.author>section.stats {
 }
 
 main.read>.author>section.info>.head {
-  border-bottom: var(--border);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3px 5px 8px 5px;
+  padding: 3px 5px 0px 5px;
 }
-
 
 main.read>.author>section.stats>.stat {
   grid-row: 1;
@@ -1086,8 +1083,15 @@ main.read>.author>section.stats>.stat>p.text {
   text-transform: capitalize;
 }
 
+main.read>.author>section.credentials {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  margin: 5px 0 0 0;
+}
+
 main.read>.author>section.info>ul.infos {
-  padding: 0 0 0 5px;
+  padding: 0;
   margin: 0;
   list-style-type: none;
   display: flex;
