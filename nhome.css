@@ -133,7 +133,7 @@ main.home>div.side .more>a:hover {
 main.home>div.side .people-list {
   display: flex;
   flex-flow: column;
-  gap: 5px;
+  gap: 7px;
   list-style-type: none;
   margin: 12px 0 0 0;
   padding: 0;
