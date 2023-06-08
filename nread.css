@@ -1195,7 +1195,7 @@ main.read>.comments-container>.comments-wrapper>i{
   position: absolute;
   top: 15px;
   right: 20px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--gray-color);
   cursor: pointer;
 }
