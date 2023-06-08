@@ -24,8 +24,13 @@
   <script type="module">
     /// importing the custom element
     import StoryHeader from "./components/component.sthead.js";
+    import RespondContainer from "./components/component.respond.js";
+    import CommentContainer from "./components/component.comment.js";
 
     customElements.define("story-header", StoryHeader);
+
+    customElements.define("respond-container", RespondContainer);
+    customElements.define("comment-container", CommentContainer);
   </script>
 
 </head>
@@ -575,10 +580,6 @@
             </select>
           </div>
           <div class="comment-options">
-            <!-- <a href="" class="comment">
-                            <i class="iconly-Edit icli"></i>
-                            <span class="add">Comment</span>
-                        </a> -->
             <span class="hr"></span>
             <span class="dots">
               <span class="dot"></span>
@@ -586,7 +587,62 @@
             </span>
           </div>
         </div>
-        <div class="comments-body">
+
+        <div class="comments">
+          <comment-container id="1" author-profile="img/profile.jpg" author-url="/puri.com" author-name="Fredrick Ochieng"
+            time-lapse="May 5 at 6:00 PM" likes="908">
+            <p>
+              Travel to the Sahara,<a href="">Mojave</a>, and the allas we seek
+              out the world's most majestic desert landscapes in this
+              fascinating docu-series.
+            </p>
+            <p>
+              Travel to the Sahara, Mojave, and the allas we seek out the
+              world's most majestic desert landscapes in this fascinating
+              docu-series.
+            </p>
+          </comment-container>
+
+          <comment-container id="1" author-profile="img/profile.jpg" author-url="/puri.com" author-name="Fredrick Ochieng"
+            time-lapse="May 5 at 6:00 PM" likes="908">
+            <p>
+              Travel to the Sahara, Mojave, and the allas we seek out the
+              world's most majestic desert landscapes in this fascinating
+              docu-series.
+            </p>
+          </comment-container>
+
+          <comment-container id="1" author-profile="img/profile.jpg" author-url="/puri.com" author-name="Fredrick Ochieng"
+            time-lapse="May 5 at 6:00 PM" likes="908">
+            <p>
+              Travel to the Sahara, Mojave, and the allas we seek out the
+              world's most majestic desert landscapes in this fascinating
+              docu-series.
+            </p>
+            <ul>
+              <li>The yellow Sahara is the postcard image of a desert.</li>
+              <li>
+                A waving sea of sand. Passing dunes. Date palm oases break up
+                the shimmering horizon.
+              </li>
+              <li>
+                Like nowhere else on earth, the Sahara embodies the romantic
+                ideal and lost dream of the infinite.
+              </li>
+            </ul>
+          </comment-container>
+
+          <comment-container id="1" author-profile="img/profile.jpg" author-url="/puri.com" author-name="Fredrick Ochieng"
+            time-lapse="May 5 at 6:00 PM" likes="908">
+            <p>
+              Travel to the Sahara, Mojave, and the allas we seek out the
+              world's most majestic desert landscapes in this fascinating
+              docu-series.
+            </p>
+          </comment-container>
+        </div>
+
+        <!-- <div class="comments-body">
           <form action="" method="post" class="add-comment">
             <textarea placeholder="Click to add comment..." name="comment" id="comment" cols="auto"
               rows="auto"></textarea>
@@ -1145,7 +1201,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
+
+
       </div>
     </div>
     <div class="author">
