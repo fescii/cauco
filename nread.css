@@ -1185,11 +1185,11 @@ main.read>.comments-container>.comments-wrapper {
   width: 55%;
   height: 80%;
   position: relative;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
 }
 main.read>.comments-container>.comments-wrapper>i{
   position: absolute;
