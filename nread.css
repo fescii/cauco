@@ -1178,11 +1178,11 @@ main.read>.comments-container {
 
 main.read>.comments-container>.comments-wrapper {
   background-color: var(--theme);
-  padding: 40px 60px;
+  padding: 10px 40px 30px 40px;
   display: flex;
   flex-flow: column;
   gap: 0px;
-  width: 60%;
+  width: 55%;
   height: 80%;
   position: relative;
   border-radius: 20px;
@@ -1195,9 +1195,18 @@ main.read>.comments-container>.comments-wrapper>i{
   position: absolute;
   top: 15px;
   right: 20px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--gray-color);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+main.read>.comments-container>.comments-wrapper>i:hover{
+  color: var(--expand-color);
+  transform: scale(1.12);
+  -webkit-transform: scale(1.12);
+  -moz-transform: scale(1.12);
+  -ms-transform: scale(1.12);
+  -o-transform: scale(1.12);
 }
 
 .comments-wrapper>.comments-header {
@@ -1240,8 +1249,10 @@ main.read>.comments-container>.comments-wrapper>i{
   color: var(--text-color);
 }
 main.read>.comments-container>.comments-wrapper>.comments{
+  border:  var(--border);
   display: flex;
   flex-flow: column;
+  overflow-x: none;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;

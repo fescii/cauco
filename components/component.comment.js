@@ -394,7 +394,7 @@ export default class CommentsContainer extends HTMLElement {
           line-height: 1;
         }
         .comment>.head.more{
-          margin: 0;
+          /*margin: 0 15px 0 0;*/
           display: flex;
           flex-flow: row;
           flex-wrap: nowrap;
@@ -450,14 +450,13 @@ export default class CommentsContainer extends HTMLElement {
           gap: 0px;
           border: var(--border);
           background-color: var(--theme);
-          /* border-top-left-radius: 15px; */
           border-top-right-radius: 8px;
           border-bottom-left-radius: 8px;
           border-bottom-right-radius: 8px;
           position: absolute;
           top: 32px;
           right: -10px;
-          z-index: 2;
+          z-index: 3;
         }
         .comment>.head>.more>.options>span.pointer {
           border: var(--border);

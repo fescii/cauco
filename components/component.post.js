@@ -1170,7 +1170,6 @@ export default class PostWrapper extends HTMLElement {
             gap: 3px;
         }
         .content>.footer>.actions>.actions-info{
-            /* border: 1px solid #284adf; */
             display: flex;
             flex-flow: row;
             align-items: center;
@@ -1178,7 +1177,6 @@ export default class PostWrapper extends HTMLElement {
             gap: 20px;
         }
         .content>.footer>.actions>.actions-info>.actions-container{
-          /*border: 1px solid #43df28;*/
           padding: 5px 0 2px 0;
           display: flex;
           flex-flow: row;
@@ -1606,7 +1604,6 @@ export default class PostWrapper extends HTMLElement {
           background: red;
         }
         .popup-content .content {
-          /*border: 1px solid var( --gray-color);*/
           margin: 0px 0;
         }
         .popup-content .content p {
@@ -1619,7 +1616,6 @@ export default class PostWrapper extends HTMLElement {
           font-size: 1.1rem;
         }
         .popup-content .content .icons {
-          /*border: 1px solid var( --gray-color);*/
           justify-content: start;
           gap: 15px;
           padding: 0%;
@@ -1628,7 +1624,6 @@ export default class PostWrapper extends HTMLElement {
           margin-bottom: 10px;
         }
         .popup-content .content .icons a {
-          /* border: 5px solid #bbb9b9aa; */
           display: flex;
           align-items: center;
           justify-content: center;
