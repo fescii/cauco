@@ -1157,15 +1157,16 @@ main.read>.author>section.info>a.all:hover {
 /*Comments*/
 main.read>.comments-container {
   border: var(--border);
-  backdrop-filter: blur(0.5px);
-  -webkit-backdrop-filter: blur(0.5px);
-  background-color: #7372724d;
+  /* backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px); */
+  background-color: var(--modal-background);
   padding: 0px;
   justify-self: end;
-  /* display: flex; */
-  display: none;
+  display: flex;
+  /* display: none; */
   flex-flow: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
   z-index: 10;
   position: fixed;
@@ -1176,14 +1177,18 @@ main.read>.comments-container {
 }
 
 main.read>.comments-container>.comments-wrapper {
-  border: 1px solid #c3c3c34d;
   background-color: var(--theme);
-  padding: 21px 20px 0px 20px;
+  padding: 40px 40px;
   display: flex;
   flex-flow: column;
   gap: 0px;
-  width: 450px;
-  height: 100%;
+  width: 60%;
+  height: 80%;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .comments-wrapper>.comments-header {
