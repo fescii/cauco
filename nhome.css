@@ -188,7 +188,7 @@ main.home>div.popular-stories>.stories {
   margin: 12px 0 0 0;
   display: flex;
   flex-flow: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 main.home>div.popular-stories>.stories>.story {
