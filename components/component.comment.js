@@ -455,7 +455,7 @@ export default class CommentsContainer extends HTMLElement {
           border-bottom-right-radius: 8px;
           position: absolute;
           top: 32px;
-          right: -10px;
+          right: 0px;
           z-index: 3;
         }
         .comment>.head>.more>.options>span.pointer {
@@ -466,7 +466,7 @@ export default class CommentsContainer extends HTMLElement {
           height: 8px;
           position: absolute;
           top: -5px;
-          right: 28px;
+          right: 18px;
           rotate: 45deg;
           border-bottom: none;
           border-right: none;

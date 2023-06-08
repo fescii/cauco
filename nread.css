@@ -1211,7 +1211,7 @@ main.read>.comments-container>.comments-wrapper>i:hover{
 
 .comments-wrapper>.comments-header {
   border-bottom:  var(--border);
-  padding: 10px 0px;
+  padding: 10px 0px 8px 0px;
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -1249,7 +1249,7 @@ main.read>.comments-container>.comments-wrapper>i:hover{
   color: var(--text-color);
 }
 main.read>.comments-container>.comments-wrapper>.comments{
-  border:  var(--border);
+  /* border:  var(--border); */
   display: flex;
   flex-flow: column;
   overflow-x: none;
