@@ -1182,15 +1182,63 @@ main.read>.comments-container>.comments-wrapper {
   display: flex;
   flex-flow: column;
   gap: 0px;
-  width: 55%;
+  width: 60%;
   height: 80%;
+  position: relative;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
+main.read>.comments-container>.comments-wrapper>i{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: var(--gray-color);
+  cursor: pointer;
+}
 
+.comments-wrapper>.comments-header {
+  border-bottom:  var(--border);
+  padding: 10px 0px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comments-wrapper>.comments-header .controls {
+  padding: 0;
+  display: flex;
+  flex-flow: row;
+  color: var(--gray-color);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.comments-wrapper>.comments-header .controls>select {
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  padding: 4px 2px 4px 2px;
+  color: var(--gray-color);
+  font-size: 1rem;
+}
+
+.comments-wrapper>.comments-header .controls>select:hover {
+  cursor: pointer;
+  color: var(--gray-color);
+  color: var(--main-color);
+}
+
+.comments-wrapper>.comments-header .controls>select>option {
+  border:  var(--border);
+  background-color: transparent;
+  color: var(--text-color);
+}
 main.read>.comments-container>.comments-wrapper>.comments{
   display: flex;
   flex-flow: column;
