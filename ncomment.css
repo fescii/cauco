@@ -108,7 +108,7 @@ main.post>div.side a:hover {
 div.people>.people-list {
   display: flex;
   flex-flow: column;
-  gap: 15px;
+  gap: 8px;
   list-style-type: none;
   margin: 12px 0 0 0;
   padding: 0;

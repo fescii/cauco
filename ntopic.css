@@ -9,7 +9,6 @@ Email: isfescii@gmail.com
 */
 
 main.topics {
-  /* border: 1px solid var(--gray-color); */
   margin: 0%;
   padding: 0 15px;
   display: grid;
@@ -77,7 +76,6 @@ main.topics>.quick-contents>.info {
 
 main.topics>.quick-contents>.info>.stat {
   grid-row: 1;
-  /* border:  var(--border); */
   width: max-content;
   height: max-content;
   display: flex;
@@ -144,7 +142,6 @@ main.topics>.quick-contents>.info>.space {
 }
 
 main.topics>.quick-contents>.info>.space>p.text {
-  /* border: 1px solid #c3c3c39b; */
   margin: 0;
   color: var(--text-color);
   font-size: 0.95rem;
@@ -179,9 +176,7 @@ main.topics>.quick-contents .head > h4.title {
 
 main.topics>.quick-contents .more {
   margin-top: 0px;
-  /* border: 1px solid #c3c3c39b; */
   height: max-content;
-  /* align-self: center; */
 }
 
 main.topics>.quick-contents .more > a {
@@ -213,7 +208,7 @@ main.topics>.quick-contents>.people {
 main.topics>.quick-contents>.people>.people-list {
   display: flex;
   flex-flow: column;
-  gap: 15px;
+  gap: 8px;
   list-style-type: none;
   margin: 0%;
   padding: 0%;
