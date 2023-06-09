@@ -1,5 +1,5 @@
-import RepliesContainer from './component.replies.js';
-export default class CommentsContainer extends HTMLElement {
+import CommentContainer from './component.comment.js';
+export default class StoryResponse extends HTMLElement {
   constructor() {
 
     // We are not even going to touch this.
@@ -14,8 +14,8 @@ export default class CommentsContainer extends HTMLElement {
     this.render();
   }
   registerOtherComponents() {
-    if (typeof customElements.get('replies-container') === 'undefined') {
-      customElements.define('replies-container', RepliesContainer);
+    if (typeof customElements.get('comment-container') === 'undefined') {
+      customElements.define('comment-container', CommentContainer);
       // console.log("Component Registered");
     }
   }
@@ -25,25 +25,7 @@ export default class CommentsContainer extends HTMLElement {
   }
 
   connectedCallback() {
-    let desktopDots  = this.shadowObj.querySelector('.comment>.head>.more > .desktop');
-    let dotsMobile  = this.shadowObj.querySelector('.comment>.head>.more > .dots');
-
-    let repliesButton = this.shadowObj.querySelector(".comment>.body>.footer>.actions>span.replies");
-
-    let response  = this.shadowObj.querySelector('.comment>.body>.footer>.actions>span.comment');
-
-    repliesButton.addEventListener('click', (e) => {
-      this.handleReplies();
-    });
-
-
-    desktopDots.addEventListener('click', (e) => {
-      this.handleOptions(desktopDots);
-    });
-
-    dotsMobile.addEventListener('click', (e) => {
-      this.handleOptionsMobile(dotsMobile);
-    });
+    let response  = this.shadowObj.querySelector('.comments-wrapper>.comments-header .add-comment');
 
     response.addEventListener('click', (e) => {
       this.openResponse();
@@ -58,85 +40,15 @@ export default class CommentsContainer extends HTMLElement {
 
   openResponse() {
     // updating the state
-    let parent  = document.querySelector('main.post > section.post > div.respond-placeholder');
+    let parent  = this.shadowObj.querySelector('div#respond-placeholder');
     parent.style.setProperty("display","flex")
 
     // response.remove()
     parent.innerHTML  = `
       <respond-container
-        name="Replying to fredrick's response"
+        name="Responding to fredrick's story"
         type="response">
       </respond-container>`;
-  }
-
-  handleOptions(item) {
-    // updating the state
-    let parent  = item.parentElement;
-    let options  = parent.querySelector('.options');
-    let pointer = options.querySelector("span.pointer")
-    let top = options.querySelector("span.option")
-
-    top.addEventListener("mouseenter", (e) => {
-        pointer.style.backgroundColor = "var(--modal-hover-background)"
-    })
-    top.addEventListener("mouseleave", (e) => {
-        pointer.style.backgroundColor = "var(--theme)"
-    })
-    if (options.style.display == "flex"){
-      // console.log(options)
-      item.classList.remove("active")
-      options.style.display = "none"
-    }
-    else {
-      item.classList.add("active")
-      options.style.display = "flex"
-    }
-  }
-
-  handleOptionsMobile() {
-    // updating the state
-    let optionsModal  = this.shadowObj.querySelector('.options-modal');
-    let options  = optionsModal.querySelector('.more-options');
-    let closeModal = options.querySelector(".close-modal")
-    let modalOverlay = optionsModal.querySelector(".modal-overlay")
-
-    if (optionsModal.style.display == "flex"){
-      // console.log(options)
-      optionsModal.style.display = "none"
-    }
-    else {
-      let parent  = document.querySelector('main.post > section.post > div.respond-placeholder');
-      parent.innerHTML = ''
-      optionsModal.style.display = "flex"
-      this.disableScroll()
-    }
-
-    closeModal.addEventListener("click", (e) => {
-      e.stopPropagation();
-      optionsModal.style.setProperty("display","none")
-      this.enableScroll()
-    },{once:true})
-    modalOverlay.addEventListener("click", (e) => {
-      e.stopPropagation();
-      optionsModal.style.setProperty("display","none")
-      this.enableScroll()
-    },{once:true})
-  }
-
-  handleReplies() {
-    // updating the state
-    let item  = this.shadowObj.querySelector('replies-container');
-    if (item){
-      try {
-        item.remove()
-        // this._isOpen = false;
-      } catch (error) {
-        return;
-      }
-    }
-    else {
-      this.shadowObj.querySelector('.replies-node').innerHTML = this.getReplies();
-    }
   }
 
 
