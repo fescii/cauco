@@ -93,6 +93,7 @@ export default class StoryResponse extends HTMLElement {
 
         <div id="respond-placeholder" class="respond-placeholder"></div>
       </div>
+
     ${this.getStyles()}
   `;
   }
@@ -280,11 +281,9 @@ export default class StoryResponse extends HTMLElement {
         }
 
         .comments-wrapper>div.respond-placeholder {
-          border:  var(--border);
-          height: 30px;
           background-color: var(--theme);
           position: sticky;
-          bottom: 0;
+          bottom: 0px;
           width: 100%;
           padding: 0 0 0 0;
           display: none;

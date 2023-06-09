@@ -65,9 +65,15 @@ export default class RespondContainer extends HTMLElement {
   }
 
   closeResponse(){
-    let parent  = document.querySelector('main.post > section.post > div.respond-placeholder');
-    parent.style.setProperty("display","none")
-    this.remove()
+    let parent  = document.querySelector('div.respond-placeholder');
+    try {
+      if (parent != null) {
+        parent.style.setProperty("display","none")
+      }
+    }
+    finally{
+      this.remove()
+    }
   }
 
   getTemplate() {
