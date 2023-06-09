@@ -1283,6 +1283,7 @@ main.read>.comments-container>.comments-wrapper>.comments::-webkit-scrollbar {
 
 main.read>.comments-container>.comments-wrapper>div.respond-placeholder {
   border:  var(--border);
+  height: 30px;
   background-color: var(--theme);
   position: sticky;
   bottom: 0;
