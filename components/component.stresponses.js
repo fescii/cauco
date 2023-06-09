@@ -150,6 +150,7 @@ export default class StoryResponse extends HTMLElement {
 
   getStyles() {
     return `
+    <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css">
       <style>
         :host {

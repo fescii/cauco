@@ -99,13 +99,27 @@ export default class RespondContainer extends HTMLElement {
       <style>
         * {
         box-sizing: border-box !important;
-          --font-one: 'Sen', sans-serif;
+          font-family: 'Sen', sans-serif;
           --font-two: 'Product Sans', sans-serif;
+        }
+        :host {
+          box-sizing: border-box !important;
+          border-top: var(--border);
+          background-color: var(--modal);
+          width: 100%;
+          padding: 0 0 0 0;
+          display: flex;
+          flex-flow: column;
+          gap: 0px;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          position: absolute;
+          bottom: 0;
         }
 
         @media screen and ( max-width:500px ){
           :host {
-            border: 1px solid #80808037;
+            box-sizing: border-box !important;
           }
           .ck.ck-editor {
             border: none;

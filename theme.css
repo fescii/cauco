@@ -87,7 +87,6 @@ Email: isfescii@gmail.com
 }
 @media (prefers-color-scheme: dark) {
   :root{
-
     --tab-color: #aa77ff;
     --main-color: hsl(250, 66%, 71%);
     --accent-color: #08b86f;

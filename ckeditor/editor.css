@@ -4399,7 +4399,7 @@ a.ck.ck-button-bold {
 
 respond-container {
 	/* border: 1px solid #80808037; */
-	border-top: none;
+	border-top: var(--border);
 	background-color: var(--modal);
 	width: 100%;
 	padding: 0 0 0 0;

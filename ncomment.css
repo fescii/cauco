@@ -142,7 +142,7 @@ main.post>section.post>.comments>.comment-wrapper {
 }
 
 div.respond-placeholder {
-  background-color: var(--theme);
+  background-color: var(--modal);
   position: sticky;
   bottom: 0;
   width: 100%;
