@@ -1222,16 +1222,16 @@ main.read>.comments-container>.comments-wrapper>i:hover{
   /* border:  var(--border); */
   color: var(--white);
   background-color: var(--main-color);
-  padding: 5px 15px;
+  padding: 4px 15px;
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
   gap: 5px;
   align-items: center;
   justify-content: center;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 .comments-wrapper>.comments-header .add-comment>i{
   font-size: 1.2rem;
