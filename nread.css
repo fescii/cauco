@@ -1211,11 +1211,30 @@ main.read>.comments-container>.comments-wrapper>i:hover{
 
 .comments-wrapper>.comments-header {
   border-bottom:  var(--border);
-  padding: 10px 0px 8px 0px;
+  padding: 10px 25px 8px 0px;
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.comments-wrapper>.comments-header .add-comment{
+  /* border:  var(--border); */
+  color: var(--white);
+  background-color: var(--main-color);
+  padding: 5px 15px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.comments-wrapper>.comments-header .add-comment>i{
+  font-size: 1.2rem;
 }
 
 .comments-wrapper>.comments-header .controls {
