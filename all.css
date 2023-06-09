@@ -660,15 +660,3 @@ footer.mobile>.more>.items>.item>i {
 footer.mobile>.more>.items>.item>span.text {
   font-size: 0.8rem;
 }
-
-
-div.respond-placeholder {
-  background-color: var(--theme);
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  padding: 0 0 0 0;
-  display: flex;
-  flex-flow: column;
-  gap: 0px;
-}
