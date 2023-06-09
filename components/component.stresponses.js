@@ -227,6 +227,7 @@ export default class StoryResponse extends HTMLElement {
           gap: 5px;
           align-items: center;
           justify-content: center;
+          cursor: pointer;
           border-top-right-radius: 50px;
           border-bottom-right-radius: 50px;
           border-bottom-left-radius: 50px;
@@ -286,7 +287,7 @@ export default class StoryResponse extends HTMLElement {
           bottom: 0;
           width: 100%;
           padding: 0 0 0 0;
-          display: flex;
+          display: none;
           flex-flow: column;
           gap: 0px;
         }
