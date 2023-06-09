@@ -131,7 +131,7 @@ Email: isfescii@gmail.com
     --theme: rgb(33, 37, 41);
     --body: rgb(33, 37, 41);
 
-    --modal: rgb(33, 37, 41);
+    --modal: rgb(11, 17, 30);
     --modal-hover-background: rgb(46, 51, 56);
     --modal-background: hsl(219, 28%, 16%, .7);
     --modal-close: rgb(46, 51, 56);
@@ -150,8 +150,8 @@ Email: isfescii@gmail.com
 
 
   /*editor*/
-    --ck-color-base-background: rgb(33, 37, 41);
-    --ck-color-base-foreground: rgb(33, 37, 41);
+    --ck-color-base-background: rgb(11, 17, 30);
+    --ck-color-base-foreground: rgb(11, 17, 30);
     --ck-color-button-default-hover-background: rgb(87, 96, 105);
 	  --ck-color-button-default-active-background: rgb(87, 96, 105);
     --ck-color-text: var(--text-color);

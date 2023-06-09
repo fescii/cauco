@@ -4400,7 +4400,7 @@ a.ck.ck-button-bold {
 respond-container {
 	/* border: 1px solid #80808037; */
 	border-top: none;
-	background-color: var(--theme);
+	background-color: var(--modal);
 	width: 100%;
 	padding: 0 0 0 0;
 	display: flex;
@@ -4414,7 +4414,7 @@ respond-container {
 
 .respond-container >span.to {
 	/*border-bottom: 1px solid #80808037;*/
-	background-color: var(--theme);
+	background-color: transparent;
 	padding: 3px 0px 0px 5px;
 	display: flex;
 	flex-flow: row;
@@ -4435,7 +4435,6 @@ respond-container {
 }
 
 .respond-container >span.respond {
-	/* border: 1px solid #80808037; */
 	background-color: var(--accent-color);
 	color: var(--white);
 	position: absolute;
@@ -4452,8 +4451,8 @@ respond-container {
 }
 
 .ck.ck-editor {
-	border: 1px solid #80808037;
-	background-color: var(--theme);
+	border: none;
+	background-color: transparent;
 	display: flex;
 	flex-flow: column-reverse;
 	border-top-left-radius: 15px;
@@ -4466,7 +4465,7 @@ respond-container {
 
 
 .ck.ck-content.ck-editor__editable {
-	background-color: var(--theme);
+	background-color: transparent;
 	border: none;
 	/* border-top-left-radius: 15px;
 	border-top-right-radius: 15px; */

@@ -25,6 +25,7 @@ export default class StoryResponse extends HTMLElement {
   }
 
   connectedCallback() {
+    this.disableScroll()
     let response  = this.shadowObj.querySelector('.comments-wrapper>.comments-header .add-comment');
 
     response.addEventListener('click', (e) => {
@@ -177,7 +178,7 @@ export default class StoryResponse extends HTMLElement {
         }
 
         .comments-wrapper {
-          background-color: var(--theme);
+          background-color: var(--modal);
           padding: 10px 40px 30px 40px;
           display: flex;
           flex-flow: column;
