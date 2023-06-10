@@ -166,7 +166,7 @@ export default class StoryResponse extends HTMLElement {
       <style>
         .comments-container {
           box-sizing: border-box !important;
-          border: var(--border);
+          border: none;
           background-color: var(--modal-background);
           padding: 0px;
           justify-self: end;
@@ -339,8 +339,8 @@ export default class StoryResponse extends HTMLElement {
             height: 100%;
             position: relative;
             border-radius: 0px;
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
+            /*border-top-left-radius: 25px;
+            border-top-right-radius: 25px;*/
           }
           .comments-wrapper>div.respond-placeholder {
             background-color: var(--theme);

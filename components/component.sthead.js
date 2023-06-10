@@ -1102,6 +1102,12 @@ export default class StoryHeader extends HTMLElement {
             display: flex;
             cursor: unset;
           }
+          .actions>.support {
+            border: var(--mobile-border);
+          }
+          .popup .content .field {
+            border: var(--mobile-border);
+          }
         }
       </style>
     `;
