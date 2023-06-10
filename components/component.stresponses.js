@@ -330,7 +330,7 @@ export default class StoryResponse extends HTMLElement {
           }
           .comments-wrapper {
             background-color: var(--modal);
-            padding: 40px 40px 30px 40px;
+            padding: 40px 10px 5px 10px;
             display: flex;
             flex-flow: column;
             gap: 0px;
