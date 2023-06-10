@@ -305,7 +305,7 @@ export default class StoryResponse extends HTMLElement {
         }
         @media screen and ( max-width:500px ){
           :host {
-            /*border-bottom: var(--mobile-dashed);*/
+            box-sizing: border-box !important;
           }
 
         }
