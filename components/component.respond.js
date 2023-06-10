@@ -1,4 +1,4 @@
-import  "/ckeditor/ckeditor.js";
+import  "../ckeditor/ckeditor.js";
 export default class RespondContainer extends HTMLElement {
   constructor() {
 
