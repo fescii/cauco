@@ -303,6 +303,46 @@ export default class StoryResponse extends HTMLElement {
           flex-flow: column;
           gap: 0px;
         }
+        @media screen and ( max-width: 850px ){
+          .comments-wrapper {
+            background-color: var(--modal);
+            padding: 40px 40px 30px 40px;
+            display: flex;
+            flex-flow: column;
+            gap: 0px;
+            width: 90%;
+            height: 90%;
+            position: relative;
+            border-radius: 25px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            -ms-border-radius: 25px;
+            -o-border-radius: 25px;
+          }
+        }
+        @media screen and ( max-width: 600px ){
+          .comments-container {
+            box-sizing: border-box !important;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: end;
+          }
+          .comments-wrapper {
+            background-color: var(--modal);
+            padding: 40px 40px 30px 40px;
+            display: flex;
+            flex-flow: column;
+            gap: 0px;
+            width: 100%;
+            height: 98%;
+            position: relative;
+            border-radius: 0px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+          }
+
+        }
         @media screen and ( max-width:500px ){
           :host {
             box-sizing: border-box !important;
