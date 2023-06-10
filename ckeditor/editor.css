@@ -4400,7 +4400,7 @@ a.ck.ck-button-bold {
 respond-container {
 	/* border: 1px solid #80808037; */
 	border-top: var(--border);
-	background-color: var(--modal);
+	background-color: var(--ck-color-base-background);
 	width: 100%;
 	padding: 0 0 0 0;
 	display: flex;
@@ -4408,8 +4408,8 @@ respond-container {
 	gap: 0px;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
-	position: absolute;
-	bottom: 0;
+	/* position: relative;
+	bottom: 0; */
 }
 
 .respond-container >span.to {
@@ -4438,7 +4438,7 @@ respond-container {
 	background-color: var(--accent-color);
 	color: var(--white);
 	position: absolute;
-	bottom: 12px;
+	bottom: 8px;
 	right: 15px;
 	padding: 5px 15px;
 	display: flex;
@@ -4528,4 +4528,12 @@ respond-container {
 	word-wrap: break-word;
 	/* max-width: 100%; */
 	/* word-break: break-all; */
+}
+
+@media screen and (max-width: 500px) {
+	respond-container {
+		border-top: var(--mobile-border);
+		position: fixed;
+		bottom: 0;
+	}
 }
