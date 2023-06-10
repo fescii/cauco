@@ -196,7 +196,7 @@ main.read>.story>.story-content>.comments-action>span.like:hover *{
 .comments-action>span.like  svg {
   position: absolute;
   left: -21px;
-  top: -5px;
+  top: -4px;
   cursor: pointer;
   overflow: visible;
   width: 28px;
