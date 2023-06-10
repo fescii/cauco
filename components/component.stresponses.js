@@ -171,7 +171,6 @@ export default class StoryResponse extends HTMLElement {
           padding: 0px;
           justify-self: end;
           display: flex;
-          /* display: none; */
           flex-flow: column;
           align-items: center;
           justify-content: center;
@@ -191,12 +190,12 @@ export default class StoryResponse extends HTMLElement {
 
         .comments-wrapper {
           background-color: var(--modal);
-          padding: 10px 40px 30px 40px;
+          padding: 40px 40px 30px 40px;
           display: flex;
           flex-flow: column;
           gap: 0px;
-          width: 55%;
-          height: 80%;
+          width: 800px;
+          height: 90%;
           position: relative;
           border-radius: 25px;
           -webkit-border-radius: 25px;
@@ -224,7 +223,7 @@ export default class StoryResponse extends HTMLElement {
 
         .comments-wrapper>.comments-header {
           border-bottom:  var(--border);
-          padding: 10px 25px 8px 0px;
+          padding: 10px 25px 5px 0px;
           display: flex;
           flex-flow: row;
           align-items: center;
@@ -233,8 +232,9 @@ export default class StoryResponse extends HTMLElement {
 
         .comments-wrapper>.comments-header .add-comment{
           color: var(--white);
-          background-color: var(--main-color);
-          padding: 4px 15px;
+          background-color: var(--accent-color);
+          padding: 3px 15px 3px 10px;
+          margin: 0 0 5px 0;
           display: flex;
           flex-flow: row;
           flex-wrap: nowrap;
