@@ -114,7 +114,6 @@ export default class RepliesContainer extends HTMLElement {
           --font-two: 'Product Sans', sans-serif;
         }
         .collapse{
-          background-color: var(--theme);
           position: absolute;
           bottom: -10px;
           right: 0px;
@@ -127,7 +126,7 @@ export default class RepliesContainer extends HTMLElement {
           padding: 0;
         }
         .collapse>span.replies{
-          color: var(--main-color);
+          color: var(--gray-color);
           padding: 0px 0px;
           display: flex;
           flex-flow: row;

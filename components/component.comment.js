@@ -58,7 +58,7 @@ export default class CommentsContainer extends HTMLElement {
 
   openResponse() {
     // updating the state
-    let parent  = document.querySelector('main.post > section.post > div.respond-placeholder');
+    let parent  = document.querySelector('div#respond-placeholder');
     parent.style.setProperty("display","flex")
 
     // response.remove()
@@ -528,7 +528,6 @@ export default class CommentsContainer extends HTMLElement {
         .comment>.body>.content h4,
         .comment>.body>.content h5,
         .comment>.body>.content h6{
-          /*border: 1px solid #784adf;*/
           color: var(--title-color);
           margin: 0 0 0px 0;
           padding: 0;
@@ -564,7 +563,6 @@ export default class CommentsContainer extends HTMLElement {
           flex-wrap: nowrap;
           align-items: center;
           gap: 30px;
-          /*justify-content: space-between;*/
         }
         .actions>span{
           color: var(--gray-color);
@@ -582,7 +580,7 @@ export default class CommentsContainer extends HTMLElement {
           cursor: pointer;
         }
         .comment>.body>.footer>.actions>span.replies{
-          color: var(--main-color);
+          color: var(--gray-color);
           padding: 0px 0px;
           display: flex;
           flex-flow: row;

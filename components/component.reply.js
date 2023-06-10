@@ -29,7 +29,7 @@ export default class ReplyWrapper extends HTMLElement {
   }
   openResponse() {
     // updating the state
-    let parent  = document.querySelector('main.post > section.post > div.respond-placeholder');
+    let parent  = document.querySelector('div#respond-placeholder');
     parent.style.setProperty("display","flex")
 
     // response.remove()

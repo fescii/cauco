@@ -6,7 +6,7 @@ export default class StoryResponse extends HTMLElement {
     super();
 
     // lets create our shadow root
-    this.shadowObj = this.attachShadow({mode: 'open'});
+    // this.shadowObj = this.attachShadow({mode: 'open'});
 
     // this._isOpen = false;
 
@@ -21,15 +21,19 @@ export default class StoryResponse extends HTMLElement {
   }
 
   render() {
-    this.shadowObj.innerHTML = this.getTemplate();
+    this.innerHTML = this.getTemplate();
   }
 
   connectedCallback() {
     this.disableScroll()
-    let response  = this.shadowObj.querySelector('.comments-wrapper>.comments-header .add-comment');
+    let closeButton  = this.querySelector('.comments-wrapper>i');
+    let response  = this.querySelector('.comments-wrapper>.comments-header .add-comment');
 
     response.addEventListener('click', (e) => {
       this.openResponse();
+    });
+    closeButton.addEventListener('click', (e) => {
+      this.closeResponses();
     });
 
   }
@@ -41,7 +45,7 @@ export default class StoryResponse extends HTMLElement {
 
   openResponse() {
     // updating the state
-    let parent  = this.shadowObj.querySelector('div#respond-placeholder');
+    let parent  = this.querySelector('div#respond-placeholder');
     parent.style.setProperty("display","flex")
 
     // response.remove()
@@ -50,6 +54,11 @@ export default class StoryResponse extends HTMLElement {
         name="Responding to fredrick's story"
         type="response">
       </respond-container>`;
+  }
+  closeResponses() {
+    // updating the state
+    this.enableScroll()
+    this.remove()
   }
 
 
@@ -73,26 +82,28 @@ export default class StoryResponse extends HTMLElement {
   getTemplate() {
     // Show HTML Here
     return `
-    <div class="comments-wrapper">
-        <i class="bi-x-circle-fill"></i>
-        <div class="comments-header">
-          <div class="controls">
-            <select name="sort" id="sort">
-              <option value="most">All Comments</option>
-              <option value="most">Most Relevant</option>
-            </select>
+    <div class="comments-container">
+      <div class="comments-wrapper">
+          <i class="bi-x-circle-fill"></i>
+          <div class="comments-header">
+            <div class="controls">
+              <select name="sort" id="sort">
+                <option value="most">All Comments</option>
+                <option value="most">Most Relevant</option>
+              </select>
+            </div>
+            <div class="add-comment">
+              <i class="bi-plus"></i>
+              <span class="tet">Respond</span>
+            </div>
           </div>
-          <div class="add-comment">
-            <i class="bi-plus"></i>
-            <span class="tet">Respond</span>
+
+          <div class="comments">
+            ${this.getResponses()}
           </div>
-        </div>
 
-        <div class="comments">
-          ${this.getResponses()}
+          <div id="respond-placeholder" class="respond-placeholder"></div>
         </div>
-
-        <div id="respond-placeholder" class="respond-placeholder"></div>
       </div>
 
     ${this.getStyles()}
@@ -153,7 +164,7 @@ export default class StoryResponse extends HTMLElement {
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css">
       <style>
-        :host {
+        .comments-container {
           box-sizing: border-box !important;
           border: var(--border);
           background-color: var(--modal-background);
