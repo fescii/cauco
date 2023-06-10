@@ -189,7 +189,7 @@ export default class StoryResponse extends HTMLElement {
         }
 
         .comments-wrapper {
-          background-color: var(--modal);
+          background-color: var(--theme);
           padding: 40px 40px 30px 40px;
           display: flex;
           flex-flow: column;
@@ -327,19 +327,54 @@ export default class StoryResponse extends HTMLElement {
             flex-flow: column;
             align-items: center;
             justify-content: end;
+            padding: 0;
           }
           .comments-wrapper {
-            background-color: var(--modal);
-            padding: 40px 10px 5px 10px;
+            background-color: var(--theme);
+            padding: 10px 10px 5px 10px;
             display: flex;
             flex-flow: column;
             gap: 0px;
             width: 100%;
-            height: 98%;
+            height: 100%;
             position: relative;
             border-radius: 0px;
             border-top-left-radius: 25px;
             border-top-right-radius: 25px;
+          }
+          .comments-wrapper>div.respond-placeholder {
+            background-color: var(--theme);
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            padding: 0 0 0 0;
+            display: none;
+            flex-flow: column;
+            gap: 0px;
+          }
+          .comments-wrapper>.comments-header .controls>select {
+            /*border: var(--border);*/
+            margin: 0;
+            border: none;
+            background-color: transparent;
+            padding: 5px 2px;
+            color: var(--gray-color);
+            font-size: 1rem;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+          }
+          .comments-wrapper>.comments-header .add-comment{
+            padding: 3px 15px 3px 10px;
+            margin: 0 25px 5px 0;
+          }
+          .comments-wrapper>i{
+            position: absolute;
+            top: 22px;
+            right: 15px;
+            font-size: 1.5rem;
           }
 
         }
