@@ -194,7 +194,7 @@ export default class StoryResponse extends HTMLElement {
           display: flex;
           flex-flow: column;
           gap: 0px;
-          width: 800px;
+          width: 750px;
           height: 90%;
           position: relative;
           border-radius: 25px;

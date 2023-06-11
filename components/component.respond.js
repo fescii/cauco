@@ -85,7 +85,10 @@ export default class RespondContainer extends HTMLElement {
         <i class="bi-x"></i>
       </span>
       <textarea placeholder="Your response here?" name="comment" id="comment-editor" cols="auto" rows="auto"></textarea>
-      <span class="respond">Respond</span>
+      <span class="respond">
+        <i class="bi-cursor"></i>
+        <span class="text">Send</span>
+      </span>
     </div>
     ${this.getStyles()}
   `;

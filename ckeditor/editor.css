@@ -4442,7 +4442,9 @@ respond-container {
 	right: 15px;
 	padding: 5px 15px;
 	display: flex;
-	flex-flow: column;
+	flex-flow: row;
+	align-items: center;
+	justify-content: center;
 	gap: 5px;
 	cursor: pointer;
 	border-top-right-radius: 15px;
