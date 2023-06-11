@@ -313,22 +313,22 @@ if (container != null) {
 	let scrollWidth = container.querySelector(".photos-container .body>.photos>.photo").clientWidth;
 
 	const totalMain = scrollContainer.scrollWidth;
-	const total = scrollWidth * 3
-	console.log(`TotalMain: ${totalMain}`)
-	console.log(`Total3: ${scrollWidth * 3}`)
-
-	let scrolled = 0;
+	let total = scrollWidth * 3
+	let current = footerImages[0]
+	let scrolled = 0,
+	count = 0;
 
 	right.addEventListener("click", (e) => {
 		e.preventDefault()
-			if (scrolled < (total-5) ){
-				scrolled += scrollWidth;
-				console.log(`Scrolled: ${scrolled}`)
+			if (scrolled < (total) ){
 				scrollContainer.scrollBy({
-					left: scrollWidth+5,
+					left: scrollWidth + 5,
 					behavior: "smooth"
 				})
+				count += 1;
+				scrolled += scrollWidth;
 				left.style.setProperty("pointer-events","auto")
+				updateCurrent(current,count)
 			}
 			else {
 				scrolled = total
@@ -339,17 +339,44 @@ if (container != null) {
 	left.addEventListener("click", (e) => {
 		e.preventDefault()
 			if (scrolled >= scrollWidth ){
-				scrolled -= scrollWidth
-				console.log(`-Scrolled: ${scrolled}`)
 				scrollContainer.scrollBy({
-					left: -scrollWidth,
+					left: -scrollWidth - 5,
 					behavior: "smooth"
 				})
+				count -= 1;
+				scrolled -= scrollWidth
 				right.style.setProperty("pointer-events","auto")
+				updateCurrent(current,count)
 			}
 			else {
 				scrolled = 0
 				left.style.setProperty("pointer-events","none")
 			}
 	})
+
+	footerImages.forEach((element,index)	=>	{
+		element.addEventListener("click", (e) => {
+			e.preventDefault()
+			scrollContainer.scrollBy({
+				left: scrollWidth + 5,
+				behavior: "smooth"
+			})
+			count += 1;
+			scrolled += scrollWidth;
+			updateCurrent(current,index)
+		})
+	})
+
+	let	updateCurrent	=	(oldCurrent,no)	=>	{
+		try {
+			oldCurrent.classList.remove("current")
+		}
+		finally {
+			current	=	footerImages[no]
+			footerImages[no].classList.add("current")
+		}
+	}
+
+
+
 }
