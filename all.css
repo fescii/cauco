@@ -683,7 +683,7 @@ section.photos-section{
 
 section.photos-section>.photos-container {
   background-color: var(--theme);
-  padding: 25px 0 30px 0;
+  padding: 40px 0 30px 0;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -701,8 +701,21 @@ section.photos-section>.photos-container {
 section.photos-section>.photos-container >i{
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 15px;
   font-size: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--gray-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+section.photos-section>.photos-container >i:hover{
+  color: var(--expand-color);
+  transform: scale(1.12);
+  -webkit-transform: scale(1.12);
+  -moz-transform: scale(1.12);
+  -ms-transform: scale(1.12);
+  -o-transform: scale(1.12);
 }
 
 section.photos-section>.photos-container .head{
@@ -730,7 +743,7 @@ section.photos-section>.photos-container .head>.control>span.text{
   font-weight: bold;
 }
 section.photos-section>.photos-container .body{
-  border: 2px solid red;
+  /* border: 2px solid red; */
   margin: 0 20px;
   height: 80%;
   display: flex;
@@ -801,7 +814,7 @@ section.photos-section>.photos-container .body>.photos>.photo>img{
 }
 
 section.photos-section>.photos-container .footer{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 0 20px;
   height: 70px;
   display: flex;
@@ -809,7 +822,7 @@ section.photos-section>.photos-container .footer{
   justify-content: center;
 }
 section.photos-section>.photos-container .footer>.thumbnails{
-  border: 1px solid rgb(0, 255, 64);
+  /* border: 1px solid rgb(0, 255, 64); */
   min-width: 100%;
   max-width: 100%;
   width: 100%;
@@ -830,10 +843,10 @@ section.photos-section>.photos-container .footer>.thumbnails::-webkit-scrollbar 
 }
 section.photos-section>.photos-container .footer>.thumbnails>.thumbnail{
   border: var(--border);
-  min-width: 68px;
-  min-height: 58px;
-  width: 68px;
-  height: 58px;
+  min-width: 60px;
+  min-height: 48px;
+  width: 60px;
+  height: 48px;
   cursor: pointer;
   overflow: hidden;
   display: flex;
@@ -844,14 +857,14 @@ section.photos-section>.photos-container .footer>.thumbnails>.thumbnail{
   border-bottom-left-radius: 20px;
 }
 section.photos-section>.photos-container .footer>.thumbnails>.thumbnail>img {
-  border: var(--border);
+  /* border: var(--border); */
   overflow: hidden;
-  min-width: 58px;
-  min-height: 48px;
-  width: 58px;
-  height: 48px;
+  min-width: 50px;
+  min-height: 38px;
+  width: 50px;
+  height: 38px;
   object-fit: cover;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
 }
