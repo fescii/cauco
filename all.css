@@ -573,7 +573,6 @@ footer.mobile>.items>.more>.dots>span.dot {
   width: 6px;
   height: 6px;
   background-color: var(--dot-color);
-  ;
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -659,4 +658,74 @@ footer.mobile>.more>.items>.item>i {
 
 footer.mobile>.more>.items>.item>span.text {
   font-size: 0.8rem;
+}
+
+
+
+section.photos-section{
+  border: none;
+  background-color: var(--modal-background);
+  padding: 0px;
+  justify-self: end;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+  position: fixed;
+  right: 0px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+section.photos-section>.photos-container {
+  background-color: var(--theme);
+  padding: 25px 40px 30px 40px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  gap: 0px;
+  width: 750px;
+  height: 90%;
+  max-height: 600px;
+  position: relative;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+section.photos-section>.photos-container .head{
+  /* border: var(--border); */
+  padding: 5px 0 5px 0;
+}
+
+section.photos-section>.photos-container .head>.control{
+  /* border: var(--border); */
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: var(--gray-color);
+  cursor: pointer;
+}
+section.photos-section>.photos-container .head>.control>i{
+  font-size: 1.2rem;
+}
+section.photos-section>.photos-container .head>.control>span.text{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+section.photos-section>.photos-container .body{
+  border: var(--border);
+  height: 70%;
+}
+section.photos-section>.photos-container .footer{
+  border: var(--border);
+  height: 18%;
 }
