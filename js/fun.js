@@ -303,57 +303,53 @@ if (headerScrollBtn != null) {
 
 
 //Post/Images
-let activitiesContainer = document.querySelector(".calendar-page>.calendar-content>.schedules>.date-schedules");
-let scrollBtn = document.querySelector(".calendar-page>.calendar-content>.schedules>.scroll-btn>.scroll");
-if (activitiesContainer != null && scrollBtn != null) {
-	let icon = scrollBtn.querySelector("span");
-	let height = 150,
-		pointer = true,
-		h = 150;
-	let total = activitiesContainer.scrollHeight - 50
-	scrollBtn.addEventListener("click", (e) => {
+let container = document.querySelector("section.photos-section");
+if (container != null) {
+	let right = container.querySelector(".photos-container .body>.right");
+	let left = container.querySelector(".photos-container .body>.left");
+	let scrollContainer = container.querySelector(".photos-container .body>.photos");
+
+	let footerImages = container.querySelectorAll(".photos-container .footer>.thumbnails>.thumbnail");
+	let scrollWidth = container.querySelector(".photos-container .body>.photos>.photo").clientWidth;
+
+	const totalMain = scrollContainer.scrollWidth;
+	const total = scrollWidth * 3
+	console.log(`TotalMain: ${totalMain}`)
+	console.log(`Total3: ${scrollWidth * 3}`)
+
+	let scrolled = 0;
+
+	right.addEventListener("click", (e) => {
 		e.preventDefault()
-		if (pointer) {
-			if (total >= (height + 150)) {
-				activitiesContainer.scrollBy({
-					top: h,
+			if (scrolled < (total-5) ){
+				scrolled += scrollWidth;
+				console.log(`Scrolled: ${scrolled}`)
+				scrollContainer.scrollBy({
+					left: scrollWidth+5,
 					behavior: "smooth"
 				})
-				height = height + 150
+				left.style.setProperty("pointer-events","auto")
 			}
 			else {
-				height += 150
-				activitiesContainer.scrollBy({
-					top: h,
-					behavior: "smooth"
-				})
-				h = 0
-				pointer = false
-				icon.classList.remove("iconly-Arrow-Down-Circle")
-				icon.classList.add("iconly-Arrow-Up-Circle")
+				scrolled = total
+				right.style.setProperty("pointer-events","none")
 			}
-		}
-		else {
-			height -= 150
-			if (height > 0) {
-				h = -150
-				activitiesContainer.scrollBy({
-					top: h,
+	})
+
+	left.addEventListener("click", (e) => {
+		e.preventDefault()
+			if (scrolled >= scrollWidth ){
+				scrolled -= scrollWidth
+				console.log(`-Scrolled: ${scrolled}`)
+				scrollContainer.scrollBy({
+					left: -scrollWidth,
 					behavior: "smooth"
 				})
-				height -= 150
+				right.style.setProperty("pointer-events","auto")
 			}
 			else {
-				activitiesContainer.scrollBy({
-					top: h,
-					behavior: "smooth"
-				})
-				h = 150
-				pointer = true
-				icon.classList.remove("iconly-Arrow-Up-Circle")
-				icon.classList.add("iconly-Arrow-Down-Circle")
-				height = 150
+				scrolled = 0
+				left.style.setProperty("pointer-events","none")
 			}
-		}
 	})
 }

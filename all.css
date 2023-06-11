@@ -784,7 +784,7 @@ section.photos-section>.photos-container .body>.photos{
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
-  gap: 0;
+  gap: 5px;
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
