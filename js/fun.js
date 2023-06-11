@@ -363,6 +363,7 @@ if (container != null) {
 					behavior: "smooth"
 				})
 				count = index;
+				scrolled = 0;
 				updateCurrent(current,index)
 				left.classList.add("stop")
 			}
@@ -375,6 +376,7 @@ if (container != null) {
 					behavior: "smooth"
 				})
 				count = index;
+				scrolled = width + space;
 				updateCurrent(current,index)
 				right.classList.add("stop")
 				left.classList.remove("stop")
@@ -387,6 +389,7 @@ if (container != null) {
 					behavior: "smooth"
 				})
 				count = index;
+				scrolled = width + space;
 				updateCurrent(current,index)
 				right.classList.remove("stop")
 				left.classList.remove("stop")
