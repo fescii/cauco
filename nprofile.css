@@ -33,7 +33,6 @@ main.profile>.side-info {
 }
 
 main.profile>.side-info>.icons {
-  /* border: 1px solid #8080804f; */
   border-bottom: var(--border);
   display: flex;
   gap: 15px;
@@ -62,7 +61,6 @@ main.profile>.side-info>section .head > h4.title {
 
 main.profile>.side-info>section .more {
   margin-top: 0px;
-  /* border: 1px solid #c3c3c39b; */
   height: max-content;
   /* align-self: center; */
 }
@@ -166,7 +164,7 @@ main.profile>.side-info>section.lists {
   padding: 0 10px 0 0;
   display: flex;
   flex-flow: column;
-  margin-top: 20px;
+  margin: 20px 0 20px 0;
   gap: 10px;
 }
 
@@ -299,7 +297,7 @@ main.profile>.main-info>section.content-container>.header>.selection {
   /* border: 1px solid var(--gray-color); */
   color: var(--gray-color);
   padding: 4px 12px 5px 12px;
-  /* color: var(--text-color); */
+  background-color: var(--back-one-color);
   display: flex;
   align-items: center;
   justify-content: center;
