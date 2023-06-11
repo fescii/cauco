@@ -724,7 +724,13 @@ section.photos-section>.photos-container .head>.control>span.text{
 section.photos-section>.photos-container .body{
   border: var(--border);
   height: 70%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
 }
+
+
 section.photos-section>.photos-container .footer{
   border: var(--border);
   height: 18%;
