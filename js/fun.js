@@ -327,12 +327,12 @@ if (container != null) {
 				})
 				count += 1;
 				scrolled += scrollWidth;
-				left.style.setProperty("pointer-events","auto")
+				left.classList.remove("stop")
 				updateCurrent(current,count)
 			}
 			else {
 				scrolled = total
-				right.style.setProperty("pointer-events","none")
+				right.classList.add("stop")
 			}
 	})
 
@@ -345,26 +345,38 @@ if (container != null) {
 				})
 				count -= 1;
 				scrolled -= scrollWidth
-				right.style.setProperty("pointer-events","auto")
+				right.classList.remove("stop")
 				updateCurrent(current,count)
 			}
 			else {
 				scrolled = 0
-				left.style.setProperty("pointer-events","none")
+				left.classList.add("stop")
 			}
 	})
 
 	footerImages.forEach((element,index)	=>	{
 		element.addEventListener("click", (e) => {
-			let space = ( index + 1 ) * 5,
-			width =  scrollWidth * ( index + 1 ) - scrollWidth;
 			e.preventDefault()
-			scrollContainer.scroll({
-				left: width + space,
-				behavior: "smooth"
-			})
-			count = index;
-			updateCurrent(current,index)
+			if (index == 0) {
+				scrollContainer.scroll({
+					left: 0,
+					behavior: "smooth"
+				})
+				count = index;
+				updateCurrent(current,index)
+				left.classList.add("stop")
+			} else {
+				let space =  5 * index,
+				width =  scrollWidth * ( index + 1 ) - scrollWidth;
+				scrollContainer.scroll({
+					left: width + space,
+					behavior: "smooth"
+				})
+				count = index;
+				updateCurrent(current,index)
+				right.classList.remove("stop")
+				left.classList.remove("stop")
+			}
 		})
 	})
 

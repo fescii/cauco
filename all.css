@@ -777,6 +777,10 @@ section.photos-section>.photos-container .body>.arrow.left{
 section.photos-section>.photos-container .body>.arrow.right{
   right: 0;
 }
+section.photos-section>.photos-container .body>.arrow.stop{
+  pointer-events: none;
+  opacity: 0.5;
+}
 section.photos-section>.photos-container .body>.photos{
   /* border: var(--border); */
   width: 86%;
