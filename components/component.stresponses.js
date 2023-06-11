@@ -223,7 +223,7 @@ export default class StoryResponse extends HTMLElement {
 
         .comments-wrapper>.comments-header {
           border-bottom:  var(--border);
-          padding: 10px 25px 5px 0px;
+          padding: 10px 5px 5px 0px;
           display: flex;
           flex-flow: row;
           align-items: center;
@@ -368,7 +368,7 @@ export default class StoryResponse extends HTMLElement {
           }
           .comments-wrapper>.comments-header .add-comment{
             padding: 3px 15px 3px 10px;
-            margin: 0 25px 5px 0;
+            margin: 0 35px 5px 0;
           }
           .comments-wrapper>i{
             position: absolute;
