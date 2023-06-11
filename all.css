@@ -729,6 +729,9 @@ section.photos-section>.photos-container .body{
   align-items: center;
   position: relative;
 }
+section.photos-section>.photos-container .body>.arrow{
+  border: var(--border);
+}
 
 
 section.photos-section>.photos-container .footer{
