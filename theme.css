@@ -72,6 +72,8 @@ Email: isfescii@gmail.com
   --close-background: #a9a8a8;
   --post-linear-gradient: linear-gradient(180deg, #ffffff29, #ffffffd1, #ffffffe8, #ffffff);
 
+  --thumbnail: 2px solid #08b86fa4;
+
   /*========== Font and typography ==========*/
   --mobile-header: #ffffff5d;
   --mobile-border: 1px solid #80808067;
@@ -137,6 +139,9 @@ Email: isfescii@gmail.com
     --back-one-color: rgb(46, 51, 56);
     --close-background: #f10e0e;
     --post-linear-gradient: linear-gradient(180deg, rgba(33, 37, 41, 0.747), rgba(33, 37, 41, 0.836), rgba(33, 37, 41, 0.938), rgb(33, 37, 41));
+
+
+    --thumbnail: 2px solid #08b86fa4;
 
     /*========== Font and typography ==========*/
     --mobile-header: rgba(33, 37, 41, 0.548);
