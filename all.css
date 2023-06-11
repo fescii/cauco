@@ -814,7 +814,7 @@ section.photos-section>.photos-container .body>.photos>.photo>img{
 }
 
 section.photos-section>.photos-container .footer{
-  /* border: 1px solid red; */
+  /* border-top: var(--border); */
   margin: 0 20px;
   height: 70px;
   display: flex;
@@ -822,10 +822,10 @@ section.photos-section>.photos-container .footer{
   justify-content: center;
 }
 section.photos-section>.photos-container .footer>.thumbnails{
-  /* border: 1px solid rgb(0, 255, 64); */
-  min-width: 100%;
-  max-width: 100%;
-  width: 100%;
+  border-top: var(--border);
+  /* min-width: 100%; */
+  /* max-width: 100%; */
+  width: 90%;
   height: 100%;
   display: flex;
   flex-flow: row;
