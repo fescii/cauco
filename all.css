@@ -743,7 +743,6 @@ section.photos-section>.photos-container .head>.control>span.text{
   font-weight: bold;
 }
 section.photos-section>.photos-container .body{
-  /* border: 2px solid red; */
   margin: 0 20px;
   height: 80%;
   display: flex;
@@ -877,4 +876,9 @@ section.photos-section>.photos-container .footer>.thumbnails>.thumbnail>img {
   border-top-right-radius: 18px;
   border-bottom-right-radius: 18px;
   border-bottom-left-radius: 18px;
+}
+
+@media screen and ( max-width: 750px ){
+  
+
 }
