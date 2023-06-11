@@ -537,7 +537,7 @@ export default class ProfileHeader extends HTMLElement {
           margin: 0;
           color: var(--text-color);
           line-height: 1.2;
-          font-size: 1rem;
+          font-size: 0.95rem;
         }
         .top>.details>.follow-stats {
           font-size: 0.93rem;
@@ -840,7 +840,25 @@ export default class ProfileHeader extends HTMLElement {
         }
         @media screen and ( max-width:500px ){
           :host{
-            padding: 20px 10px 0 10px;
+            /*border: var(--mobile-border);*/
+            padding: 20px 0px 0 0px;
+          }
+          .top>.image {
+            width: 80px;
+            min-width: 80px;
+            height: 80px;
+            min-height: 80px;
+            border-radius: 100%;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            -ms-border-radius: 100%;
+            -o-border-radius: 100%;
+          }
+          .top>.details>.bio {
+            margin: 0;
+            color: var(--text-color);
+            line-height: 1.2;
+            font-size: 0.85rem;
           }
          .show{
             display: flex;

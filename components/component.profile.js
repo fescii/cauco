@@ -251,9 +251,6 @@ export default class UserInfo extends HTMLElement {
             color: var(--text-color);
             cursor: default;
           }
-
-
-
         }
       </style>
     `;
