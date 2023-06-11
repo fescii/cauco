@@ -356,13 +356,14 @@ if (container != null) {
 
 	footerImages.forEach((element,index)	=>	{
 		element.addEventListener("click", (e) => {
+			let space = ( index + 1 ) * 5,
+			width =  scrollWidth * ( index + 1 ) - scrollWidth;
 			e.preventDefault()
-			scrollContainer.scrollBy({
-				left: scrollWidth + 5,
+			scrollContainer.scroll({
+				left: width + space,
 				behavior: "smooth"
 			})
-			count += 1;
-			scrolled += scrollWidth;
+			count = index;
 			updateCurrent(current,index)
 		})
 	})
@@ -376,7 +377,4 @@ if (container != null) {
 			footerImages[no].classList.add("current")
 		}
 	}
-
-
-
 }
