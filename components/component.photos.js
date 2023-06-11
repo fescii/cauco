@@ -365,7 +365,6 @@ export default class PostPhotos extends HTMLElement {
           opacity: 0.5;
         }
         .photos-container .body>.photos{
-          /* border: var(--border); */
           width: 86%;
           height: 100%;
           display: flex;
@@ -381,7 +380,6 @@ export default class PostPhotos extends HTMLElement {
           visibility: hidden;
         }
         .photos-container .body>.photos>.photo{
-          /* border: 1px solid var(--main-color); */
           max-width: 100%;
           min-width: 100%;
           width: 100%;
@@ -448,7 +446,6 @@ export default class PostPhotos extends HTMLElement {
           border: var(--thumbnail);
         }
         .photos-container .footer>.thumbnails>.thumbnail>img {
-          /* border: var(--border); */
           overflow: hidden;
           min-width: 50px;
           min-height: 38px;
