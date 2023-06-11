@@ -1,3 +1,4 @@
+import PostPhotos from './component.photos.js';
 export default class PostWrapper extends HTMLElement {
   constructor() {
 
@@ -24,7 +25,14 @@ export default class PostWrapper extends HTMLElement {
     // lets create our shadow root
     this.shadowObj = this.attachShadow({mode: 'open'});
 
+    this.registerOtherComponents();
     this.render();
+  }
+  registerOtherComponents() {
+    if (typeof customElements.get('photos-container') === 'undefined') {
+      customElements.define('photos-container', PostPhotos);
+      // console.log("Component Registered");
+    }
   }
 
   render() {
@@ -70,6 +78,20 @@ export default class PostWrapper extends HTMLElement {
       });
     }
 
+    //Images
+    let images = this.shadowObj.querySelectorAll(".content>.footer>.images>.image");
+    images.forEach(image => {
+      image.addEventListener('click', (e) => {
+        this.openPhotos();
+      });
+    });
+
+    let more = this.shadowObj.querySelector(".content>.footer>.images>.more");
+    // console.log(more)
+    if (more != null) {
+      more.addEventListener('click', (e) => {this.openPhotos() });
+    }
+
   }
 
   disconnectedCallback() {
@@ -86,6 +108,18 @@ export default class PostWrapper extends HTMLElement {
     item.removeEventListener('click',this.handleOptions(item));
 
     itemMobile.removeEventListener('click',this.handleOptionsMobile());
+
+    //Images
+    let images = this.shadowObj.querySelectorAll(".content>.footer>.images>.image");
+    images.forEach(image => {
+      image.removeEventListener('click', (e) => {this.openPhotos() });
+    });
+
+    let more = this.shadowObj.querySelector(".content>.footer>.images>.more");
+    // console.log(more)
+    if (more != null) {
+      more.removeEventListener('click', (e) => {this.openPhotos() });
+    }
   }
 
   handleOptions(item) {
@@ -236,6 +270,19 @@ export default class PostWrapper extends HTMLElement {
         name="Responding to fredrick's post"
         type="response">
       </respond-container>`;
+  }
+
+  openPhotos() {
+    // updating the state
+    // let parent  = this.shadowObj.querySelector('div#post-photos');
+    let parent  = document.querySelector('body');
+    let html  = '<photos-container id="40"></photos-container>'
+
+
+    // response.remove()
+    // parent.appendChild(`<post-photos id="40"></post-photos>`)
+    parent.insertAdjacentHTML('beforeEnd', html);
+    // parent.innerHTML = `<post-photos id="40"></post-photos>`
   }
 
   handleExpand(expandButton) {
@@ -408,6 +455,7 @@ export default class PostWrapper extends HTMLElement {
       </div>
       <div class="modal-overlay"></div>
     </div>
+    <div id="post-photos"></div>
     ${this.getStyles()}
   `;
   }
@@ -532,7 +580,6 @@ export default class PostWrapper extends HTMLElement {
     </div>
     `
   }
-
 
   getPostHeader(){
     if (this.getAttribute('type') == 'space') {
@@ -844,7 +891,7 @@ export default class PostWrapper extends HTMLElement {
           color: inherit;
         }
         .head>.user>.info>.name-container>p.name>a:hover{
-            text-decoration: underline;
+          text-decoration: underline;
         }
         .head>.user>.info>.name-container>p.name>i{
           font-size: 0.85rem;

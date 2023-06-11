@@ -5,26 +5,32 @@ export default class PostPhotos extends HTMLElement {
     super();
 
     // lets create our shadow root
-    this.shadowObj = this.attachShadow({ mode: 'open' });
-
-    // this._isOpen = false;
+    this.shadowObj = this.attachShadow({mode: 'open'});
 
     this.render();
   }
 
-
   render() {
-    this.innerHTML = this.getTemplate();
+    this.shadowObj.innerHTML = this.getTemplate();
   }
 
   connectedCallback() {
-    this.disableScroll()
-    let closeButton = this.querySelector('.photos-container >i');
+    this.switchPhotos();
+    let closeButton = this.shadowObj.querySelector(".photos-container >i"),
+    modalOverlay = this.shadowObj.querySelector(".modal-overlay");
 
-    closeButton.addEventListener('click', (e) => {
-      this.closePhotos();
-    },{once:true});
+    closeButton.addEventListener("click", (e) => {
+        this.closePhotos();
+      },{ once: true }
+    );
 
+
+    modalOverlay.addEventListener("click", (e) => {
+        this.closePhotos();
+      },{ once: true }
+    );
+
+    this.disableScroll();
   }
 
   disconnectedCallback() {
@@ -34,10 +40,108 @@ export default class PostPhotos extends HTMLElement {
 
   closePhotos() {
     // updating the state
-    this.enableScroll()
-    this.remove()
+    this.enableScroll();
+    this.remove();
   }
 
+  switchPhotos(){
+    let right = this.shadowObj.querySelector(".body>.right");
+    let left = this.shadowObj.querySelector(".body>.left");
+    let scrollContainer = this.shadowObj.querySelector(".body>.photos");
+
+    let footerImages = this.shadowObj.querySelectorAll(".footer>.thumbnails>.thumbnail");
+    let scrollWidth = this.shadowObj.querySelector(".body>.photos>div.photo").clientWidth;
+
+    // const totalMain = scrollContainer.scrollWidth;
+    let total = scrollWidth * 3;
+    let current = footerImages[0];
+    let scrolled = 0,
+      count = 0;
+
+    right.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (scrolled < total) {
+        scrollContainer.scrollBy({
+          left: scrollWidth + 5,
+          behavior: "smooth",
+        });
+        count += 1;
+        scrolled += scrollWidth;
+        left.classList.remove("stop");
+        updateCurrent(current, count);
+      } else {
+        scrolled = total;
+        right.classList.add("stop");
+      }
+    });
+
+    left.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (scrolled >= scrollWidth) {
+        scrollContainer.scrollBy({
+          left: -scrollWidth - 5,
+          behavior: "smooth",
+        });
+        count -= 1;
+        scrolled -= scrollWidth;
+        right.classList.remove("stop");
+        updateCurrent(current, count);
+      } else {
+        scrolled = 0;
+        left.classList.add("stop");
+      }
+    });
+
+    footerImages.forEach((element, index) => {
+      element.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (index == 0) {
+          scrollContainer.scroll({
+            left: 0,
+            behavior: "smooth",
+          });
+          count = index;
+          scrolled = 0;
+          updateCurrent(current, index);
+          left.classList.add("stop");
+          right.classList.remove("stop");
+        } else if (index == footerImages.length - 1) {
+          let space = 5 * index,
+            width = scrollWidth * (index + 1) - scrollWidth;
+          scrollContainer.scroll({
+            left: width + space,
+            behavior: "smooth",
+          });
+          count = index;
+          scrolled = width + space;
+          updateCurrent(current, index);
+          right.classList.add("stop");
+          left.classList.remove("stop");
+        } else {
+          let space = 5 * index,
+            width = scrollWidth * (index + 1) - scrollWidth;
+          scrollContainer.scroll({
+            left: width + space,
+            behavior: "smooth",
+          });
+          count = index;
+          scrolled = width + space;
+          updateCurrent(current, index);
+          right.classList.remove("stop");
+          left.classList.remove("stop");
+        }
+      });
+    });
+
+    let updateCurrent = (oldCurrent, no) => {
+      try {
+        oldCurrent.classList.remove("current");
+      } finally {
+        current = footerImages[no];
+        footerImages[no].classList.add("current");
+      }
+    };
+  }
 
   disableScroll() {
     // Get the current page scroll position
@@ -56,114 +160,10 @@ export default class PostPhotos extends HTMLElement {
     window.onscroll = function () { };
   }
 
-  switchPhotos() {
-    let right = this.shadowObj.querySelector(".photos-container .body>.right");
-    let left = this.shadowObj.querySelector(".photos-container .body>.left");
-    let scrollContainer = this.shadowObj.querySelector(".photos-container .body>.photos");
-
-    let footerImages = this.shadowObj.querySelectorAll(".photos-container .footer>.thumbnails>.thumbnail");
-    let scrollWidth = this.shadowObj.querySelector(".photos-container .body>.photos>.photo").clientWidth;
-
-    // const totalMain = scrollContainer.scrollWidth;
-    let total = scrollWidth * 3
-    let current = footerImages[0]
-    let scrolled = 0,
-      count = 0;
-
-    right.addEventListener("click", (e) => {
-      e.preventDefault()
-      if (scrolled < (total)) {
-        scrollContainer.scrollBy({
-          left: scrollWidth + 5,
-          behavior: "smooth"
-        })
-        count += 1;
-        scrolled += scrollWidth;
-        left.classList.remove("stop")
-        updateCurrent(current, count)
-      }
-      else {
-        scrolled = total
-        right.classList.add("stop")
-      }
-    })
-
-    left.addEventListener("click", (e) => {
-      e.preventDefault()
-      if (scrolled >= scrollWidth) {
-        scrollContainer.scrollBy({
-          left: -scrollWidth - 5,
-          behavior: "smooth"
-        })
-        count -= 1;
-        scrolled -= scrollWidth
-        right.classList.remove("stop")
-        updateCurrent(current, count)
-      }
-      else {
-        scrolled = 0
-        left.classList.add("stop")
-      }
-    })
-
-    footerImages.forEach((element, index) => {
-      element.addEventListener("click", (e) => {
-        e.preventDefault()
-        if (index == 0) {
-          scrollContainer.scroll({
-            left: 0,
-            behavior: "smooth"
-          })
-          count = index;
-          scrolled = 0;
-          updateCurrent(current, index)
-          left.classList.add("stop")
-        }
-
-        else if (index == (footerImages.length - 1)) {
-          let space = 5 * index,
-            width = scrollWidth * (index + 1) - scrollWidth;
-          scrollContainer.scroll({
-            left: width + space,
-            behavior: "smooth"
-          })
-          count = index;
-          scrolled = width + space;
-          updateCurrent(current, index)
-          right.classList.add("stop")
-          left.classList.remove("stop")
-        }
-        else {
-          let space = 5 * index,
-            width = scrollWidth * (index + 1) - scrollWidth;
-          scrollContainer.scroll({
-            left: width + space,
-            behavior: "smooth"
-          })
-          count = index;
-          scrolled = width + space;
-          updateCurrent(current, index)
-          right.classList.remove("stop")
-          left.classList.remove("stop")
-        }
-      })
-    })
-
-    let updateCurrent = (oldCurrent, no) => {
-      try {
-        oldCurrent.classList.remove("current")
-      }
-      finally {
-        current = footerImages[no]
-        footerImages[no].classList.add("current")
-      }
-    }
-  }
-
   getTemplate() {
     // Show HTML Here
     return `
-    <section class="photos-section">
+    <div class="modal-overlay"></div>
       <div class="photos-container">
         <i class="bi-x-circle-fill"></i>
         <div class="head">
@@ -189,8 +189,7 @@ export default class PostPhotos extends HTMLElement {
           </div>
         </div>
       </div>
-    </section>
-  `;
+      ${this.getStyles()}`;
   }
 
   getImages() {
@@ -207,8 +206,9 @@ export default class PostPhotos extends HTMLElement {
       <div class="photo">
         <img src="new/two.jpg" alt="Photo">
       </div>
-    `
+    `;
   }
+
   getThumbnails() {
     return `
       <div class="thumbnail current">
@@ -223,7 +223,7 @@ export default class PostPhotos extends HTMLElement {
       <div class="thumbnail">
         <img src="new/two.jpg" alt="Thumbnail">
       </div>
-    `
+    `;
   }
 
   getStyles() {
@@ -232,11 +232,9 @@ export default class PostPhotos extends HTMLElement {
     <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css">
       <style>
         * {
-        box-sizing: border-box !important;
-          font-family: 'Sen', sans-serif;
-        }
-        :host {
           box-sizing: border-box !important;
+        }
+        :host{
           border: none;
           background-color: var(--modal-background);
           padding: 0px;
@@ -252,10 +250,22 @@ export default class PostPhotos extends HTMLElement {
           top: 0;
           bottom: 0;
           left: 0;
+          backdrop-filter: blur(3px);
+          -webkit-backdrop-filter: blur(3px);
+        }
+
+        .modal-overlay{
+          position: absolute;
+          z-index: 20;
+          right: 0px;
+          top: 0;
+          bottom: 0;
+          left: 0;
         }
 
         .photos-container {
-          background-color: var(--theme);
+          z-index: 21;
+          background-color: var(--photos-background);
           padding: 40px 0 30px 0;
           display: flex;
           flex-flow: column;
@@ -325,8 +335,8 @@ export default class PostPhotos extends HTMLElement {
           position: relative;
         }
         .photos-container .body>.arrow{
-          /* border: var(--border); */
           color: var(--gray-color);
+          color: var(--accent-color);
           width: 7%;
           height: 50px;
           display: flex;
@@ -350,6 +360,7 @@ export default class PostPhotos extends HTMLElement {
           right: 0;
         }
         .photos-container .body>.arrow.stop{
+          color: var(--gray-color);
           pointer-events: none;
           opacity: 0.5;
         }
@@ -393,7 +404,6 @@ export default class PostPhotos extends HTMLElement {
         }
 
         .photos-container .footer{
-          /* border-top: var(--border); */
           margin: 0 20px;
           height: 70px;
           display: flex;
@@ -402,8 +412,7 @@ export default class PostPhotos extends HTMLElement {
         }
         .photos-container .footer>.thumbnails{
           border-top: var(--border);
-          /* min-width: 100%; */
-          /* max-width: 100%; */
+          padding: 15px 0 0 0;
           width: 90%;
           height: 100%;
           display: flex;
@@ -458,13 +467,12 @@ export default class PostPhotos extends HTMLElement {
             height: 90%;
             max-height: 550px;
           }
-
         }
         @media screen and ( max-width: 550px ){
           :host{
             border: none;
             background-color: var(--modal-background);
-            padding: 0px;
+            padding: 0;
             justify-self: end;
             display: flex;
             flex-flow: column;
@@ -479,14 +487,24 @@ export default class PostPhotos extends HTMLElement {
             left: 0;
           }
           .photos-container {
-            padding: 50px 0 0px 0;
+            padding: 25px 0 10px 0;
             gap: 0px;
             width: 100%;
             max-height: 80%;
             height: max-content;
             border-radius: 0px;
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+          }
+          .photos-container >i{
+            display: none;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            font-size: 1.5rem;
+            color: var(--gray-color);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
           }
           .photos-container .body{
             margin: 0 20px;
@@ -543,7 +561,7 @@ export default class PostPhotos extends HTMLElement {
           }
           .photos-container .footer>.thumbnails{
             border-top: var(--mobile-border);
-            padding: 10px 0 5px 5px;
+            padding: 20px 0 5px 5px;
             width: 100%;
             height: 100%;
             display: flex;
@@ -579,6 +597,7 @@ export default class PostPhotos extends HTMLElement {
             border: var(--thumbnail);
           }
           .photos-container .footer>.thumbnails>.thumbnail>img {
+            /* border: var(--border); */
             overflow: hidden;
             min-width: 50px;
             min-height: 38px;
@@ -591,7 +610,6 @@ export default class PostPhotos extends HTMLElement {
           }
 
         }
-      </style>
     `;
   }
 }
