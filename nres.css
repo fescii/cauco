@@ -296,8 +296,8 @@ Email: isfescii@gmail.com
   main.read>.story>.story-header>.action-links {
     display: none;
   }
-
   main.read>.story>.story-content>.comments-action {
+    border: var(--mobile-border);
     position: fixed;
     padding-left: 10px;
     bottom: 30px;
@@ -312,12 +312,17 @@ Email: isfescii@gmail.com
 
   main.read>.story>.story-content>.comments-action>.action {
     cursor: unset;
+    border-right: var(--mobile-border);
+  }
+  main.read>.story>.story-content>.comments-action>.dots-mobile,
+  main.read>.story>.story-content>.comments-action>.dots {
+    border-right:none;
   }
 
   main.read>.story>.story-content>.comments-action>span.like {
     position: relative;
     padding: 0;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 19px;
     display: flex;
     flex-flow: row;
     align-items: center;
