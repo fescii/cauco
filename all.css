@@ -722,19 +722,97 @@ section.photos-section>.photos-container .head>.control>span.text{
   font-weight: bold;
 }
 section.photos-section>.photos-container .body{
-  border: var(--border);
+  /* border: var(--border); */
   height: 70%;
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
 section.photos-section>.photos-container .body>.arrow{
-  border: var(--border);
+  /* border: var(--border); */
+  color: var(--gray-color);
+  width: 7%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: absolute;
+  top: calc(50% - 25px);
+  cursor: pointer;
 }
-
+section.photos-section>.photos-container .body>.arrow:hover{
+  color: var(--main-color);
+}
+section.photos-section>.photos-container .body>.arrow>i{
+  font-size: 1.5rem;
+}
+section.photos-section>.photos-container .body>.arrow.left{
+  left: 0;
+  justify-content: start;
+}
+section.photos-section>.photos-container .body>.arrow.right{
+  right: 0;
+}
+section.photos-section>.photos-container .body>.photos{
+  /* border: var(--border); */
+  width: 86%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+section.photos-section>.photos-container .body>.photos::-webkit-scrollbar {
+  display: none !important;
+  visibility: hidden;
+}
+section.photos-section>.photos-container .body>.photos>.photo{
+  border: 1px solid var(--main-color);
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+section.photos-section>.photos-container .body>.photos>.photo>img{
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
 section.photos-section>.photos-container .footer{
   border: var(--border);
   height: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.photos-section>.photos-container .footer>.thumbnails{
+  /* border: var(--border); */
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+section.photos-section>.photos-container .footer>.thumbnails::-webkit-scrollbar {
+  display: none !important;
+  visibility: hidden;
 }
