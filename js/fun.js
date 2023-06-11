@@ -365,7 +365,21 @@ if (container != null) {
 				count = index;
 				updateCurrent(current,index)
 				left.classList.add("stop")
-			} else {
+			}
+
+			else if(index == (footerImages.length - 1)){
+				let space =  5 * index,
+				width =  scrollWidth * ( index + 1 ) - scrollWidth;
+				scrollContainer.scroll({
+					left: width + space,
+					behavior: "smooth"
+				})
+				count = index;
+				updateCurrent(current,index)
+				right.classList.add("stop")
+				left.classList.remove("stop")
+			}
+			else {
 				let space =  5 * index,
 				width =  scrollWidth * ( index + 1 ) - scrollWidth;
 				scrollContainer.scroll({
