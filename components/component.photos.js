@@ -302,14 +302,12 @@ export default class PostPhotos extends HTMLElement {
         }
 
         .photos-container .head{
-          /* border: var(--border); */
           margin: 0 20px;
           padding: 5px 0 5px 0;
           display: none;
         }
 
         .photos-container .head>.control{
-          /* border: var(--border); */
           width: max-content;
           display: flex;
           align-items: center;
@@ -318,13 +316,16 @@ export default class PostPhotos extends HTMLElement {
           color: var(--gray-color);
           cursor: pointer;
         }
+
         .photos-container .head>.control>i{
           font-size: 1.2rem;
         }
+
         .photos-container .head>.control>span.text{
           font-size: 1.2rem;
           font-weight: bold;
         }
+
         .photos-container .body{
           margin: 0 20px;
           height: 80%;
@@ -334,6 +335,7 @@ export default class PostPhotos extends HTMLElement {
           justify-content: center;
           position: relative;
         }
+
         .photos-container .body>.arrow{
           color: var(--gray-color);
           color: var(--accent-color);
