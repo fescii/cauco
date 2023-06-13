@@ -89,7 +89,7 @@ main.post>div.side .more {
   height: max-content;
 }
 
-main.post>div.side a {
+main.post>div.side .more a {
   text-decoration: none;
   color: var(--gray-color);
   font-size: 0.9rem;
@@ -101,8 +101,9 @@ main.post>div.side a {
   -o-border-radius: 50px;
 }
 
-main.post>div.side a:hover {
+main.post>div.side .more a:hover {
   text-decoration: underline;
+  color: var(--accent-color);
 }
 
 div.people>.people-list {

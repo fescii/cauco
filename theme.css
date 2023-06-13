@@ -117,8 +117,8 @@ Email: isfescii@gmail.com
 
     --title-color: hsl(0, 0%, 100%);
     --text-color: rgb(219, 219, 219);
-    --gray-color: rgb(113, 118, 123);
-    --gray-two: rgb(158, 160, 161);
+    --gray-color: #aaaaaa;
+    --gray-two: #d4d4d4;
     --link-color: #0d6efd;
 
     --dot-color: #808080c1;
