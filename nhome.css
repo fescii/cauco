@@ -56,7 +56,6 @@ main.home>ul.icons {
 }
 
 main.home>section.posts {
-  /* border: 1px solid #fa0e0e; */
   grid-column: 1/2;
   display: flex;
   flex-flow: column;
@@ -127,7 +126,7 @@ main.home>div.side .more>a {
 
 main.home>div.side .more>a:hover {
   text-decoration: underline;
-  color: var(---accent-two);
+  color: var(--accent-color);
 }
 
 main.home>div.side .people-list {
