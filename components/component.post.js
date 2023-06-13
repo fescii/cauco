@@ -1159,41 +1159,55 @@ export default class PostWrapper extends HTMLElement {
             align-items: center;
             gap: 15px;
         }
+
         .content>.footer>.images>.image{
-            min-width: 48px;
-            min-height: 38px;
-            width: 48px;
-            height: 38px;
-            cursor: pointer;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            border-bottom-left-radius: 15px;
+          border: var(--border);
+          min-width: 50px;
+          min-height: 40px;
+          width: 50px;
+          height: 40px;
+          cursor: pointer;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-top-right-radius: 18px;
+          border-bottom-right-radius: 18px;
+          border-bottom-left-radius: 18px;
         }
+
+        .content>.footer>.images>.image:hover{
+          border: var(--thumbnail);
+        }
+
+        .content>.footer>.images>.image>img {
+          overflow: hidden;
+          min-width: 42px;
+          min-height: 32px;
+          width: 42px;
+          height: 32px;
+          object-fit: cover;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          border-bottom-left-radius: 15px;
+        }
+
         .content>.footer>.images>.more{
-            border: var( --dashed);
-            color: var( --gray-color);
-            width: max-content;
-            padding: 0 10px;
-            height: 28px;
-            display: flex;
-            /* flex-flow: column; */
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            border-bottom-left-radius: 15px;
+          border: var( --dashed);
+          color: var( --gray-color);
+          width: max-content;
+          padding: 0 10px;
+          height: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          border-bottom-left-radius: 15px;
         }
         .content>.footer>.images>.more:hover{
             color: var( --main-color);
-        }
-        .content>.footer>.images>.image>img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            border-bottom-left-radius: 15px;
         }
         .content>.footer>.actions{
             padding: 0px 0 12px 0;
