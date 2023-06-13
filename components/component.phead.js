@@ -348,7 +348,7 @@ export default class ProfileHeader extends HTMLElement {
       `
     } else {
       return `
-      <i class="bi-person-plus"></i>
+      <i class="bi-person-plus-fill"></i>
       <span class="text">Follow</span>
       `
     }
@@ -365,7 +365,7 @@ export default class ProfileHeader extends HTMLElement {
       `
     } else {
       return `
-        <i class="bi-person-plus"></i>
+        <i class="bi-person-plus-fill"></i>
         <span class="option-details">
           <span class="detail-title">Follow</span>
           <span class="detail-text">Get to see ${this.getAttribute('user-name')}'s activity</span>

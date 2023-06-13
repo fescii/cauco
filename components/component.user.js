@@ -57,7 +57,7 @@ export default class UserProfile extends HTMLElement {
   getIcon(conn){
     if (conn == "follow") {
       return `
-        <i class="bi-person-plus"></i>
+        <i class="bi-person-plus-fill"></i>
       `
     } else {
       return `

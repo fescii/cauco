@@ -114,6 +114,7 @@ export default class RepliesContainer extends HTMLElement {
           --font-two: 'Product Sans', sans-serif;
         }
         .collapse{
+          margin: 5px 0;
           position: absolute;
           bottom: -10px;
           right: 0px;

@@ -176,7 +176,7 @@ export default class StoryWrapper extends HTMLElement {
       <div class="more-options">
         <span class="pointer"></span>
         <span class="options-item">
-          <i class="bi-person-plus"></i>
+          <i class="bi-person-plus-fill-fill-fill-fill"></i>
           <span class="option-details">
             <span class="detail-title">Follow</span>
             <span class="detail-text">Follow the author of this story</span>
