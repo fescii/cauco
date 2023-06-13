@@ -467,7 +467,7 @@ ul.topic-list>li.item>a.item-link {
   text-decoration: none;
   font-size: 0.92rem;
   padding: 5px 15px 5px 10px;
-  color: var(--gray-color);
+  color: var(--gray-two);
   display: flex;
   align-items: center;
   justify-content: center;
