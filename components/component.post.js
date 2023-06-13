@@ -662,7 +662,7 @@ export default class PostWrapper extends HTMLElement {
           </div>
           <div class="options-cover">
             <div class="options">
-              <span class="pointer"></span>>
+              <span class="pointer"></span>
               <span class="option">
                 <i class="bi-person-plus"></i>
                 <span class="text">Follow</span>
@@ -956,7 +956,7 @@ export default class PostWrapper extends HTMLElement {
           display: inline-block;
           width: 5px;
           height: 5px;
-          background-color: var( --dot-color);
+          background-color: var(--dot-color);
           border-radius: 50px;
           -webkit-border-radius: 50px;
           -moz-border-radius: 50px;
@@ -970,9 +970,9 @@ export default class PostWrapper extends HTMLElement {
         .space>.more>.options-cover,
         .head>.more>.options-cover{
           position: absolute;
-          background-color: var( --theme);
-          border: var(  --border);
-          box-shadow: var(  --box-shadow);
+          background-color: var(--theme);
+          border: var(--border);
+          box-shadow: var(--box-shadow);
           right: -10px;
           top: 28px;
           left: unset;
