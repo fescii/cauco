@@ -4400,20 +4400,21 @@ a.ck.ck-button-bold {
 respond-container {
 	/* border: 1px solid #80808037; */
 	border-top: var(--border);
+	border-left: var(--border);
+	border-right: var(--border);
 	background-color: var(--ck-color-base-background);
 	width: 100%;
 	padding: 0 0 0 0;
 	display: flex;
 	flex-flow: column;
 	gap: 0px;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
 	/* position: relative;
 	bottom: 0; */
 }
 
 .respond-container >span.to {
-	/*border-bottom: 1px solid #80808037;*/
 	background-color: transparent;
 	padding: 3px 0px 0px 5px;
 	display: flex;
@@ -4422,10 +4423,9 @@ respond-container {
 	justify-content: center;
 	gap: 5px;
 	font-size: 0.8rem;
-	color: var(--gray-color);
-	/*color: #25d366;*/
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
+	color: var(--accent-color);
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
 }
 
 .respond-container >span.to>i {

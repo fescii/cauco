@@ -99,14 +99,14 @@ Email: isfescii@gmail.com
     --nav-item-color: hsl(250, 88%, 75%);
     --logout: #fb482c;
 
-    --border: 1px solid rgb(61, 67, 73);
-    --dashed: 1px dashed #ffffff27;
+    --border: 1px solid rgb(53, 62, 80);
+    --dashed: 1px dashed rgb(53, 62, 80);
     --start-border: 2px solid hsla(250, 88%, 75%, 0.521);
 
-    --border-reply: 1px solid rgb(91, 99, 107);
-    --reply: rgb(46, 51, 56);
+    --border-reply: 1px solid rgb(30, 35, 48);
+    --reply: rgb(30, 35, 48);
 
-    --user-background: rgb(46, 51, 56);
+    --user-background:rgb(30, 35, 48);
 
     --button-background: linear-gradient(-105deg, #08b86f, hsla(250, 88%, 75%, 0.274), #08b86f, hsla(250, 88%, 75%, 0.521));
     --button-background-two: linear-gradient(-45deg, #ee7752, #23a6d5,#08b86f, #08b86f);
@@ -121,7 +121,7 @@ Email: isfescii@gmail.com
     --gray-two: #d4d4d4;
     --link-color: #0d6efd;
 
-    --dot-color: #808080c1;
+    --dot-color: rgb(146, 147, 150);
     --reply-dot-color: rgb(91, 99, 107);
 
     --red-color: #f84125;
@@ -133,23 +133,23 @@ Email: isfescii@gmail.com
     --theme:  rgb(11, 17, 30);
     --body:  rgb(11, 17, 30);
 
-    --modal: rgb(33, 37, 41);
-    --modal-hover-background: rgb(46, 51, 56);
+    --modal: rgb(11, 17, 30);
+    --modal-hover-background: rgb(30, 35, 48);
     --modal-background:  hsl(219, 28%, 16%, .7);
     --photos-background: rgb(11, 17, 30);
-    --modal-close: rgb(46, 51, 56);
-    --back-one-color: rgb(46, 51, 56);
+    --modal-close: rgb(29, 38, 59);
+    --back-one-color: rgb(29, 38, 59);
     --close-background: #f10e0e;
-    --post-linear-gradient: linear-gradient(180deg, rgba(33, 37, 41, 0.747), rgba(33, 37, 41, 0.836), rgba(33, 37, 41, 0.938), rgb(33, 37, 41));
+    --post-linear-gradient: linear-gradient(180deg, rgba(11, 17, 30, 0.671), rgba(11, 17, 30, 0.767), rgba(11, 17, 30, 0.911), rgb(11, 17, 30));
 
 
     --thumbnail: 2px solid #08b86fa4;
 
     /*========== Font and typography ==========*/
     --mobile-header: rgba(33, 37, 41, 0.548);
-    --mobile-border: 1px solid rgb(61, 67, 73);
+    --mobile-border: 1px solid rgb(53, 62, 80);
     --pointer-mobile: 1px solid #80808067;
-    --mobile-dashed: 1px dashed #ffffff27;
+    --mobile-dashed: 1px dashed rgb(53, 62, 80);
     --mobile-border-reply: 1.5px solid rgb(91, 99, 107);
     --mobile-reply-dot-color: rgb(91, 99, 107);
     --mobile-user-background: rgb(46, 51, 56);
