@@ -176,7 +176,7 @@ export default class StoryWrapper extends HTMLElement {
       <div class="more-options">
         <span class="pointer"></span>
         <span class="options-item">
-          <i class="bi-person-plus-fill-fill-fill-fill"></i>
+          <i class="bi-person-plus"></i>
           <span class="option-details">
             <span class="detail-title">Follow</span>
             <span class="detail-text">Follow the author of this story</span>
@@ -672,11 +672,9 @@ export default class StoryWrapper extends HTMLElement {
 
         .footer>.actions>.more>.options>.option:first-of-type {
           border-top-right-radius: 10px;
-          // padding: 10px 15px 7px 12px;
         }
 
         .footer>.actions>.more>.options>.delete {
-          // padding: 5px 10px 8px 10px;
           border-bottom-right-radius: 10px;
           border-bottom-left-radius: 10px;
         }
@@ -805,7 +803,6 @@ export default class StoryWrapper extends HTMLElement {
         }
         .options-modal>.more-options>.close-modal{
           background-color: var(--modal-close);
-          /*color: var(--gray-color);*/
           color: var(--text-color);
           padding: 10px 10px;
           margin: 15px 0 25px 0;
@@ -819,10 +816,13 @@ export default class StoryWrapper extends HTMLElement {
           font-weight: 700;
           border-radius: 50px;
         }
+        .options-modal>.more-options>.close-modal i{
+          margin-top: 2px;
+        }
         @media screen and (max-width:500px ){
           :host {
             box-sizing: border-box !important;
-            border-bottom: 1px solid #80808037;
+            border-bottom: var(--mobile-border);
           }
           .space>.left>.info>a.name,
           .space>.left>.info>.author>a.name,

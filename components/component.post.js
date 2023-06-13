@@ -414,7 +414,7 @@ export default class PostWrapper extends HTMLElement {
       <div class="more-options">
         <span class="pointer"></span>
         <span class="options-item">
-          <i class="bi-person-plus-fill-fill-fill-fill"></i>
+          <i class="bi-person-plus-fill"></i>
           <span class="option-details">
             <span class="detail-title">Follow</span>
             <span class="detail-text">Follow the author of this post</span>
@@ -612,7 +612,7 @@ export default class PostWrapper extends HTMLElement {
             <div class="options">
               <span class="pointer"></span>
               <span class="option">
-                <i class="bi-person-plus-fill-fill-fill-fill"></i>
+                <i class="bi-person-plus-fill"></i>
                 <span class="text">Follow</span>
               </span>
               <span class="option">
@@ -665,7 +665,7 @@ export default class PostWrapper extends HTMLElement {
               <span class="pointer"></span>
               <p class="actions">Post actions</p>
               <span class="option">
-                <i class="bi-person-plus-fill-fill-fill-fill"></i>
+                <i class="bi-person-plus-fill"></i>
                 <span class="text">Follow</span>
               </span>
               <span class="option">
