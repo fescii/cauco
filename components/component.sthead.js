@@ -23,6 +23,7 @@ export default class StoryHeader extends HTMLElement {
 
   connectedCallback() {
     let itemMobile  = this.shadowObj.querySelector('.head-nav>.options>.dots');
+    let dots  = document.querySelector('main.read>.story>.story-content>.comments-action>.dots');
     let dotsMobile  = document.querySelector('main.read>.story>.story-content>.comments-action>.dots-mobile');
     let share = this.shadowObj.querySelector(".close-modal>div.share")
 
@@ -32,6 +33,10 @@ export default class StoryHeader extends HTMLElement {
 
     dotsMobile.addEventListener('click', (e) => {
       this.handleOptionsMobile();
+    });
+
+    dots.addEventListener('click', (e) => {
+      this.handleOptionsDesktop(dots);
     });
 
     share.addEventListener('click', (e) => {
@@ -106,6 +111,33 @@ export default class StoryHeader extends HTMLElement {
       optionsModal.style.setProperty("display","none")
       this.enableScroll()
     })
+  }
+
+  handleOptionsDesktop(item) {
+    // updating the state
+    let optionsModal  = document.querySelector('main.read>.story>.story-content>.comments-action>.options-modal');
+
+    if (optionsModal != null) {
+      let top = optionsModal.querySelector("span.options-item:last-of-type")
+      let pointer = optionsModal.querySelector("span.pointer")
+
+      top.addEventListener("mouseenter", (e) => {
+          pointer.style.backgroundColor = "var(--modal-hover-background)"
+      })
+      top.addEventListener("mouseleave", (e) => {
+          pointer.style.backgroundColor = "var(--theme)"
+      })
+
+      if (optionsModal.style.display == "flex"){
+        optionsModal.style.display = "none"
+        item.classList.remove("dots-active")
+      }
+      else {
+        optionsModal.style.display = "flex"
+        item.classList.add("dots-active")
+
+      }
+    }
   }
 
   handleOptionsShare() {
