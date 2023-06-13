@@ -106,6 +106,12 @@ main.post>div.side .more a:hover {
   color: var(--accent-color);
 }
 
+main.post div.people{
+  margin-top: 15px;
+  position: sticky;
+  top: 70px;
+}
+
 div.people>.people-list {
   display: flex;
   flex-flow: column;

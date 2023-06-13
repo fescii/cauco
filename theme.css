@@ -117,7 +117,7 @@ Email: isfescii@gmail.com
 
     --title-color: hsl(0, 0%, 100%);
     --text-color: rgb(219, 219, 219);
-    --gray-color: #aaaaaa;
+    --gray-color: #a0a0a0;
     --gray-two: #d4d4d4;
     --link-color: #0d6efd;
 
@@ -130,8 +130,8 @@ Email: isfescii@gmail.com
 
     --box-shadow: 0 5px 25px rgba(109, 117, 141, 0.1);
 
-    --theme: rgb(33, 37, 41);
-    --body: rgb(33, 37, 41);
+    --theme:  rgb(11, 17, 30);
+    --body:  rgb(11, 17, 30);
 
     --modal: rgb(33, 37, 41);
     --modal-hover-background: rgb(46, 51, 56);
