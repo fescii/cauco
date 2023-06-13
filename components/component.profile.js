@@ -57,7 +57,7 @@ export default class UserInfo extends HTMLElement {
       `
     } else {
       return `
-        <i class="bi-person-plus-fill"></i>
+        <i class="bi-person-plus"></i>
         <span class="text">Follow</span>
       `
     }
