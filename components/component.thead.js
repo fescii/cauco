@@ -620,6 +620,9 @@ export default class TopicHeader extends HTMLElement {
           font-weight: 700;
           border-radius: 50px;
         }
+        .options-modal>.more-options>.close-modal i{
+          margin-top: 2px;
+        }
         @media screen and ( max-width:500px ){
           :host{
             padding: 30px 10px 0 10px;

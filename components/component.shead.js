@@ -915,6 +915,9 @@ export default class SpaceHeader extends HTMLElement {
           font-weight: 700;
           border-radius: 50px;
         }
+        .options-modal>.more-options>.close-modal i{
+          margin-top: 2px;
+        }
         @media screen and ( max-width:500px ){
          .header{
             padding: 0;

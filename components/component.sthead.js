@@ -280,7 +280,7 @@ export default class StoryHeader extends HTMLElement {
         <div class="more-options">
           <span class="pointer"></span>
           <span class="options-item">
-            <i class="bi-person-plus-fill"></i>
+            <i class="bi-person-plus"></i>
             <span class="option-details">
               <span class="detail-title">Follow</span>
               <span class="detail-text">Get to see ${this.getAttribute('author-name')}'s activity on your feeds</span>
@@ -484,7 +484,7 @@ export default class StoryHeader extends HTMLElement {
     } else {
       return `
       <span class="follow">
-        <i class="bi-person-plus-fill"></i>
+        <i class="bi-person-plus"></i>
         <span class="text">Follow</span>
       </span>
       `
@@ -1073,6 +1073,9 @@ export default class StoryHeader extends HTMLElement {
         .options-modal>.options>.close-modal>div>i{
           margin: 3px 0 0 0;
           font-size: 1.2rem;
+        }
+        .options-modal>.options>.close-modal>div i{
+          margin-top: 2px;
         }
         @media screen and ( max-width:500px ){
           :host {

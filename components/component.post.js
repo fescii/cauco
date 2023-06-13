@@ -414,7 +414,7 @@ export default class PostWrapper extends HTMLElement {
       <div class="more-options">
         <span class="pointer"></span>
         <span class="options-item">
-          <i class="bi-person-plus-fill"></i>
+          <i class="bi-person-plus"></i>
           <span class="option-details">
             <span class="detail-title">Follow</span>
             <span class="detail-text">Follow the author of this post</span>
@@ -612,7 +612,7 @@ export default class PostWrapper extends HTMLElement {
             <div class="options">
               <span class="pointer"></span>
               <span class="option">
-                <i class="bi-person-plus-fill"></i>
+                <i class="bi-person-plus"></i>
                 <span class="text">Follow</span>
               </span>
               <span class="option">
@@ -662,10 +662,9 @@ export default class PostWrapper extends HTMLElement {
           </div>
           <div class="options-cover">
             <div class="options">
-              <span class="pointer"></span>
-              <p class="actions">Post actions</p>
+              <span class="pointer"></span>>
               <span class="option">
-                <i class="bi-person-plus-fill"></i>
+                <i class="bi-person-plus"></i>
                 <span class="text">Follow</span>
               </span>
               <span class="option">
@@ -678,7 +677,7 @@ export default class PostWrapper extends HTMLElement {
               </span>
               <span class="option delete">
                 <i class="bi-trash2"></i>
-                <span class="text">Delete story</span>
+                <span class="text">Delete post</span>
               </span>
             </div>
           </div>
@@ -1197,7 +1196,6 @@ export default class PostWrapper extends HTMLElement {
             border-bottom-left-radius: 15px;
         }
         .content>.footer>.actions{
-            /*border-top: var( --dashed);*/
             padding: 0px 0 12px 0;
             display: flex;
             flex-flow: column;
@@ -1209,7 +1207,6 @@ export default class PostWrapper extends HTMLElement {
             display: none;
         }
         .content>.footer>.actions>.actions-info{
-            /* border: 1px solid #284adf; */
             display: flex;
             flex-flow: row;
             align-items: center;
@@ -1893,6 +1890,9 @@ export default class PostWrapper extends HTMLElement {
           font-size: 1.18rem;
           font-weight: 700;
           border-radius: 50px;
+        }
+        .options-modal>.more-options>.close-modal i{
+          margin-top: 2px;
         }
 
         @media screen and ( max-width:500px ){
