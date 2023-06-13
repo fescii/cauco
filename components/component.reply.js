@@ -66,24 +66,26 @@ export default class ReplyWrapper extends HTMLElement {
         <span class="dot"></span>
         <span class="dot"></span>
       </span>
-      <div class="head">
-        <div class="image">
-          <img src="${this.getAttribute("author-profile")}" alt="Profile" srcset="" />
+      <div class="main-content">
+        <div class="head">
+          <div class="image">
+            <img src="${this.getAttribute("author-profile")}" alt="Profile" srcset="" />
+          </div>
+          <div class="info">
+            <a href="${this.getAttribute("author-url")}" class="name">
+              <span class="text">${this.getAttribute("author-name")}</span>
+            </a>
+            <span class="time">${this.getAttribute("time-lapse")}</span>
+          </div>
         </div>
-        <div class="info">
-          <a href="${this.getAttribute("author-url")}" class="name">
-            <span class="text">${this.getAttribute("author-name")}</span>
-          </a>
-          <span class="time">${this.getAttribute("time-lapse")}</span>
+        <div class="content">
+          ${this.getContent()}
         </div>
-      </div>
-      <div class="content">
-        ${this.getContent()}
       </div>
       <div class="actions">
-        <span class="mention">
-          <i class="bi-chat"></i>
-          <span class="no">Mention</span>
+        <span class="mentions">
+          <span class="text">8</span>
+          <span class="no">Mentions</span>
         </span>
         <span class="like">
           <input type="checkbox" class="checkbox" id="checkbox" />
@@ -126,10 +128,8 @@ export default class ReplyWrapper extends HTMLElement {
           </label>
         </span>
         <span class="mention">
-          <span class="no">Edit</span>
-        </span>
-        <span class="mention">
-          <span class="no">Report</span>
+          <i class="bi-chat"></i>
+          <span class="no">Mention</span>
         </span>
     ${this.getStyles()}
   `;
@@ -146,15 +146,11 @@ export default class ReplyWrapper extends HTMLElement {
         :host {
           box-sizing: border-box !important;
           border: none;
-          background-color: var(--reply);
-          padding: 8px 8px;
+          padding: 0px;
           display: flex;
           flex-flow: column;
           gap: 5px;
           position: relative;
-          border-top-right-radius: 15px;
-          border-bottom-right-radius: 15px;
-          border-bottom-left-radius: 15px;
         }
         * {
         box-sizing: border-box !important;
@@ -192,15 +188,24 @@ export default class ReplyWrapper extends HTMLElement {
           max-height: 2px;
           border-radius: 3px;
         }
-        .head{
+        .main-content{
+          padding: 8px 8px 5px 10px;
+          background-color: var(--reply);
+          display: flex;
+          flex-flow: column;
+          gap: 10px;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          border-bottom-left-radius: 20px;
+        }
+        .main-content .head{
           padding: 0;
           display: flex;
           flex-flow: row;
           flex-wrap: nowrap;
           gap: 5px;
         }
-        .head>.image{
-          /*border: 1px solid #08b86f77;*/
+        .main-content .head>.image{
           background-color: var(--theme);
           display: flex;
           align-items: center;
@@ -214,11 +219,9 @@ export default class ReplyWrapper extends HTMLElement {
           -ms-border-radius: 50px;
           -o-border-radius: 50px;
         }
-        .head>.image>img{
+        .main-content .head>.image>img{
           width: 100%;
           height: 100%;
-          /*width: 22px;
-          height: 22px;*/
           object-fit: cover;
           border-radius: 50px;
           -webkit-border-radius: 50px;
@@ -226,58 +229,57 @@ export default class ReplyWrapper extends HTMLElement {
           -ms-border-radius: 50px;
           -o-border-radius: 50px;
         }
-        .head>.info{
+        .main-content .head>.info{
           padding: 0;
           display: flex;
           flex-flow: column;
           gap: 0;
           font-size: 0.92rem;
         }
-        .head>.info>a{
+        .main-content .head>.info>a{
           text-decoration: none;
           color: var(--text-color);
-          /*line-height: 1;*/
         }
-        .head>.info>a:hover{
+        .main-content .head>.info>a:hover{
           text-decoration: underline;
         }
-        .head>.info>span.time{
+        .main-content .head>.info>span.time{
           color: var(--gray-color);
           font-size: 0.7rem;
           line-height: 1;
         }
 
-        .content{
+        .main-content .content{
           padding: 0;
           /*word-break: break-all;*/
         }
-        .content ul,
-        .content ol{
+        .main-content .content ul,
+        .main-content .content ol{
           padding-left: 20px;
           margin-bottom: 6px;
           margin-top: 0px;
           color: var(--text-color);
         }
 
-        .content h1,
-        .content h2,
-        .content h3,
-        .content h4,
-        .content h5,
-        .content h6{
+        .main-content .content h1,
+        .main-content .content h2,
+        .main-content .content h3,
+        .main-content .content h4,
+        .main-content .content h5,
+        .main-content .content h6{
           /*border: 1px solid #784adf;*/
           color: var(--title-color);
           margin: 0 0 0px 0;
           padding: 0;
         }
 
-        .content a{
+        .main-content .content a{
           text-decoration: none;
           color: var(--link-color);
           padding: 0 3px 0 3px;
         }
 
-        .content p{
+        .main-content .content p{
           margin: 0 0 6px 0;
           padding: 0;
           line-height: 1.3;
@@ -287,7 +289,7 @@ export default class ReplyWrapper extends HTMLElement {
 
 
         .actions{
-          margin: 0;
+          margin:  2px 0px 0px -2px;
           padding: 0px 5px;
           display: flex;
           flex-flow: row;
@@ -599,7 +601,6 @@ export default class ReplyWrapper extends HTMLElement {
           :host {
             box-sizing: border-box !important;
             border: none;
-            background-color: var(--reply);
           }
           span.pointer{
             border-left: var(--mobile-border-reply);

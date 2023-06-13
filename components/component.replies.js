@@ -102,7 +102,7 @@ export default class RepliesContainer extends HTMLElement {
           margin: 0 0 5px 2px;
           display: flex;
           flex-flow: column;
-          gap: 15px;
+          gap: 25px;
           border-left: none;
           border-bottom: none;
           border-bottom-left-radius: 10px;
