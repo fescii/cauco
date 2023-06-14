@@ -20,6 +20,7 @@ export default class Sidebar extends HTMLElement {
 
   connectedCallback() {
     this.updateCurrent(this.getAttribute('current'))
+    this.handleTooltips()
 
   }
 
@@ -38,6 +39,23 @@ export default class Sidebar extends HTMLElement {
           // console.log(link)
           link.classList.add('selected')
         }
+      });
+    }
+  }
+
+  handleTooltips(){
+    //Side-ar
+    let itemLinkButtons = this.shadowObj.querySelectorAll("ul.menu-items>.item>a.item-link>span.icli")
+    if (itemLinkButtons != null) {
+      itemLinkButtons.forEach(element => {
+        let parentEl = element.parentElement;
+        let toolTip = parentEl.querySelector(".link-text");
+        element.addEventListener("mouseenter", (e) => {
+          toolTip.style.display = "inline-block"
+        })
+        element.addEventListener("mouseleave", (e) => {
+          toolTip.style.display = "none"
+        })
       });
     }
   }
@@ -377,6 +395,7 @@ export default class Sidebar extends HTMLElement {
           color: inherit;
           position: absolute;
           left: 37px;
+          top: 3px;
           border-radius: 8px;
           -webkit-border-radius: 8px;
           -moz-border-radius: 8px;

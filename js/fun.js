@@ -59,20 +59,6 @@ if (headerIcons != null) {
 	});
 }
 
-//Side-ar
-let itemLinkButtons = document.querySelectorAll(".sidebar>.menu>ul.menu-items>.item>a.item-link>span.icli")
-if (itemLinkButtons != null) {
-	itemLinkButtons.forEach(element => {
-		let parentEl = element.parentElement;
-		let toolTip = parentEl.querySelector(".link-text");
-		element.addEventListener("mouseenter", (e) => {
-			toolTip.style.display = "inline-block"
-		})
-		element.addEventListener("mouseleave", (e) => {
-			toolTip.style.display = "none"
-		})
-	});
-}
 
 
 //Share-Modal
