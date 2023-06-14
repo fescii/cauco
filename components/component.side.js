@@ -1,4 +1,4 @@
-export default class SideContainer extends HTMLElement {
+export default class Sidebar extends HTMLElement {
   constructor() {
 
     // We are not even going to touch this.
@@ -195,14 +195,28 @@ export default class SideContainer extends HTMLElement {
     return `
     <link rel="stylesheet" href="icon/style.css" />
       <style>
-        :host {
-          box-sizing: border-box !important;
-        }
         * {
         box-sizing: border-box !important;
-          --font-one: 'Sen', sans-serif;
-          --font-two: 'Product Sans', sans-serif;
+          font-family: 'Sen', sans-serif;
         }
+        :host {
+          box-sizing: border-box !important;
+          grid-column: 1/2;
+          background-color: var(--theme);
+          display: flex;
+          flex-flow: column;
+          gap: 5px;
+          width: max-content;
+          padding: 30px 10px 10px 25px;
+          height: 90vh;
+          z-index: 6;
+          position: fixed;
+          top: 0px;
+          left: 65px;
+          bottom: 0%;
+          height: 100vh;
+        }
+
         .head {
           display: flex;
           flex-wrap: nowrap;
@@ -395,11 +409,72 @@ export default class SideContainer extends HTMLElement {
         .options-modal>.more-options>.close-modal i{
           margin-top: 2px;
         }
+
+        @media screen and (min-width: 1250px) {
+          :host {
+            grid-column: 1/2;
+            background-color: var(--theme);
+            display: flex;
+            flex-flow: column;
+            gap: 5px;
+            width: max-content;
+            padding: 30px 10px 10px 25px;
+            height: 90vh;
+            z-index: 6;
+            position: sticky;
+            top: 0;
+            left: unset;
+            height: 100vh;
+          }
+        }
+
+        @media screen and (max-width: 1250px) {
+          :host {
+            grid-column: 1/2;
+            background-color: var(--theme);
+            display: flex;
+            flex-flow: column;
+            gap: 5px;
+            width: max-content;
+            padding: 30px 10px 10px 25px;
+            height: 90vh;
+            z-index: 6;
+            position: fixed;
+            top: 0px;
+            left: 20px;
+            bottom: 0%;
+            height: 100vh;
+          }
+        }
+
+        @media screen and (max-width: 1150px) {
+          :host {
+            background-color: var(--theme);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            bottom: 0%;
+            height: 100vh;
+          }
+        }
+
+        @media screen and (max-width: 1100px) {
+          :host {
+            max-width: 70px;
+          }
+        }
+
+        @media screen and (max-width: 550px) {
+          :host {
+            padding: 30px 5px 10px 12px;
+          }
+        }
+
         @media screen and (max-width:500px ){
           :host {
-            box-sizing: border-box !important;
+            display: none;
           }
-         }
+        }
 
       </style>
     `;

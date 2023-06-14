@@ -32,28 +32,6 @@ body.stop-scrolling {
   overflow: hidden;
 }
 
-/*SIDEbar*/
-
-.sidebar {
-  grid-column: 1/2;
-  background-color: var(--theme);
-  display: flex;
-  flex-flow: column;
-  gap: 5px;
-  width: max-content;
-  padding: 30px 10px 10px 25px;
-  height: 90vh;
-  z-index: 6;
-  position: fixed;
-  top: 0px;
-  left: 65px;
-  bottom: 0%;
-  height: 100vh;
-}
-
-
-
-
 ul.tab {
   border-bottom: var(--border);
   background-color: var(--theme);
