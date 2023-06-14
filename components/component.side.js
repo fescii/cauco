@@ -161,17 +161,16 @@ export default class Sidebar extends HTMLElement {
         <li class="item">
           <span class="line"></span>
           <a href="" class="item-link">
-            <span class="iconly-Bookmark icli"></span>
+            <span class="iconly-User3 icli"></span>
             <div class="link-text">
               <span class="arrow"></span>
-              <span class="text">My List</span>
+              <span class="text">Spaces</span>
             </div>
           </a>
         </li>
       </ul>
     </div>
     <div class="menu user">
-      <div class="title">User</div>
       <ul class="menu-items">
         <li class="item">
           <span class="line"></span>
@@ -186,20 +185,20 @@ export default class Sidebar extends HTMLElement {
         <li class="item">
           <span class="line"></span>
           <a href="" class="item-link">
-            <span class="iconly-Message icli"></span>
+            <span class="iconly-Bookmark icli"></span>
             <div class="link-text">
               <span class="arrow"></span>
-              <span class="text">Subscriptions</span>
+              <span class="text">My List</span>
             </div>
           </a>
         </li>
         <li class="item">
           <span class="line"></span>
           <a href="" class="item-link">
-            <span class="iconly-Setting icli"></span>
+            <span class="iconly-Message icli"></span>
             <div class="link-text">
               <span class="arrow"></span>
-              <span class="text">Settings</span>
+              <span class="text">Chats</span>
             </div>
           </a>
         </li>
@@ -209,11 +208,11 @@ export default class Sidebar extends HTMLElement {
       <ul class="menu-items">
         <li class="item">
           <span class="line"></span>
-          <a href="" class="item-link logout">
-            <span class="iconly-Logout icli"></span>
+          <a href="" class="item-link">
+            <span class="iconly-Setting icli"></span>
             <div class="link-text">
               <span class="arrow"></span>
-              <span class="text">Logout</span>
+              <span class="text">Settings</span>
             </div>
           </a>
         </li>
