@@ -19,6 +19,7 @@ export default class Sidebar extends HTMLElement {
   }
 
   connectedCallback() {
+    this.updateCurrent(this.getAttribute('current'))
 
   }
 
@@ -27,6 +28,19 @@ export default class Sidebar extends HTMLElement {
 
   }
 
+  updateCurrent(curr){
+    const links = this.shadowObj.querySelectorAll('.menu>ul.menu-items>li.item');
+
+    if (links != null) {
+      links.forEach(link => {
+        const text = link.querySelector('a.item-link>.link-text span.text').textContent.toLowerCase();
+        if (text == curr) {
+          // console.log(link)
+          link.classList.add('selected')
+        }
+      });
+    }
+  }
 
 
   disableScroll() {
@@ -82,7 +96,7 @@ export default class Sidebar extends HTMLElement {
             </div>
           </a>
         </li>
-        <li class="item selected">
+        <li class="item">
           <span class="line"></span>
           <a href="" class="item-link">
             <span class="iconly-Discovery icli"></span>

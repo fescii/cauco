@@ -16,13 +16,13 @@ export default class UserInfo extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log('We are inside connectedCallback');
+    // console.log('We are inside connectedCallback');
 
   }
 
 
   disconnectedCallback() {
-    console.log('We are inside disconnectedCallback');
+    // console.log('We are inside disconnectedCallback');
     // adding event handler to the button
   }
 
