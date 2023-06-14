@@ -349,7 +349,6 @@ export default class SpaceHeader extends HTMLElement {
   getIcon(conn){
     if (conn == "following") {
       return `
-        <i class="bi-dash-circle"></i>
         <span class="text">Following</span>
       `
     } else {
