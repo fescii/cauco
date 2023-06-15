@@ -379,8 +379,7 @@ export default class Sidebar extends HTMLElement {
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 1.3rem;
-          /*font-weight: 500;*/
+          font-size: 1.35rem;
           color: inherit;
         }
 
